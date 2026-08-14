@@ -1,7 +1,10 @@
 # 2 Mitchs 1 Cup — Draft Assistant (2026)
 
-`draft-assistant.html` is the whole thing: one self-contained file, no build step,
-no network needed except the optional Sleeper sync. Open it on the iPad and go.
+`index.html` is the whole thing: one self-contained file, no build step, no network
+needed except the optional Sleeper sync. Open it on the iPad and go.
+
+Hosted on GitHub Pages so the iPad can reach it from anywhere — and so Safari
+actually allows `localStorage`, which it refuses for `file://` pages.
 
 ## League (pulled from Sleeper, id `1383837552376545280`)
 
@@ -48,14 +51,23 @@ reorders QBs among themselves, so QB tiers are unaffected either way.
 
 ```bash
 python merge.py   # sources -> merged.json (+ prints tiers and match diagnostics)
-python build.py   # merged.json + template.html -> draft-assistant.html
+python build.py   # merged.json + template.html -> index.html
 ```
 
-Edit `template.html` for UI changes, never `draft-assistant.html` — it is generated.
+Edit `template.html` for UI changes, never `index.html` — it is generated, and
+`build.py` stamps it with a build time shown in the Setup dialog. If the iPad
+looks stale after a deploy, open Setup and check that stamp before debugging
+anything else.
 
-## Known limitation
+## Using it during the draft
 
-Safari sometimes refuses `localStorage` for pages opened straight off the
-filesystem. The page detects this and shows a banner; picks then live only in
-memory and a refresh loses them. Serving the file over http (or hosting it,
-e.g. GitHub Pages like Bova's Picks) removes the risk entirely.
+- Tap any player row to draft them to whoever is on the clock; the dropdown at
+  the top overrides the team first. Tap a drafted player again to undo.
+- The filter button cycles **Hide drafted → Show all → Only drafted**.
+- Drafted rows show the owner as a chip between the name and the position badge.
+- **Rosters** tab: pick any team from the dropdown to see their picks by round,
+  each with a `×` to remove it, plus **Add player** to assign straight to that
+  team. This is the fast path for fixing a mis-tap.
+- Everything is sized for an Apple Pencil: 52px rows, 44px `×` buttons,
+  `touch-action: manipulation` so taps register without the double-tap-zoom delay,
+  and no hover-dependent controls.
