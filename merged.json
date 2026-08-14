@@ -24,8 +24,9 @@
   "rank": 1,
   "leagueBlend": 1.5,
   "leagueRank": 1,
-  "posRankFinal": 1,
-  "tier": 1
+  "tier": 1,
+  "tierSrc": "fp",
+  "posRankFinal": 1
  },
  {
   "name": "Jahmyr Gibbs",
@@ -52,8 +53,9 @@
   "rank": 2,
   "leagueBlend": 2.25,
   "leagueRank": 2,
-  "posRankFinal": 1,
-  "tier": 1
+  "tier": 1,
+  "tierSrc": "fp",
+  "posRankFinal": 1
  },
  {
   "name": "Puka Nacua",
@@ -80,8 +82,9 @@
   "rank": 3,
   "leagueBlend": 3.0,
   "leagueRank": 3,
-  "posRankFinal": 2,
-  "tier": 1
+  "tier": 1,
+  "tierSrc": "fp",
+  "posRankFinal": 2
  },
  {
   "name": "Bijan Robinson",
@@ -108,8 +111,9 @@
   "rank": 4,
   "leagueBlend": 3.25,
   "leagueRank": 4,
-  "posRankFinal": 2,
-  "tier": 1
+  "tier": 1,
+  "tierSrc": "fp",
+  "posRankFinal": 2
  },
  {
   "name": "Jaxon Smith-Njigba",
@@ -136,8 +140,9 @@
   "rank": 5,
   "leagueBlend": 6.25,
   "leagueRank": 5,
-  "posRankFinal": 3,
-  "tier": 1
+  "tier": 1,
+  "tierSrc": "fp",
+  "posRankFinal": 3
  },
  {
   "name": "Amon-Ra St. Brown",
@@ -164,8 +169,9 @@
   "rank": 6,
   "leagueBlend": 7.0,
   "leagueRank": 6,
-  "posRankFinal": 4,
-  "tier": 1
+  "tier": 1,
+  "tierSrc": "fp",
+  "posRankFinal": 4
  },
  {
   "name": "Christian McCaffrey",
@@ -192,8 +198,9 @@
   "rank": 7,
   "leagueBlend": 7.0,
   "leagueRank": 7,
-  "posRankFinal": 3,
-  "tier": 1
+  "tier": 1,
+  "tierSrc": "fp",
+  "posRankFinal": 3
  },
  {
   "name": "Jonathan Taylor",
@@ -220,8 +227,9 @@
   "rank": 8,
   "leagueBlend": 8.25,
   "leagueRank": 8,
-  "posRankFinal": 4,
-  "tier": 1
+  "tier": 2,
+  "tierSrc": "fp",
+  "posRankFinal": 4
  },
  {
   "name": "CeeDee Lamb",
@@ -248,8 +256,9 @@
   "rank": 9,
   "leagueBlend": 9.0,
   "leagueRank": 9,
-  "posRankFinal": 5,
-  "tier": 1
+  "tier": 2,
+  "tierSrc": "fp",
+  "posRankFinal": 5
  },
  {
   "name": "Justin Jefferson",
@@ -276,8 +285,9 @@
   "rank": 10,
   "leagueBlend": 10.25,
   "leagueRank": 10,
-  "posRankFinal": 6,
-  "tier": 1
+  "tier": 2,
+  "tierSrc": "fp",
+  "posRankFinal": 6
  },
  {
   "name": "James Cook III",
@@ -304,8 +314,9 @@
   "rank": 11,
   "leagueBlend": 12.0,
   "leagueRank": 11,
-  "posRankFinal": 5,
-  "tier": 2
+  "tier": 2,
+  "tierSrc": "fp",
+  "posRankFinal": 5
  },
  {
   "name": "Ashton Jeanty",
@@ -332,8 +343,9 @@
   "rank": 12,
   "leagueBlend": 13.5,
   "leagueRank": 12,
-  "posRankFinal": 6,
-  "tier": 2
+  "tier": 2,
+  "tierSrc": "fp",
+  "posRankFinal": 6
  },
  {
   "name": "Drake London",
@@ -360,8 +372,9 @@
   "rank": 13,
   "leagueBlend": 15.0,
   "leagueRank": 13,
-  "posRankFinal": 7,
-  "tier": 2
+  "tier": 2,
+  "tierSrc": "fp",
+  "posRankFinal": 7
  },
  {
   "name": "Nico Collins",
@@ -388,8 +401,9 @@
   "rank": 14,
   "leagueBlend": 16.25,
   "leagueRank": 14,
-  "posRankFinal": 8,
-  "tier": 2
+  "tier": 2,
+  "tierSrc": "fp",
+  "posRankFinal": 8
  },
  {
   "name": "Chase Brown",
@@ -416,8 +430,9 @@
   "rank": 15,
   "leagueBlend": 16.25,
   "leagueRank": 15,
-  "posRankFinal": 7,
-  "tier": 2
+  "tier": 2,
+  "tierSrc": "fp",
+  "posRankFinal": 7
  },
  {
   "name": "De'Von Achane",
@@ -444,8 +459,9 @@
   "rank": 16,
   "leagueBlend": 16.75,
   "leagueRank": 16,
-  "posRankFinal": 8,
-  "tier": 2
+  "tier": 2,
+  "tierSrc": "fp",
+  "posRankFinal": 8
  },
  {
   "name": "A.J. Brown",
@@ -472,8 +488,9 @@
   "rank": 17,
   "leagueBlend": 17.75,
   "leagueRank": 18,
-  "posRankFinal": 9,
-  "tier": 2
+  "tier": 2,
+  "tierSrc": "fp",
+  "posRankFinal": 9
  },
  {
   "name": "Brock Bowers",
@@ -500,8 +517,9 @@
   "rank": 18,
   "leagueBlend": 18.5,
   "leagueRank": 19,
-  "posRankFinal": 1,
-  "tier": 1
+  "tier": 1,
+  "tierSrc": "fp",
+  "posRankFinal": 1
  },
  {
   "name": "Saquon Barkley",
@@ -528,8 +546,9 @@
   "rank": 19,
   "leagueBlend": 19.5,
   "leagueRank": 20,
-  "posRankFinal": 9,
-  "tier": 2
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 9
  },
  {
   "name": "Trey McBride",
@@ -556,8 +575,9 @@
   "rank": 20,
   "leagueBlend": 20.0,
   "leagueRank": 21,
-  "posRankFinal": 2,
-  "tier": 1
+  "tier": 1,
+  "tierSrc": "fp",
+  "posRankFinal": 2
  },
  {
   "name": "George Pickens",
@@ -584,8 +604,9 @@
   "rank": 21,
   "leagueBlend": 20.0,
   "leagueRank": 22,
-  "posRankFinal": 10,
-  "tier": 2
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 10
  },
  {
   "name": "Kenneth Walker III",
@@ -612,8 +633,9 @@
   "rank": 22,
   "leagueBlend": 21.5,
   "leagueRank": 23,
-  "posRankFinal": 10,
-  "tier": 2
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 10
  },
  {
   "name": "Omarion Hampton",
@@ -640,8 +662,9 @@
   "rank": 23,
   "leagueBlend": 22.25,
   "leagueRank": 24,
-  "posRankFinal": 11,
-  "tier": 2
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 11
  },
  {
   "name": "Malik Nabers",
@@ -668,8 +691,9 @@
   "rank": 24,
   "leagueBlend": 24.25,
   "leagueRank": 25,
-  "posRankFinal": 11,
-  "tier": 2
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 11
  },
  {
   "name": "Chris Olave",
@@ -696,8 +720,9 @@
   "rank": 25,
   "leagueBlend": 25.75,
   "leagueRank": 26,
-  "posRankFinal": 12,
-  "tier": 2
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 12
  },
  {
   "name": "DeVonta Smith",
@@ -724,8 +749,9 @@
   "rank": 26,
   "leagueBlend": 27.0,
   "leagueRank": 27,
-  "posRankFinal": 13,
-  "tier": 2
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 13
  },
  {
   "name": "Josh Allen",
@@ -752,8 +778,9 @@
   "rank": 27,
   "leagueBlend": 17.25,
   "leagueRank": 17,
-  "posRankFinal": 1,
-  "tier": 1
+  "tier": 1,
+  "tierSrc": "fp",
+  "posRankFinal": 1
  },
  {
   "name": "Rashee Rice",
@@ -780,8 +807,9 @@
   "rank": 28,
   "leagueBlend": 29.25,
   "leagueRank": 29,
-  "posRankFinal": 14,
-  "tier": 3
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 14
  },
  {
   "name": "Derrick Henry",
@@ -808,8 +836,9 @@
   "rank": 29,
   "leagueBlend": 30.75,
   "leagueRank": 30,
-  "posRankFinal": 12,
-  "tier": 3
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 12
  },
  {
   "name": "Tee Higgins",
@@ -836,8 +865,9 @@
   "rank": 30,
   "leagueBlend": 31.25,
   "leagueRank": 31,
-  "posRankFinal": 15,
-  "tier": 3
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 15
  },
  {
   "name": "Zay Flowers",
@@ -864,8 +894,9 @@
   "rank": 31,
   "leagueBlend": 32.0,
   "leagueRank": 32,
-  "posRankFinal": 16,
-  "tier": 3
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 16
  },
  {
   "name": "Tetairoa McMillan",
@@ -892,8 +923,9 @@
   "rank": 32,
   "leagueBlend": 32.75,
   "leagueRank": 33,
-  "posRankFinal": 17,
-  "tier": 3
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 17
  },
  {
   "name": "Colston Loveland",
@@ -920,8 +952,9 @@
   "rank": 33,
   "leagueBlend": 34.0,
   "leagueRank": 34,
-  "posRankFinal": 3,
-  "tier": 1
+  "tier": 1,
+  "tierSrc": "fp",
+  "posRankFinal": 3
  },
  {
   "name": "Jeremiyah Love",
@@ -948,8 +981,9 @@
   "rank": 34,
   "leagueBlend": 34.25,
   "leagueRank": 35,
-  "posRankFinal": 13,
-  "tier": 3
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 13
  },
  {
   "name": "Garrett Wilson",
@@ -976,8 +1010,9 @@
   "rank": 35,
   "leagueBlend": 35.25,
   "leagueRank": 36,
-  "posRankFinal": 18,
-  "tier": 3
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 18
  },
  {
   "name": "Breece Hall",
@@ -1004,8 +1039,9 @@
   "rank": 36,
   "leagueBlend": 35.25,
   "leagueRank": 37,
-  "posRankFinal": 14,
-  "tier": 3
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 14
  },
  {
   "name": "Lamar Jackson",
@@ -1032,8 +1068,9 @@
   "rank": 37,
   "leagueBlend": 28.0,
   "leagueRank": 28,
-  "posRankFinal": 2,
-  "tier": 1
+  "tier": 1,
+  "tierSrc": "fp",
+  "posRankFinal": 2
  },
  {
   "name": "Emeka Egbuka",
@@ -1060,8 +1097,9 @@
   "rank": 38,
   "leagueBlend": 38.5,
   "leagueRank": 38,
-  "posRankFinal": 19,
-  "tier": 3
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 19
  },
  {
   "name": "Ladd McConkey",
@@ -1088,8 +1126,9 @@
   "rank": 39,
   "leagueBlend": 39.0,
   "leagueRank": 40,
-  "posRankFinal": 20,
-  "tier": 3
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 20
  },
  {
   "name": "Kyren Williams",
@@ -1116,8 +1155,9 @@
   "rank": 40,
   "leagueBlend": 39.25,
   "leagueRank": 41,
-  "posRankFinal": 15,
-  "tier": 3
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 15
  },
  {
   "name": "Josh Jacobs",
@@ -1144,8 +1184,9 @@
   "rank": 41,
   "leagueBlend": 39.5,
   "leagueRank": 42,
-  "posRankFinal": 16,
-  "tier": 3
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 16
  },
  {
   "name": "Jaylen Waddle",
@@ -1172,8 +1213,9 @@
   "rank": 42,
   "leagueBlend": 40.75,
   "leagueRank": 43,
-  "posRankFinal": 21,
-  "tier": 3
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 21
  },
  {
   "name": "Javonte Williams",
@@ -1200,8 +1242,9 @@
   "rank": 43,
   "leagueBlend": 41.0,
   "leagueRank": 44,
-  "posRankFinal": 17,
-  "tier": 3
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 17
  },
  {
   "name": "Travis Etienne Jr.",
@@ -1228,8 +1271,9 @@
   "rank": 44,
   "leagueBlend": 42.5,
   "leagueRank": 46,
-  "posRankFinal": 18,
-  "tier": 3
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 18
  },
  {
   "name": "Cam Skattebo",
@@ -1256,8 +1300,9 @@
   "rank": 45,
   "leagueBlend": 47.25,
   "leagueRank": 47,
-  "posRankFinal": 19,
-  "tier": 3
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 19
  },
  {
   "name": "Luther Burden III",
@@ -1284,8 +1329,9 @@
   "rank": 46,
   "leagueBlend": 47.75,
   "leagueRank": 48,
-  "posRankFinal": 22,
-  "tier": 4
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 22
  },
  {
   "name": "Drake Maye",
@@ -1312,8 +1358,9 @@
   "rank": 47,
   "leagueBlend": 38.5,
   "leagueRank": 39,
-  "posRankFinal": 3,
-  "tier": 2
+  "tier": 1,
+  "tierSrc": "fp",
+  "posRankFinal": 3
  },
  {
   "name": "Terry McLaurin",
@@ -1340,8 +1387,9 @@
   "rank": 48,
   "leagueBlend": 48.75,
   "leagueRank": 50,
-  "posRankFinal": 23,
-  "tier": 4
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 23
  },
  {
   "name": "Joe Burrow",
@@ -1368,8 +1416,9 @@
   "rank": 49,
   "leagueBlend": 42.0,
   "leagueRank": 45,
-  "posRankFinal": 4,
-  "tier": 2
+  "tier": 2,
+  "tierSrc": "fp",
+  "posRankFinal": 4
  },
  {
   "name": "DJ Moore",
@@ -1396,8 +1445,9 @@
   "rank": 50,
   "leagueBlend": 52.5,
   "leagueRank": 51,
-  "posRankFinal": 24,
-  "tier": 4
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 24
  },
  {
   "name": "Jameson Williams",
@@ -1424,8 +1474,9 @@
   "rank": 51,
   "leagueBlend": 53.5,
   "leagueRank": 52,
-  "posRankFinal": 25,
-  "tier": 4
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 25
  },
  {
   "name": "D'Andre Swift",
@@ -1452,8 +1503,9 @@
   "rank": 52,
   "leagueBlend": 54.25,
   "leagueRank": 54,
-  "posRankFinal": 20,
-  "tier": 4
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 20
  },
  {
   "name": "Quinshon Judkins",
@@ -1480,8 +1532,9 @@
   "rank": 53,
   "leagueBlend": 54.25,
   "leagueRank": 55,
-  "posRankFinal": 21,
-  "tier": 4
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 21
  },
  {
   "name": "Jayden Daniels",
@@ -1508,8 +1561,9 @@
   "rank": 54,
   "leagueBlend": 47.75,
   "leagueRank": 49,
-  "posRankFinal": 5,
-  "tier": 2
+  "tier": 2,
+  "tierSrc": "fp",
+  "posRankFinal": 5
  },
  {
   "name": "David Montgomery",
@@ -1536,8 +1590,9 @@
   "rank": 55,
   "leagueBlend": 54.75,
   "leagueRank": 56,
-  "posRankFinal": 22,
-  "tier": 4
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 22
  },
  {
   "name": "Bucky Irving",
@@ -1564,8 +1619,9 @@
   "rank": 56,
   "leagueBlend": 55.0,
   "leagueRank": 57,
-  "posRankFinal": 23,
-  "tier": 4
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 23
  },
  {
   "name": "Tyler Warren",
@@ -1592,8 +1648,9 @@
   "rank": 57,
   "leagueBlend": 55.25,
   "leagueRank": 58,
-  "posRankFinal": 4,
-  "tier": 2
+  "tier": 1,
+  "tierSrc": "fp",
+  "posRankFinal": 4
  },
  {
   "name": "Rome Odunze",
@@ -1620,8 +1677,9 @@
   "rank": 58,
   "leagueBlend": 55.25,
   "leagueRank": 59,
-  "posRankFinal": 26,
-  "tier": 4
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 26
  },
  {
   "name": "Davante Adams",
@@ -1648,8 +1706,9 @@
   "rank": 59,
   "leagueBlend": 56.0,
   "leagueRank": 60,
-  "posRankFinal": 27,
-  "tier": 4
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 27
  },
  {
   "name": "Mike Evans",
@@ -1676,8 +1735,9 @@
   "rank": 60,
   "leagueBlend": 59.5,
   "leagueRank": 61,
-  "posRankFinal": 28,
-  "tier": 4
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 28
  },
  {
   "name": "Bhayshul Tuten",
@@ -1704,8 +1764,9 @@
   "rank": 61,
   "leagueBlend": 59.75,
   "leagueRank": 62,
-  "posRankFinal": 24,
-  "tier": 4
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 24
  },
  {
   "name": "Jalen Hurts",
@@ -1732,8 +1793,9 @@
   "rank": 62,
   "leagueBlend": 53.75,
   "leagueRank": 53,
-  "posRankFinal": 6,
-  "tier": 2
+  "tier": 2,
+  "tierSrc": "fp",
+  "posRankFinal": 6
  },
  {
   "name": "TreVeyon Henderson",
@@ -1760,8 +1822,9 @@
   "rank": 63,
   "leagueBlend": 62.25,
   "leagueRank": 64,
-  "posRankFinal": 25,
-  "tier": 4
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 25
  },
  {
   "name": "Christian Watson",
@@ -1788,8 +1851,9 @@
   "rank": 64,
   "leagueBlend": 63.75,
   "leagueRank": 65,
-  "posRankFinal": 29,
-  "tier": 5
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 29
  },
  {
   "name": "Jadarian Price",
@@ -1816,8 +1880,9 @@
   "rank": 65,
   "leagueBlend": 65.0,
   "leagueRank": 66,
-  "posRankFinal": 26,
-  "tier": 4
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 26
  },
  {
   "name": "Marvin Harrison Jr.",
@@ -1844,8 +1909,9 @@
   "rank": 66,
   "leagueBlend": 66.0,
   "leagueRank": 67,
-  "posRankFinal": 30,
-  "tier": 5
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 30
  },
  {
   "name": "Carnell Tate",
@@ -1872,8 +1938,9 @@
   "rank": 67,
   "leagueBlend": 67.0,
   "leagueRank": 69,
-  "posRankFinal": 31,
-  "tier": 5
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 31
  },
  {
   "name": "Caleb Williams",
@@ -1900,8 +1967,9 @@
   "rank": 68,
   "leagueBlend": 61.75,
   "leagueRank": 63,
-  "posRankFinal": 7,
-  "tier": 3
+  "tier": 2,
+  "tierSrc": "fp",
+  "posRankFinal": 7
  },
  {
   "name": "Parker Washington",
@@ -1928,8 +1996,9 @@
   "rank": 69,
   "leagueBlend": 69.5,
   "leagueRank": 70,
-  "posRankFinal": 32,
-  "tier": 5
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 32
  },
  {
   "name": "Jaylen Warren",
@@ -1956,8 +2025,9 @@
   "rank": 70,
   "leagueBlend": 70.25,
   "leagueRank": 71,
-  "posRankFinal": 27,
-  "tier": 5
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 27
  },
  {
   "name": "Rhamondre Stevenson",
@@ -1984,8 +2054,9 @@
   "rank": 71,
   "leagueBlend": 73.0,
   "leagueRank": 73,
-  "posRankFinal": 28,
-  "tier": 5
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 28
  },
  {
   "name": "Justin Herbert",
@@ -2012,8 +2083,9 @@
   "rank": 72,
   "leagueBlend": 66.5,
   "leagueRank": 68,
-  "posRankFinal": 8,
-  "tier": 3
+  "tier": 2,
+  "tierSrc": "fp",
+  "posRankFinal": 8
  },
  {
   "name": "Tony Pollard",
@@ -2040,8 +2112,9 @@
   "rank": 73,
   "leagueBlend": 74.0,
   "leagueRank": 74,
-  "posRankFinal": 29,
-  "tier": 5
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 29
  },
  {
   "name": "Harold Fannin Jr.",
@@ -2068,8 +2141,9 @@
   "rank": 74,
   "leagueBlend": 75.0,
   "leagueRank": 75,
-  "posRankFinal": 5,
-  "tier": 3
+  "tier": 2,
+  "tierSrc": "fp",
+  "posRankFinal": 5
  },
  {
   "name": "Tucker Kraft",
@@ -2096,8 +2170,9 @@
   "rank": 75,
   "leagueBlend": 75.5,
   "leagueRank": 77,
-  "posRankFinal": 6,
-  "tier": 3
+  "tier": 2,
+  "tierSrc": "fp",
+  "posRankFinal": 6
  },
  {
   "name": "Brian Thomas Jr.",
@@ -2124,8 +2199,9 @@
   "rank": 76,
   "leagueBlend": 76.25,
   "leagueRank": 78,
-  "posRankFinal": 33,
-  "tier": 5
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 33
  },
  {
   "name": "Trevor Lawrence",
@@ -2152,8 +2228,9 @@
   "rank": 77,
   "leagueBlend": 70.5,
   "leagueRank": 72,
-  "posRankFinal": 9,
-  "tier": 3
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 9
  },
  {
   "name": "DK Metcalf",
@@ -2180,8 +2257,9 @@
   "rank": 78,
   "leagueBlend": 78.0,
   "leagueRank": 79,
-  "posRankFinal": 34,
-  "tier": 5
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 34
  },
  {
   "name": "Sam LaPorta",
@@ -2208,8 +2286,9 @@
   "rank": 79,
   "leagueBlend": 81.75,
   "leagueRank": 80,
-  "posRankFinal": 7,
-  "tier": 3
+  "tier": 2,
+  "tierSrc": "fp",
+  "posRankFinal": 7
  },
  {
   "name": "Dak Prescott",
@@ -2236,8 +2315,9 @@
   "rank": 80,
   "leagueBlend": 75.25,
   "leagueRank": 76,
-  "posRankFinal": 10,
-  "tier": 3
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 10
  },
  {
   "name": "Jordyn Tyson",
@@ -2264,8 +2344,9 @@
   "rank": 81,
   "leagueBlend": 83.0,
   "leagueRank": 81,
-  "posRankFinal": 35,
-  "tier": 6
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 35
  },
  {
   "name": "Chuba Hubbard",
@@ -2292,8 +2373,9 @@
   "rank": 82,
   "leagueBlend": 83.0,
   "leagueRank": 82,
-  "posRankFinal": 30,
-  "tier": 5
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 30
  },
  {
   "name": "Rico Dowdle",
@@ -2320,8 +2402,9 @@
   "rank": 83,
   "leagueBlend": 84.75,
   "leagueRank": 83,
-  "posRankFinal": 31,
-  "tier": 5
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 31
  },
  {
   "name": "Alec Pierce",
@@ -2348,8 +2431,9 @@
   "rank": 84,
   "leagueBlend": 86.0,
   "leagueRank": 84,
-  "posRankFinal": 36,
-  "tier": 6
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 36
  },
  {
   "name": "Michael Pittman Jr.",
@@ -2376,8 +2460,9 @@
   "rank": 85,
   "leagueBlend": 87.25,
   "leagueRank": 85,
-  "posRankFinal": 37,
-  "tier": 6
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 37
  },
  {
   "name": "Chris Godwin Jr.",
@@ -2404,8 +2489,9 @@
   "rank": 86,
   "leagueBlend": 87.5,
   "leagueRank": 87,
-  "posRankFinal": 38,
-  "tier": 6
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 38
  },
  {
   "name": "Courtland Sutton",
@@ -2432,8 +2518,9 @@
   "rank": 87,
   "leagueBlend": 87.75,
   "leagueRank": 88,
-  "posRankFinal": 39,
-  "tier": 6
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 39
  },
  {
   "name": "Kyle Pitts Sr.",
@@ -2460,8 +2547,9 @@
   "rank": 88,
   "leagueBlend": 88.25,
   "leagueRank": 89,
-  "posRankFinal": 8,
-  "tier": 3
+  "tier": 2,
+  "tierSrc": "fp",
+  "posRankFinal": 8
  },
  {
   "name": "RJ Harvey",
@@ -2488,8 +2576,9 @@
   "rank": 89,
   "leagueBlend": 88.25,
   "leagueRank": 90,
-  "posRankFinal": 32,
-  "tier": 5
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 32
  },
  {
   "name": "Jaxson Dart",
@@ -2516,8 +2605,9 @@
   "rank": 90,
   "leagueBlend": 87.25,
   "leagueRank": 86,
-  "posRankFinal": 11,
-  "tier": 4
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 11
  },
  {
   "name": "Josh Downs",
@@ -2544,8 +2634,9 @@
   "rank": 91,
   "leagueBlend": 92.5,
   "leagueRank": 91,
-  "posRankFinal": 40,
-  "tier": 6
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 40
  },
  {
   "name": "Michael Wilson",
@@ -2572,8 +2663,9 @@
   "rank": 92,
   "leagueBlend": 94.5,
   "leagueRank": 93,
-  "posRankFinal": 41,
-  "tier": 6
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 41
  },
  {
   "name": "J.K. Dobbins",
@@ -2600,8 +2692,9 @@
   "rank": 93,
   "leagueBlend": 95.75,
   "leagueRank": 95,
-  "posRankFinal": 33,
-  "tier": 6
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 33
  },
  {
   "name": "Quentin Johnston",
@@ -2628,8 +2721,9 @@
   "rank": 94,
   "leagueBlend": 96.25,
   "leagueRank": 96,
-  "posRankFinal": 42,
-  "tier": 7
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 42
  },
  {
   "name": "Bo Nix",
@@ -2656,8 +2750,9 @@
   "rank": 95,
   "leagueBlend": 93.25,
   "leagueRank": 92,
-  "posRankFinal": 12,
-  "tier": 4
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 12
  },
  {
   "name": "Jordan Addison",
@@ -2684,8 +2779,9 @@
   "rank": 96,
   "leagueBlend": 98.25,
   "leagueRank": 98,
-  "posRankFinal": 43,
-  "tier": 7
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 43
  },
  {
   "name": "Blake Corum",
@@ -2712,8 +2808,9 @@
   "rank": 97,
   "leagueBlend": 99.0,
   "leagueRank": 99,
-  "posRankFinal": 34,
-  "tier": 6
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 34
  },
  {
   "name": "Brock Purdy",
@@ -2740,8 +2837,9 @@
   "rank": 98,
   "leagueBlend": 95.5,
   "leagueRank": 94,
-  "posRankFinal": 13,
-  "tier": 4
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 13
  },
  {
   "name": "Kyle Monangai",
@@ -2768,8 +2866,9 @@
   "rank": 99,
   "leagueBlend": 99.75,
   "leagueRank": 100,
-  "posRankFinal": 35,
-  "tier": 6
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 35
  },
  {
   "name": "Wan'Dale Robinson",
@@ -2796,8 +2895,9 @@
   "rank": 100,
   "leagueBlend": 100.5,
   "leagueRank": 101,
-  "posRankFinal": 44,
-  "tier": 7
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 44
  },
  {
   "name": "Makai Lemon",
@@ -2824,8 +2924,9 @@
   "rank": 101,
   "leagueBlend": 101.5,
   "leagueRank": 102,
-  "posRankFinal": 45,
-  "tier": 7
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 45
  },
  {
   "name": "Patrick Mahomes II",
@@ -2852,8 +2953,9 @@
   "rank": 102,
   "leagueBlend": 97.75,
   "leagueRank": 97,
-  "posRankFinal": 14,
-  "tier": 4
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 14
  },
  {
   "name": "Jonathon Brooks",
@@ -2880,8 +2982,9 @@
   "rank": 103,
   "leagueBlend": 102.75,
   "leagueRank": 103,
-  "posRankFinal": 36,
-  "tier": 6
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 36
  },
  {
   "name": "Rachaad White",
@@ -2908,8 +3011,9 @@
   "rank": 104,
   "leagueBlend": 104.75,
   "leagueRank": 105,
-  "posRankFinal": 37,
-  "tier": 6
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 37
  },
  {
   "name": "Jakobi Meyers",
@@ -2936,8 +3040,9 @@
   "rank": 105,
   "leagueBlend": 105.0,
   "leagueRank": 106,
-  "posRankFinal": 46,
-  "tier": 7
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 46
  },
  {
   "name": "Jayden Reed",
@@ -2964,8 +3069,9 @@
   "rank": 106,
   "leagueBlend": 105.0,
   "leagueRank": 107,
-  "posRankFinal": 47,
-  "tier": 7
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 47
  },
  {
   "name": "Kenny Gainwell",
@@ -2992,8 +3098,9 @@
   "rank": 107,
   "leagueBlend": 105.25,
   "leagueRank": 108,
-  "posRankFinal": 38,
-  "tier": 6
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 38
  },
  {
   "name": "Travis Kelce",
@@ -3020,8 +3127,9 @@
   "rank": 108,
   "leagueBlend": 106.5,
   "leagueRank": 109,
-  "posRankFinal": 9,
-  "tier": 4
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 9
  },
  {
   "name": "Matthew Stafford",
@@ -3048,8 +3156,9 @@
   "rank": 109,
   "leagueBlend": 103.25,
   "leagueRank": 104,
-  "posRankFinal": 15,
-  "tier": 5
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 15
  },
  {
   "name": "Stefon Diggs",
@@ -3070,8 +3179,9 @@
   "rank": 110,
   "leagueBlend": 109.33,
   "leagueRank": 111,
-  "posRankFinal": 48,
-  "tier": 7
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 48
  },
  {
   "name": "Dalton Kincaid",
@@ -3098,8 +3208,9 @@
   "rank": 111,
   "leagueBlend": 110.5,
   "leagueRank": 112,
-  "posRankFinal": 10,
-  "tier": 4
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 10
  },
  {
   "name": "Jacory Croskey-Merritt",
@@ -3126,8 +3237,9 @@
   "rank": 112,
   "leagueBlend": 111.0,
   "leagueRank": 113,
-  "posRankFinal": 39,
-  "tier": 6
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 39
  },
  {
   "name": "George Kittle",
@@ -3154,8 +3266,9 @@
   "rank": 113,
   "leagueBlend": 111.5,
   "leagueRank": 114,
-  "posRankFinal": 11,
-  "tier": 4
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 11
  },
  {
   "name": "Jared Goff",
@@ -3182,8 +3295,9 @@
   "rank": 114,
   "leagueBlend": 107.75,
   "leagueRank": 110,
-  "posRankFinal": 16,
-  "tier": 5
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 16
  },
  {
   "name": "Jordan Mason",
@@ -3210,8 +3324,9 @@
   "rank": 115,
   "leagueBlend": 112.5,
   "leagueRank": 115,
-  "posRankFinal": 40,
-  "tier": 6
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 40
  },
  {
   "name": "Aaron Jones Sr.",
@@ -3238,8 +3353,9 @@
   "rank": 116,
   "leagueBlend": 114.0,
   "leagueRank": 116,
-  "posRankFinal": 41,
-  "tier": 6
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 41
  },
  {
   "name": "Jayden Higgins",
@@ -3266,8 +3382,9 @@
   "rank": 117,
   "leagueBlend": 114.75,
   "leagueRank": 117,
-  "posRankFinal": 49,
-  "tier": 8
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 49
  },
  {
   "name": "Ricky Pearsall",
@@ -3294,8 +3411,9 @@
   "rank": 118,
   "leagueBlend": 115.0,
   "leagueRank": 119,
-  "posRankFinal": 50,
-  "tier": 8
+  "tier": 6,
+  "tierSrc": "band",
+  "posRankFinal": 50
  },
  {
   "name": "Kyler Murray",
@@ -3322,8 +3440,9 @@
   "rank": 119,
   "leagueBlend": 114.75,
   "leagueRank": 118,
-  "posRankFinal": 17,
-  "tier": 5
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 17
  },
  {
   "name": "Jake Ferguson",
@@ -3350,8 +3469,9 @@
   "rank": 120,
   "leagueBlend": 116.0,
   "leagueRank": 120,
-  "posRankFinal": 12,
-  "tier": 4
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 12
  },
  {
   "name": "Matthew Golden",
@@ -3378,8 +3498,9 @@
   "rank": 121,
   "leagueBlend": 120.0,
   "leagueRank": 121,
-  "posRankFinal": 51,
-  "tier": 8
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 51
  },
  {
   "name": "Isaiah Likely",
@@ -3406,8 +3527,9 @@
   "rank": 122,
   "leagueBlend": 120.25,
   "leagueRank": 122,
-  "posRankFinal": 13,
-  "tier": 4
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 13
  },
  {
   "name": "Jordan Love",
@@ -3434,8 +3556,9 @@
   "rank": 123,
   "leagueBlend": 121.0,
   "leagueRank": 123,
-  "posRankFinal": 18,
-  "tier": 6
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 18
  },
  {
   "name": "Baker Mayfield",
@@ -3462,8 +3585,9 @@
   "rank": 124,
   "leagueBlend": 122.75,
   "leagueRank": 124,
-  "posRankFinal": 19,
-  "tier": 6
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 19
  },
  {
   "name": "Jalen Coker",
@@ -3490,8 +3614,9 @@
   "rank": 125,
   "leagueBlend": 124.25,
   "leagueRank": 125,
-  "posRankFinal": 52,
-  "tier": 8
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 52
  },
  {
   "name": "Chris Rodriguez Jr.",
@@ -3518,8 +3643,9 @@
   "rank": 126,
   "leagueBlend": 124.5,
   "leagueRank": 126,
-  "posRankFinal": 42,
-  "tier": 7
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 42
  },
  {
   "name": "KC Concepcion",
@@ -3546,8 +3672,9 @@
   "rank": 127,
   "leagueBlend": 125.0,
   "leagueRank": 127,
-  "posRankFinal": 53,
-  "tier": 8
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 53
  },
  {
   "name": "Dallas Goedert",
@@ -3574,8 +3701,9 @@
   "rank": 128,
   "leagueBlend": 125.5,
   "leagueRank": 128,
-  "posRankFinal": 14,
-  "tier": 4
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 14
  },
  {
   "name": "Romeo Doubs",
@@ -3602,8 +3730,9 @@
   "rank": 129,
   "leagueBlend": 125.75,
   "leagueRank": 129,
-  "posRankFinal": 54,
-  "tier": 8
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 54
  },
  {
   "name": "Mark Andrews",
@@ -3630,8 +3759,9 @@
   "rank": 130,
   "leagueBlend": 128.75,
   "leagueRank": 131,
-  "posRankFinal": 15,
-  "tier": 4
+  "tier": 3,
+  "tierSrc": "fp",
+  "posRankFinal": 15
  },
  {
   "name": "Tyler Shough",
@@ -3658,8 +3788,9 @@
   "rank": 131,
   "leagueBlend": 128.5,
   "leagueRank": 130,
-  "posRankFinal": 20,
-  "tier": 6
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 20
  },
  {
   "name": "Malik Willis",
@@ -3686,8 +3817,9 @@
   "rank": 132,
   "leagueBlend": 128.75,
   "leagueRank": 132,
-  "posRankFinal": 21,
-  "tier": 6
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 21
  },
  {
   "name": "Tyrone Tracy Jr.",
@@ -3714,8 +3846,9 @@
   "rank": 133,
   "leagueBlend": 130.25,
   "leagueRank": 133,
-  "posRankFinal": 43,
-  "tier": 7
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 43
  },
  {
   "name": "Xavier Worthy",
@@ -3742,8 +3875,9 @@
   "rank": 134,
   "leagueBlend": 131.0,
   "leagueRank": 134,
-  "posRankFinal": 55,
-  "tier": 8
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 55
  },
  {
   "name": "Khalil Shakir",
@@ -3770,8 +3904,9 @@
   "rank": 135,
   "leagueBlend": 132.75,
   "leagueRank": 135,
-  "posRankFinal": 56,
-  "tier": 8
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 56
  },
  {
   "name": "Woody Marks",
@@ -3798,8 +3933,9 @@
   "rank": 136,
   "leagueBlend": 132.75,
   "leagueRank": 136,
-  "posRankFinal": 44,
-  "tier": 7
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 44
  },
  {
   "name": "Tyler Allgeier",
@@ -3826,8 +3962,9 @@
   "rank": 137,
   "leagueBlend": 141.0,
   "leagueRank": 137,
-  "posRankFinal": 45,
-  "tier": 8
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 45
  },
  {
   "name": "Zach Charbonnet",
@@ -3854,8 +3991,9 @@
   "rank": 138,
   "leagueBlend": 141.0,
   "leagueRank": 138,
-  "posRankFinal": 46,
-  "tier": 8
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 46
  },
  {
   "name": "Deebo Samuel Sr.",
@@ -3876,8 +4014,9 @@
   "rank": 139,
   "leagueBlend": 141.67,
   "leagueRank": 139,
-  "posRankFinal": 57,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 57
  },
  {
   "name": "Dylan Sampson",
@@ -3904,8 +4043,9 @@
   "rank": 140,
   "leagueBlend": 143.5,
   "leagueRank": 140,
-  "posRankFinal": 47,
-  "tier": 8
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 47
  },
  {
   "name": "Alvin Kamara",
@@ -3932,8 +4072,9 @@
   "rank": 141,
   "leagueBlend": 145.75,
   "leagueRank": 142,
-  "posRankFinal": 48,
-  "tier": 8
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 48
  },
  {
   "name": "C.J. Stroud",
@@ -3960,8 +4101,9 @@
   "rank": 142,
   "leagueBlend": 145.25,
   "leagueRank": 141,
-  "posRankFinal": 22,
-  "tier": 7
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 22
  },
  {
   "name": "Tyjae Spears",
@@ -3988,8 +4130,9 @@
   "rank": 143,
   "leagueBlend": 146.25,
   "leagueRank": 143,
-  "posRankFinal": 49,
-  "tier": 8
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 49
  },
  {
   "name": "Rashid Shaheed",
@@ -4016,8 +4159,9 @@
   "rank": 144,
   "leagueBlend": 146.5,
   "leagueRank": 144,
-  "posRankFinal": 58,
-  "tier": 9
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 58
  },
  {
   "name": "Isiah Pacheco",
@@ -4044,8 +4188,9 @@
   "rank": 145,
   "leagueBlend": 147.0,
   "leagueRank": 145,
-  "posRankFinal": 50,
-  "tier": 8
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 50
  },
  {
   "name": "Juwan Johnson",
@@ -4072,8 +4217,9 @@
   "rank": 146,
   "leagueBlend": 147.5,
   "leagueRank": 146,
-  "posRankFinal": 16,
-  "tier": 5
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 16
  },
  {
   "name": "Cam Ward",
@@ -4100,8 +4246,9 @@
   "rank": 147,
   "leagueBlend": 147.75,
   "leagueRank": 147,
-  "posRankFinal": 23,
-  "tier": 7
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 23
  },
  {
   "name": "Denzel Boston",
@@ -4128,8 +4275,9 @@
   "rank": 148,
   "leagueBlend": 150.0,
   "leagueRank": 148,
-  "posRankFinal": 59,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 59
  },
  {
   "name": "Keaton Mitchell",
@@ -4156,8 +4304,9 @@
   "rank": 149,
   "leagueBlend": 150.25,
   "leagueRank": 149,
-  "posRankFinal": 51,
-  "tier": 8
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 51
  },
  {
   "name": "Brenton Strange",
@@ -4184,8 +4333,9 @@
   "rank": 150,
   "leagueBlend": 152.5,
   "leagueRank": 151,
-  "posRankFinal": 17,
-  "tier": 5
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 17
  },
  {
   "name": "Sam Darnold",
@@ -4212,8 +4362,9 @@
   "rank": 151,
   "leagueBlend": 152.25,
   "leagueRank": 150,
-  "posRankFinal": 24,
-  "tier": 7
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 24
  },
  {
   "name": "Daniel Jones",
@@ -4240,8 +4391,9 @@
   "rank": 152,
   "leagueBlend": 153.75,
   "leagueRank": 152,
-  "posRankFinal": 25,
-  "tier": 7
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 25
  },
  {
   "name": "Brian Robinson Jr.",
@@ -4268,8 +4420,9 @@
   "rank": 153,
   "leagueBlend": 157.0,
   "leagueRank": 153,
-  "posRankFinal": 52,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 52
  },
  {
   "name": "Chig Okonkwo",
@@ -4296,8 +4449,9 @@
   "rank": 154,
   "leagueBlend": 157.25,
   "leagueRank": 154,
-  "posRankFinal": 18,
-  "tier": 5
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 18
  },
  {
   "name": "Tank Bigsby",
@@ -4324,8 +4478,9 @@
   "rank": 155,
   "leagueBlend": 158.25,
   "leagueRank": 155,
-  "posRankFinal": 53,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 53
  },
  {
   "name": "Jalen McMillan",
@@ -4352,8 +4507,9 @@
   "rank": 156,
   "leagueBlend": 158.5,
   "leagueRank": 156,
-  "posRankFinal": 60,
-  "tier": 10
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 60
  },
  {
   "name": "Hunter Henry",
@@ -4380,8 +4536,9 @@
   "rank": 157,
   "leagueBlend": 159.0,
   "leagueRank": 157,
-  "posRankFinal": 19,
-  "tier": 5
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 19
  },
  {
   "name": "Jonah Coleman",
@@ -4408,8 +4565,9 @@
   "rank": 158,
   "leagueBlend": 161.25,
   "leagueRank": 158,
-  "posRankFinal": 54,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 54
  },
  {
   "name": "Bryce Young",
@@ -4436,8 +4594,9 @@
   "rank": 159,
   "leagueBlend": 161.5,
   "leagueRank": 159,
-  "posRankFinal": 26,
-  "tier": 8
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 26
  },
  {
   "name": "Travis Hunter",
@@ -4464,8 +4623,9 @@
   "rank": 160,
   "leagueBlend": 162.5,
   "leagueRank": 160,
-  "posRankFinal": 61,
-  "tier": 10
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 61
  },
  {
   "name": "Omar Cooper Jr.",
@@ -4492,8 +4652,9 @@
   "rank": 161,
   "leagueBlend": 163.5,
   "leagueRank": 161,
-  "posRankFinal": 62,
-  "tier": 10
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 62
  },
  {
   "name": "Jerry Jeudy",
@@ -4520,8 +4681,9 @@
   "rank": 162,
   "leagueBlend": 165.0,
   "leagueRank": 162,
-  "posRankFinal": 63,
-  "tier": 10
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 63
  },
  {
   "name": "De'Zhaun Stribling",
@@ -4548,8 +4710,9 @@
   "rank": 163,
   "leagueBlend": 167.25,
   "leagueRank": 163,
-  "posRankFinal": 64,
-  "tier": 10
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 64
  },
  {
   "name": "Oronde Gadsden II",
@@ -4576,8 +4739,9 @@
   "rank": 164,
   "leagueBlend": 167.25,
   "leagueRank": 164,
-  "posRankFinal": 20,
-  "tier": 6
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 20
  },
  {
   "name": "Jalen Nailor",
@@ -4604,8 +4768,9 @@
   "rank": 165,
   "leagueBlend": 167.25,
   "leagueRank": 165,
-  "posRankFinal": 65,
-  "tier": 10
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 65
  },
  {
   "name": "Adonai Mitchell",
@@ -4632,8 +4797,9 @@
   "rank": 166,
   "leagueBlend": 167.75,
   "leagueRank": 166,
-  "posRankFinal": 66,
-  "tier": 10
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 66
  },
  {
   "name": "Ray Davis",
@@ -4660,8 +4826,9 @@
   "rank": 167,
   "leagueBlend": 168.25,
   "leagueRank": 167,
-  "posRankFinal": 55,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 55
  },
  {
   "name": "Jauan Jennings",
@@ -4688,8 +4855,9 @@
   "rank": 168,
   "leagueBlend": 169.25,
   "leagueRank": 168,
-  "posRankFinal": 67,
-  "tier": 10
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 67
  },
  {
   "name": "Tre Tucker",
@@ -4716,8 +4884,9 @@
   "rank": 169,
   "leagueBlend": 173.25,
   "leagueRank": 169,
-  "posRankFinal": 68,
-  "tier": 11
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 68
  },
  {
   "name": "T.J. Hockenson",
@@ -4744,8 +4913,9 @@
   "rank": 170,
   "leagueBlend": 174.0,
   "leagueRank": 170,
-  "posRankFinal": 21,
-  "tier": 6
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 21
  },
  {
   "name": "Emmett Johnson",
@@ -4772,8 +4942,9 @@
   "rank": 171,
   "leagueBlend": 175.5,
   "leagueRank": 171,
-  "posRankFinal": 56,
-  "tier": 10
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 56
  },
  {
   "name": "Dalton Schultz",
@@ -4800,8 +4971,9 @@
   "rank": 172,
   "leagueBlend": 178.25,
   "leagueRank": 172,
-  "posRankFinal": 22,
-  "tier": 6
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 22
  },
  {
   "name": "Mike Washington Jr.",
@@ -4828,8 +5000,9 @@
   "rank": 173,
   "leagueBlend": 180.5,
   "leagueRank": 173,
-  "posRankFinal": 57,
-  "tier": 10
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 57
  },
  {
   "name": "Ryan Flournoy",
@@ -4856,8 +5029,9 @@
   "rank": 174,
   "leagueBlend": 181.0,
   "leagueRank": 174,
-  "posRankFinal": 69,
-  "tier": 11
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 69
  },
  {
   "name": "Tre' Harris",
@@ -4884,8 +5058,9 @@
   "rank": 175,
   "leagueBlend": 182.0,
   "leagueRank": 175,
-  "posRankFinal": 70,
-  "tier": 11
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 70
  },
  {
   "name": "Nicholas Singleton",
@@ -4912,8 +5087,9 @@
   "rank": 176,
   "leagueBlend": 185.75,
   "leagueRank": 176,
-  "posRankFinal": 58,
-  "tier": 10
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 58
  },
  {
   "name": "Kenyon Sadiq",
@@ -4940,8 +5116,9 @@
   "rank": 177,
   "leagueBlend": 189.25,
   "leagueRank": 177,
-  "posRankFinal": 23,
-  "tier": 7
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 23
  },
  {
   "name": "Jaydon Blue",
@@ -4968,8 +5145,9 @@
   "rank": 178,
   "leagueBlend": 193.25,
   "leagueRank": 178,
-  "posRankFinal": 59,
-  "tier": 11
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 59
  },
  {
   "name": "AJ Barner",
@@ -4996,8 +5174,9 @@
   "rank": 179,
   "leagueBlend": 196.25,
   "leagueRank": 179,
-  "posRankFinal": 24,
-  "tier": 7
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 24
  },
  {
   "name": "Kayshon Boutte",
@@ -5024,8 +5203,9 @@
   "rank": 180,
   "leagueBlend": 196.75,
   "leagueRank": 180,
-  "posRankFinal": 71,
-  "tier": 12
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 71
  },
  {
   "name": "Kimani Vidal",
@@ -5052,8 +5232,9 @@
   "rank": 181,
   "leagueBlend": 197.25,
   "leagueRank": 181,
-  "posRankFinal": 60,
-  "tier": 11
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 60
  },
  {
   "name": "Sean Tucker",
@@ -5080,8 +5261,9 @@
   "rank": 182,
   "leagueBlend": 198.25,
   "leagueRank": 182,
-  "posRankFinal": 61,
-  "tier": 11
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 61
  },
  {
   "name": "MarShawn Lloyd",
@@ -5108,8 +5290,9 @@
   "rank": 183,
   "leagueBlend": 198.5,
   "leagueRank": 183,
-  "posRankFinal": 62,
-  "tier": 11
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 62
  },
  {
   "name": "Calvin Ridley",
@@ -5136,8 +5319,9 @@
   "rank": 184,
   "leagueBlend": 199.25,
   "leagueRank": 184,
-  "posRankFinal": 72,
-  "tier": 12
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 72
  },
  {
   "name": "Malik Washington",
@@ -5164,8 +5348,9 @@
   "rank": 185,
   "leagueBlend": 199.75,
   "leagueRank": 185,
-  "posRankFinal": 73,
-  "tier": 12
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 73
  },
  {
   "name": "Jacoby Brissett",
@@ -5192,8 +5377,9 @@
   "rank": 186,
   "leagueBlend": 199.75,
   "leagueRank": 186,
-  "posRankFinal": 27,
-  "tier": 9
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 27
  },
  {
   "name": "Dontayvion Wicks",
@@ -5220,8 +5406,9 @@
   "rank": 187,
   "leagueBlend": 201.0,
   "leagueRank": 187,
-  "posRankFinal": 74,
-  "tier": 12
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 74
  },
  {
   "name": "Pat Bryant",
@@ -5248,8 +5435,9 @@
   "rank": 188,
   "leagueBlend": 202.25,
   "leagueRank": 188,
-  "posRankFinal": 75,
-  "tier": 12
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 75
  },
  {
   "name": "Emanuel Wilson",
@@ -5276,8 +5464,9 @@
   "rank": 189,
   "leagueBlend": 206.0,
   "leagueRank": 189,
-  "posRankFinal": 63,
-  "tier": 11
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 63
  },
  {
   "name": "James Conner",
@@ -5304,8 +5493,9 @@
   "rank": 190,
   "leagueBlend": 207.0,
   "leagueRank": 190,
-  "posRankFinal": 64,
-  "tier": 11
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 64
  },
  {
   "name": "Braelon Allen",
@@ -5332,8 +5522,9 @@
   "rank": 191,
   "leagueBlend": 209.0,
   "leagueRank": 191,
-  "posRankFinal": 65,
-  "tier": 11
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 65
  },
  {
   "name": "Rashod Bateman",
@@ -5360,8 +5551,9 @@
   "rank": 192,
   "leagueBlend": 209.0,
   "leagueRank": 192,
-  "posRankFinal": 76,
-  "tier": 12
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 76
  },
  {
   "name": "Troy Franklin",
@@ -5388,8 +5580,9 @@
   "rank": 193,
   "leagueBlend": 209.75,
   "leagueRank": 193,
-  "posRankFinal": 77,
-  "tier": 12
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 77
  },
  {
   "name": "Isaac TeSlaa",
@@ -5416,8 +5609,9 @@
   "rank": 194,
   "leagueBlend": 211.0,
   "leagueRank": 194,
-  "posRankFinal": 78,
-  "tier": 12
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 78
  },
  {
   "name": "Kaytron Allen",
@@ -5444,8 +5638,9 @@
   "rank": 195,
   "leagueBlend": 211.25,
   "leagueRank": 195,
-  "posRankFinal": 66,
-  "tier": 11
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 66
  },
  {
   "name": "Antonio Williams",
@@ -5472,8 +5667,9 @@
   "rank": 196,
   "leagueBlend": 213.0,
   "leagueRank": 196,
-  "posRankFinal": 79,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 79
  },
  {
   "name": "Gunnar Helm",
@@ -5500,8 +5696,9 @@
   "rank": 197,
   "leagueBlend": 213.25,
   "leagueRank": 197,
-  "posRankFinal": 25,
-  "tier": 8
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 25
  },
  {
   "name": "Darnell Mooney",
@@ -5528,8 +5725,9 @@
   "rank": 198,
   "leagueBlend": 214.75,
   "leagueRank": 198,
-  "posRankFinal": 80,
-  "tier": 13
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 80
  },
  {
   "name": "Tank Dell",
@@ -5556,8 +5754,9 @@
   "rank": 199,
   "leagueBlend": 215.25,
   "leagueRank": 199,
-  "posRankFinal": 81,
-  "tier": 13
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 81
  },
  {
   "name": "Jaylin Noel",
@@ -5584,8 +5783,9 @@
   "rank": 200,
   "leagueBlend": 217.0,
   "leagueRank": 200,
-  "posRankFinal": 82,
-  "tier": 13
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 82
  },
  {
   "name": "Zachariah Branch",
@@ -5612,8 +5812,9 @@
   "rank": 201,
   "leagueBlend": 217.5,
   "leagueRank": 201,
-  "posRankFinal": 83,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 83
  },
  {
   "name": "Terrance Ferguson",
@@ -5640,8 +5841,9 @@
   "rank": 202,
   "leagueBlend": 219.0,
   "leagueRank": 202,
-  "posRankFinal": 26,
-  "tier": 8
+  "tier": 4,
+  "tierSrc": "fp",
+  "posRankFinal": 26
  },
  {
   "name": "Greg Dulcich",
@@ -5668,8 +5870,9 @@
   "rank": 203,
   "leagueBlend": 219.5,
   "leagueRank": 203,
-  "posRankFinal": 27,
-  "tier": 9
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 27
  },
  {
   "name": "Geno Smith",
@@ -5696,8 +5899,9 @@
   "rank": 204,
   "leagueBlend": 220.0,
   "leagueRank": 204,
-  "posRankFinal": 28,
-  "tier": 9
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 28
  },
  {
   "name": "Pat Freiermuth",
@@ -5724,8 +5928,9 @@
   "rank": 205,
   "leagueBlend": 222.75,
   "leagueRank": 205,
-  "posRankFinal": 28,
-  "tier": 9
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 28
  },
  {
   "name": "Germie Bernard",
@@ -5752,8 +5957,9 @@
   "rank": 206,
   "leagueBlend": 226.0,
   "leagueRank": 206,
-  "posRankFinal": 84,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 84
  },
  {
   "name": "Cooper Kupp",
@@ -5774,8 +5980,9 @@
   "rank": 207,
   "leagueBlend": 226.67,
   "leagueRank": 207,
-  "posRankFinal": 85,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 85
  },
  {
   "name": "Ollie Gordon II",
@@ -5802,8 +6009,9 @@
   "rank": 208,
   "leagueBlend": 229.0,
   "leagueRank": 209,
-  "posRankFinal": 67,
-  "tier": 12
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 67
  },
  {
   "name": "Aaron Rodgers",
@@ -5830,8 +6038,9 @@
   "rank": 209,
   "leagueBlend": 228.25,
   "leagueRank": 208,
-  "posRankFinal": 29,
-  "tier": 9
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 29
  },
  {
   "name": "Jaylen Wright",
@@ -5858,8 +6067,9 @@
   "rank": 210,
   "leagueBlend": 237.75,
   "leagueRank": 210,
-  "posRankFinal": 68,
-  "tier": 12
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 68
  },
  {
   "name": "Demond Claiborne",
@@ -5886,8 +6096,9 @@
   "rank": 211,
   "leagueBlend": 238.25,
   "leagueRank": 211,
-  "posRankFinal": 69,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 69
  },
  {
   "name": "Cade Otton",
@@ -5914,8 +6125,9 @@
   "rank": 212,
   "leagueBlend": 239.5,
   "leagueRank": 212,
-  "posRankFinal": 29,
-  "tier": 9
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 29
  },
  {
   "name": "Justice Hill",
@@ -5942,8 +6154,9 @@
   "rank": 213,
   "leagueBlend": 240.0,
   "leagueRank": 213,
-  "posRankFinal": 70,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 70
  },
  {
   "name": "Kaelon Black",
@@ -5970,8 +6183,9 @@
   "rank": 214,
   "leagueBlend": 240.75,
   "leagueRank": 214,
-  "posRankFinal": 71,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 71
  },
  {
   "name": "Chris Bell",
@@ -5998,8 +6212,9 @@
   "rank": 215,
   "leagueBlend": 242.5,
   "leagueRank": 215,
-  "posRankFinal": 86,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 86
  },
  {
   "name": "Samaje Perine",
@@ -6026,8 +6241,9 @@
   "rank": 216,
   "leagueBlend": 242.5,
   "leagueRank": 216,
-  "posRankFinal": 72,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 72
  },
  {
   "name": "Fernando Mendoza",
@@ -6054,8 +6270,9 @@
   "rank": 217,
   "leagueBlend": 242.5,
   "leagueRank": 217,
-  "posRankFinal": 30,
-  "tier": 9
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 30
  },
  {
   "name": "George Holani",
@@ -6082,8 +6299,9 @@
   "rank": 218,
   "leagueBlend": 243.5,
   "leagueRank": 218,
-  "posRankFinal": 73,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 73
  },
  {
   "name": "Isaiah Davis",
@@ -6104,8 +6322,9 @@
   "rank": 219,
   "leagueBlend": 244.33,
   "leagueRank": 219,
-  "posRankFinal": 74,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 74
  },
  {
   "name": "Malachi Fields",
@@ -6132,8 +6351,9 @@
   "rank": 220,
   "leagueBlend": 244.75,
   "leagueRank": 220,
-  "posRankFinal": 87,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 87
  },
  {
   "name": "Evan Engram",
@@ -6160,8 +6380,9 @@
   "rank": 221,
   "leagueBlend": 245.75,
   "leagueRank": 221,
-  "posRankFinal": 30,
-  "tier": 9
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 30
  },
  {
   "name": "Elijah Sarratt",
@@ -6188,8 +6409,9 @@
   "rank": 222,
   "leagueBlend": 246.0,
   "leagueRank": 222,
-  "posRankFinal": 88,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 88
  },
  {
   "name": "Jordan James",
@@ -6216,8 +6438,9 @@
   "rank": 223,
   "leagueBlend": 247.25,
   "leagueRank": 223,
-  "posRankFinal": 75,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 75
  },
  {
   "name": "Elic Ayomanor",
@@ -6244,8 +6467,9 @@
   "rank": 224,
   "leagueBlend": 247.75,
   "leagueRank": 224,
-  "posRankFinal": 89,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 89
  },
  {
   "name": "Jack Bech",
@@ -6266,8 +6490,9 @@
   "rank": 225,
   "leagueBlend": 248.33,
   "leagueRank": 225,
-  "posRankFinal": 90,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 90
  },
  {
   "name": "Chris Brooks",
@@ -6294,8 +6519,9 @@
   "rank": 226,
   "leagueBlend": 249.25,
   "leagueRank": 226,
-  "posRankFinal": 76,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 76
  },
  {
   "name": "Chimere Dike",
@@ -6322,8 +6548,9 @@
   "rank": 227,
   "leagueBlend": 249.5,
   "leagueRank": 227,
-  "posRankFinal": 91,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 91
  },
  {
   "name": "David Njoku",
@@ -6350,8 +6577,9 @@
   "rank": 228,
   "leagueBlend": 249.5,
   "leagueRank": 228,
-  "posRankFinal": 31,
-  "tier": 9
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 31
  },
  {
   "name": "Colby Parkinson",
@@ -6378,8 +6606,9 @@
   "rank": 229,
   "leagueBlend": 251.0,
   "leagueRank": 229,
-  "posRankFinal": 32,
-  "tier": 9
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 32
  },
  {
   "name": "Ted Hurst III",
@@ -6406,8 +6635,9 @@
   "rank": 230,
   "leagueBlend": 251.5,
   "leagueRank": 230,
-  "posRankFinal": 92,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 92
  },
  {
   "name": "Ja'Kobi Lane",
@@ -6434,8 +6664,9 @@
   "rank": 231,
   "leagueBlend": 253.0,
   "leagueRank": 231,
-  "posRankFinal": 93,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 93
  },
  {
   "name": "Keon Coleman",
@@ -6456,8 +6687,9 @@
   "rank": 232,
   "leagueBlend": 257.0,
   "leagueRank": 232,
-  "posRankFinal": 94,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 94
  },
  {
   "name": "Tyquan Thornton",
@@ -6478,8 +6710,9 @@
   "rank": 233,
   "leagueBlend": 257.33,
   "leagueRank": 233,
-  "posRankFinal": 95,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 95
  },
  {
   "name": "Adam Randall",
@@ -6506,8 +6739,9 @@
   "rank": 234,
   "leagueBlend": 258.5,
   "leagueRank": 234,
-  "posRankFinal": 77,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 77
  },
  {
   "name": "Darius Slayton",
@@ -6534,8 +6768,9 @@
   "rank": 235,
   "leagueBlend": 260.0,
   "leagueRank": 235,
-  "posRankFinal": 96,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 96
  },
  {
   "name": "Brandon Aiyuk",
@@ -6562,8 +6797,9 @@
   "rank": 236,
   "leagueBlend": 261.0,
   "leagueRank": 236,
-  "posRankFinal": 97,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 97
  },
  {
   "name": "LeQuint Allen Jr.",
@@ -6590,8 +6826,9 @@
   "rank": 237,
   "leagueBlend": 261.25,
   "leagueRank": 237,
-  "posRankFinal": 78,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 78
  },
  {
   "name": "Tory Horton",
@@ -6612,8 +6849,9 @@
   "rank": 238,
   "leagueBlend": 262.33,
   "leagueRank": 238,
-  "posRankFinal": 98,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 98
  },
  {
   "name": "Ty Johnson",
@@ -6640,8 +6878,9 @@
   "rank": 239,
   "leagueBlend": 262.75,
   "leagueRank": 239,
-  "posRankFinal": 79,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 79
  },
  {
   "name": "DJ Giddens",
@@ -6668,8 +6907,9 @@
   "rank": 240,
   "leagueBlend": 264.5,
   "leagueRank": 240,
-  "posRankFinal": 80,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 80
  },
  {
   "name": "Tua Tagovailoa",
@@ -6696,8 +6936,9 @@
   "rank": 241,
   "leagueBlend": 264.5,
   "leagueRank": 241,
-  "posRankFinal": 31,
-  "tier": 9
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 31
  },
  {
   "name": "Eli Stowers",
@@ -6724,8 +6965,9 @@
   "rank": 242,
   "leagueBlend": 268.0,
   "leagueRank": 242,
-  "posRankFinal": 33,
-  "tier": 9
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 33
  },
  {
   "name": "Trey Benson",
@@ -6752,8 +6994,9 @@
   "rank": 243,
   "leagueBlend": 270.0,
   "leagueRank": 243,
-  "posRankFinal": 81,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 81
  },
  {
   "name": "Kaleb Johnson",
@@ -6780,8 +7023,9 @@
   "rank": 244,
   "leagueBlend": 272.25,
   "leagueRank": 244,
-  "posRankFinal": 82,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 82
  },
  {
   "name": "Michael Penix Jr.",
@@ -6808,8 +7052,9 @@
   "rank": 245,
   "leagueBlend": 272.5,
   "leagueRank": 245,
-  "posRankFinal": 32,
-  "tier": 9
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 32
  },
  {
   "name": "Devaughn Vele",
@@ -6836,8 +7081,9 @@
   "rank": 246,
   "leagueBlend": 274.5,
   "leagueRank": 246,
-  "posRankFinal": 99,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 99
  },
  {
   "name": "Christian Kirk",
@@ -6858,8 +7104,9 @@
   "rank": 247,
   "leagueBlend": 275.67,
   "leagueRank": 247,
-  "posRankFinal": 100,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 100
  },
  {
   "name": "Xavier Legette",
@@ -6880,8 +7127,9 @@
   "rank": 248,
   "leagueBlend": 275.67,
   "leagueRank": 248,
-  "posRankFinal": 101,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 101
  },
  {
   "name": "Caleb Douglas",
@@ -6902,8 +7150,9 @@
   "rank": 249,
   "leagueBlend": 277.67,
   "leagueRank": 249,
-  "posRankFinal": 102,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 102
  },
  {
   "name": "Mason Taylor",
@@ -6930,8 +7179,9 @@
   "rank": 250,
   "leagueBlend": 279.25,
   "leagueRank": 251,
-  "posRankFinal": 34,
-  "tier": 9
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 34
  },
  {
   "name": "Kirk Cousins",
@@ -6958,8 +7208,9 @@
   "rank": 251,
   "leagueBlend": 278.25,
   "leagueRank": 250,
-  "posRankFinal": 33,
-  "tier": 9
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 33
  },
  {
   "name": "Malik Davis",
@@ -6986,8 +7237,9 @@
   "rank": 252,
   "leagueBlend": 280.25,
   "leagueRank": 254,
-  "posRankFinal": 83,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 83
  },
  {
   "name": "Cyrus Allen",
@@ -7008,8 +7260,9 @@
   "rank": 253,
   "leagueBlend": 280.33,
   "leagueRank": 255,
-  "posRankFinal": 103,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 103
  },
  {
   "name": "Shedeur Sanders",
@@ -7036,8 +7289,9 @@
   "rank": 254,
   "leagueBlend": 279.75,
   "leagueRank": 252,
-  "posRankFinal": 34,
-  "tier": 9
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 34
  },
  {
   "name": "Deshaun Watson",
@@ -7064,8 +7318,9 @@
   "rank": 255,
   "leagueBlend": 280.0,
   "leagueRank": 253,
-  "posRankFinal": 35,
-  "tier": 9
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 35
  },
  {
   "name": "Emari Demercado",
@@ -7086,8 +7341,9 @@
   "rank": 256,
   "leagueBlend": 283.67,
   "leagueRank": 256,
-  "posRankFinal": 84,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 84
  },
  {
   "name": "Mike Gesicki",
@@ -7114,8 +7370,9 @@
   "rank": 257,
   "leagueBlend": 284.75,
   "leagueRank": 257,
-  "posRankFinal": 35,
-  "tier": 9
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 35
  },
  {
   "name": "Isaiah Bond",
@@ -7142,8 +7399,9 @@
   "rank": 258,
   "leagueBlend": 285.75,
   "leagueRank": 258,
-  "posRankFinal": 104,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 104
  },
  {
   "name": "Marvin Mims Jr.",
@@ -7164,8 +7422,9 @@
   "rank": 259,
   "leagueBlend": 286.0,
   "leagueRank": 259,
-  "posRankFinal": 105,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 105
  },
  {
   "name": "Keenan Allen",
@@ -7192,8 +7451,9 @@
   "rank": 260,
   "leagueBlend": 286.25,
   "leagueRank": 260,
-  "posRankFinal": 106,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 106
  },
  {
   "name": "Oscar Delp",
@@ -7220,8 +7480,9 @@
   "rank": 261,
   "leagueBlend": 287.5,
   "leagueRank": 261,
-  "posRankFinal": 36,
-  "tier": 9
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 36
  },
  {
   "name": "Theo Johnson",
@@ -7248,8 +7509,9 @@
   "rank": 262,
   "leagueBlend": 288.5,
   "leagueRank": 262,
-  "posRankFinal": 37,
-  "tier": 9
+  "tier": 5,
+  "tierSrc": "fp",
+  "posRankFinal": 37
  },
  {
   "name": "Devin Neal",
@@ -7276,8 +7538,9 @@
   "rank": 263,
   "leagueBlend": 290.5,
   "leagueRank": 263,
-  "posRankFinal": 85,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 85
  },
  {
   "name": "Tahj Brooks",
@@ -7304,8 +7567,9 @@
   "rank": 264,
   "leagueBlend": 291.25,
   "leagueRank": 264,
-  "posRankFinal": 86,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 86
  },
  {
   "name": "Kendre Miller",
@@ -7332,8 +7596,9 @@
   "rank": 265,
   "leagueBlend": 292.5,
   "leagueRank": 265,
-  "posRankFinal": 87,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 87
  },
  {
   "name": "Brashard Smith",
@@ -7360,8 +7625,9 @@
   "rank": 266,
   "leagueBlend": 295.0,
   "leagueRank": 266,
-  "posRankFinal": 88,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 88
  },
  {
   "name": "Chris Brazzell II",
@@ -7387,8 +7653,9 @@
   "rank": 267,
   "leagueBlend": 295.0,
   "leagueRank": 267,
-  "posRankFinal": 107,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 107
  },
  {
   "name": "Andrei Iosivas",
@@ -7415,8 +7682,9 @@
   "rank": 268,
   "leagueBlend": 295.25,
   "leagueRank": 268,
-  "posRankFinal": 108,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 108
  },
  {
   "name": "Hollywood Brown",
@@ -7443,8 +7711,9 @@
   "rank": 269,
   "leagueBlend": 295.75,
   "leagueRank": 269,
-  "posRankFinal": 109,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 109
  },
  {
   "name": "Seth McGowan",
@@ -7465,8 +7734,9 @@
   "rank": 270,
   "leagueBlend": 297.0,
   "leagueRank": 270,
-  "posRankFinal": 89,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 89
  },
  {
   "name": "Bam Knight",
@@ -7492,8 +7762,9 @@
   "rank": 271,
   "leagueBlend": 299.67,
   "leagueRank": 271,
-  "posRankFinal": 90,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 90
  },
  {
   "name": "Jake Tonges",
@@ -7520,8 +7791,9 @@
   "rank": 272,
   "leagueBlend": 301.0,
   "leagueRank": 272,
-  "posRankFinal": 38,
-  "tier": 9
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 38
  },
  {
   "name": "Skyler Bell",
@@ -7542,8 +7814,9 @@
   "rank": 273,
   "leagueBlend": 301.67,
   "leagueRank": 273,
-  "posRankFinal": 110,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 110
  },
  {
   "name": "Jerome Ford",
@@ -7563,8 +7836,9 @@
   "rank": 274,
   "leagueBlend": 305.0,
   "leagueRank": 274,
-  "posRankFinal": 91,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 91
  },
  {
   "name": "Devin Singletary",
@@ -7585,8 +7859,9 @@
   "rank": 275,
   "leagueBlend": 305.33,
   "leagueRank": 275,
-  "posRankFinal": 92,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 92
  },
  {
   "name": "Tyreek Hill",
@@ -7606,8 +7881,9 @@
   "rank": 276,
   "leagueBlend": 306.0,
   "leagueRank": 276,
-  "posRankFinal": 111,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 111
  },
  {
   "name": "Najee Harris",
@@ -7628,8 +7904,9 @@
   "rank": 277,
   "leagueBlend": 307.33,
   "leagueRank": 278,
-  "posRankFinal": 93,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 93
  },
  {
   "name": "Darnell Washington",
@@ -7650,8 +7927,9 @@
   "rank": 278,
   "leagueBlend": 307.33,
   "leagueRank": 279,
-  "posRankFinal": 39,
-  "tier": 9
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 39
  },
  {
   "name": "Elijah Arroyo",
@@ -7677,8 +7955,9 @@
   "rank": 279,
   "leagueBlend": 307.33,
   "leagueRank": 280,
-  "posRankFinal": 40,
-  "tier": 9
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 40
  },
  {
   "name": "J.J. McCarthy",
@@ -7704,8 +7983,9 @@
   "rank": 280,
   "leagueBlend": 307.0,
   "leagueRank": 277,
-  "posRankFinal": 36,
-  "tier": 9
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 36
  },
  {
   "name": "Jahan Dotson",
@@ -7726,8 +8006,9 @@
   "rank": 281,
   "leagueBlend": 311.67,
   "leagueRank": 281,
-  "posRankFinal": 112,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 112
  },
  {
   "name": "Michael Mayer",
@@ -7753,8 +8034,9 @@
   "rank": 282,
   "leagueBlend": 312.33,
   "leagueRank": 282,
-  "posRankFinal": 41,
-  "tier": 9
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 41
  },
  {
   "name": "Kyle Williams",
@@ -7775,8 +8057,9 @@
   "rank": 283,
   "leagueBlend": 312.67,
   "leagueRank": 283,
-  "posRankFinal": 113,
-  "tier": 13
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 113
  },
  {
   "name": "Calvin Austin III",
@@ -7803,8 +8086,9 @@
   "rank": 284,
   "leagueBlend": 314.25,
   "leagueRank": 284,
-  "posRankFinal": 114,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 114
  },
  {
   "name": "Isaac Guerendo",
@@ -7824,8 +8108,9 @@
   "rank": 285,
   "leagueBlend": 315.0,
   "leagueRank": 285,
-  "posRankFinal": 94,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 94
  },
  {
   "name": "Max Klare",
@@ -7851,8 +8136,9 @@
   "rank": 286,
   "leagueBlend": 315.33,
   "leagueRank": 286,
-  "posRankFinal": 42,
-  "tier": 9
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 42
  },
  {
   "name": "Mack Hollins",
@@ -7873,8 +8159,9 @@
   "rank": 287,
   "leagueBlend": 316.0,
   "leagueRank": 287,
-  "posRankFinal": 115,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 115
  },
  {
   "name": "Jalen Tolbert",
@@ -7895,8 +8182,9 @@
   "rank": 288,
   "leagueBlend": 316.33,
   "leagueRank": 288,
-  "posRankFinal": 116,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 116
  },
  {
   "name": "Jaleel McLaughlin",
@@ -7916,8 +8204,9 @@
   "rank": 289,
   "leagueBlend": 318.0,
   "leagueRank": 289,
-  "posRankFinal": 95,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 95
  },
  {
   "name": "Audric Estime",
@@ -7937,8 +8226,9 @@
   "rank": 290,
   "leagueBlend": 320.0,
   "leagueRank": 291,
-  "posRankFinal": 96,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 96
  },
  {
   "name": "Carson Beck",
@@ -7965,8 +8255,9 @@
   "rank": 291,
   "leagueBlend": 319.5,
   "leagueRank": 290,
-  "posRankFinal": 37,
-  "tier": 9
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 37
  },
  {
   "name": "Trevor Etienne",
@@ -7987,8 +8278,9 @@
   "rank": 292,
   "leagueBlend": 320.67,
   "leagueRank": 292,
-  "posRankFinal": 97,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 97
  },
  {
   "name": "Ja'Tavion Sanders",
@@ -8014,8 +8306,9 @@
   "rank": 293,
   "leagueBlend": 321.0,
   "leagueRank": 293,
-  "posRankFinal": 43,
-  "tier": 9
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 43
  },
  {
   "name": "Will Shipley",
@@ -8035,8 +8328,9 @@
   "rank": 294,
   "leagueBlend": 322.0,
   "leagueRank": 294,
-  "posRankFinal": 98,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 98
  },
  {
   "name": "Kareem Hunt",
@@ -8056,8 +8350,9 @@
   "rank": 295,
   "leagueBlend": 324.0,
   "leagueRank": 295,
-  "posRankFinal": 99,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 99
  },
  {
   "name": "Tyler Higbee",
@@ -8078,8 +8373,9 @@
   "rank": 296,
   "leagueBlend": 324.33,
   "leagueRank": 296,
-  "posRankFinal": 44,
-  "tier": 9
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 44
  },
  {
   "name": "Jarquez Hunter",
@@ -8100,8 +8396,9 @@
   "rank": 297,
   "leagueBlend": 324.67,
   "leagueRank": 297,
-  "posRankFinal": 100,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 100
  },
  {
   "name": "Ty Simpson",
@@ -8127,8 +8424,9 @@
   "rank": 298,
   "leagueBlend": 326.0,
   "leagueRank": 298,
-  "posRankFinal": 38,
-  "tier": 9
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 38
  },
  {
   "name": "Luke McCaffrey",
@@ -8149,8 +8447,9 @@
   "rank": 299,
   "leagueBlend": 327.67,
   "leagueRank": 299,
-  "posRankFinal": 117,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 117
  },
  {
   "name": "Joe Mixon",
@@ -8170,8 +8469,9 @@
   "rank": 300,
   "leagueBlend": 329.0,
   "leagueRank": 302,
-  "posRankFinal": 101,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 101
  },
  {
   "name": "Mac Jones",
@@ -8198,8 +8498,9 @@
   "rank": 301,
   "leagueBlend": 328.5,
   "leagueRank": 300,
-  "posRankFinal": 39,
-  "tier": 9
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 39
  },
  {
   "name": "Justin Fields",
@@ -8225,8 +8526,9 @@
   "rank": 302,
   "leagueBlend": 328.67,
   "leagueRank": 301,
-  "posRankFinal": 40,
-  "tier": 9
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 40
  },
  {
   "name": "Cedric Tillman",
@@ -8246,8 +8548,9 @@
   "rank": 303,
   "leagueBlend": 330.0,
   "leagueRank": 303,
-  "posRankFinal": 118,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 118
  },
  {
   "name": "Tez Johnson",
@@ -8267,8 +8570,9 @@
   "rank": 304,
   "leagueBlend": 333.0,
   "leagueRank": 304,
-  "posRankFinal": 119,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 119
  },
  {
   "name": "DeMario Douglas",
@@ -8289,8 +8593,9 @@
   "rank": 305,
   "leagueBlend": 334.0,
   "leagueRank": 305,
-  "posRankFinal": 120,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 120
  },
  {
   "name": "Erick All Jr.",
@@ -8311,8 +8616,9 @@
   "rank": 306,
   "leagueBlend": 335.33,
   "leagueRank": 306,
-  "posRankFinal": 45,
-  "tier": 9
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 45
  },
  {
   "name": "Cole Kmet",
@@ -8332,8 +8638,9 @@
   "rank": 307,
   "leagueBlend": 337.0,
   "leagueRank": 307,
-  "posRankFinal": 46,
-  "tier": 9
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 46
  },
  {
   "name": "Konata Mumpfield",
@@ -8353,8 +8660,9 @@
   "rank": 308,
   "leagueBlend": 338.0,
   "leagueRank": 308,
-  "posRankFinal": 121,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 121
  },
  {
   "name": "KaVontae Turpin",
@@ -8380,8 +8688,9 @@
   "rank": 309,
   "leagueBlend": 338.67,
   "leagueRank": 309,
-  "posRankFinal": 122,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 122
  },
  {
   "name": "Jalen Royals",
@@ -8401,8 +8710,9 @@
   "rank": 310,
   "leagueBlend": 339.0,
   "leagueRank": 310,
-  "posRankFinal": 123,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 123
  },
  {
   "name": "Joshua Palmer",
@@ -8423,8 +8733,9 @@
   "rank": 311,
   "leagueBlend": 340.33,
   "leagueRank": 311,
-  "posRankFinal": 124,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 124
  },
  {
   "name": "Treylon Burks",
@@ -8445,8 +8756,9 @@
   "rank": 312,
   "leagueBlend": 340.33,
   "leagueRank": 312,
-  "posRankFinal": 125,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 125
  },
  {
   "name": "Brenen Thompson",
@@ -8467,8 +8779,9 @@
   "rank": 313,
   "leagueBlend": 340.67,
   "leagueRank": 313,
-  "posRankFinal": 126,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 126
  },
  {
   "name": "Olamide Zaccheaus",
@@ -8488,8 +8801,9 @@
   "rank": 314,
   "leagueBlend": 341.0,
   "leagueRank": 314,
-  "posRankFinal": 127,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 127
  },
  {
   "name": "Noah Gray",
@@ -8509,8 +8823,9 @@
   "rank": 315,
   "leagueBlend": 344.0,
   "leagueRank": 315,
-  "posRankFinal": 47,
-  "tier": 9
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 47
  },
  {
   "name": "Anthony Richardson Sr.",
@@ -8536,8 +8851,9 @@
   "rank": 316,
   "leagueBlend": 344.0,
   "leagueRank": 316,
-  "posRankFinal": 41,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 41
  },
  {
   "name": "Eli Raridon",
@@ -8558,8 +8874,9 @@
   "rank": 317,
   "leagueBlend": 345.33,
   "leagueRank": 317,
-  "posRankFinal": 48,
-  "tier": 9
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 48
  },
  {
   "name": "Dawson Knox",
@@ -8579,8 +8896,9 @@
   "rank": 318,
   "leagueBlend": 348.0,
   "leagueRank": 318,
-  "posRankFinal": 49,
-  "tier": 9
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 49
  },
  {
   "name": "Devontez Walker",
@@ -8606,8 +8924,9 @@
   "rank": 319,
   "leagueBlend": 349.0,
   "leagueRank": 319,
-  "posRankFinal": 128,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 128
  },
  {
   "name": "Eli Heidenreich",
@@ -8627,8 +8946,9 @@
   "rank": 320,
   "leagueBlend": 350.0,
   "leagueRank": 320,
-  "posRankFinal": 102,
-  "tier": 13
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 102
  },
  {
   "name": "Raheim Sanders",
@@ -8649,8 +8969,9 @@
   "rank": 321,
   "leagueBlend": 352.33,
   "leagueRank": 321,
-  "posRankFinal": 103,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 103
  },
  {
   "name": "Kendrick Bourne",
@@ -8671,8 +8992,9 @@
   "rank": 322,
   "leagueBlend": 356.0,
   "leagueRank": 323,
-  "posRankFinal": 129,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 129
  },
  {
   "name": "Joe Flacco",
@@ -8698,8 +9020,9 @@
   "rank": 323,
   "leagueBlend": 355.33,
   "leagueRank": 322,
-  "posRankFinal": 42,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 42
  },
  {
   "name": "Phil Mafah",
@@ -8720,8 +9043,9 @@
   "rank": 324,
   "leagueBlend": 356.67,
   "leagueRank": 324,
-  "posRankFinal": 104,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 104
  },
  {
   "name": "Bryce Lance",
@@ -8741,8 +9065,9 @@
   "rank": 325,
   "leagueBlend": 357.0,
   "leagueRank": 325,
-  "posRankFinal": 130,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 130
  },
  {
   "name": "Savion Williams",
@@ -8763,8 +9088,9 @@
   "rank": 326,
   "leagueBlend": 358.67,
   "leagueRank": 327,
-  "posRankFinal": 131,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 131
  },
  {
   "name": "Jawhar Jordan",
@@ -8785,8 +9111,9 @@
   "rank": 327,
   "leagueBlend": 358.67,
   "leagueRank": 328,
-  "posRankFinal": 105,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 105
  },
  {
   "name": "Jameis Winston",
@@ -8812,8 +9139,9 @@
   "rank": 328,
   "leagueBlend": 358.33,
   "leagueRank": 326,
-  "posRankFinal": 43,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 43
  },
  {
   "name": "Michael Carter",
@@ -8833,8 +9161,9 @@
   "rank": 329,
   "leagueBlend": 361.0,
   "leagueRank": 329,
-  "posRankFinal": 106,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 106
  },
  {
   "name": "Charlie Kolar",
@@ -8855,8 +9184,9 @@
   "rank": 330,
   "leagueBlend": 362.33,
   "leagueRank": 330,
-  "posRankFinal": 50,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 50
  },
  {
   "name": "Justin Joly",
@@ -8876,8 +9206,9 @@
   "rank": 331,
   "leagueBlend": 363.0,
   "leagueRank": 331,
-  "posRankFinal": 51,
-  "tier": 9
+  "tier": 6,
+  "tierSrc": "fp",
+  "posRankFinal": 51
  },
  {
   "name": "Darren Waller",
@@ -8897,8 +9228,9 @@
   "rank": 332,
   "leagueBlend": 366.0,
   "leagueRank": 332,
-  "posRankFinal": 52,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 52
  },
  {
   "name": "John Metchie III",
@@ -8918,8 +9250,9 @@
   "rank": 333,
   "leagueBlend": 369.0,
   "leagueRank": 333,
-  "posRankFinal": 132,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 132
  },
  {
   "name": "Ashton Dulin",
@@ -8940,8 +9273,9 @@
   "rank": 334,
   "leagueBlend": 369.33,
   "leagueRank": 334,
-  "posRankFinal": 133,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 133
  },
  {
   "name": "Tutu Atwell",
@@ -8961,8 +9295,9 @@
   "rank": 335,
   "leagueBlend": 370.0,
   "leagueRank": 335,
-  "posRankFinal": 134,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 134
  },
  {
   "name": "Malik Benson",
@@ -8983,8 +9318,9 @@
   "rank": 336,
   "leagueBlend": 370.67,
   "leagueRank": 336,
-  "posRankFinal": 135,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 135
  },
  {
   "name": "Noah Fant",
@@ -9004,8 +9340,9 @@
   "rank": 337,
   "leagueBlend": 372.0,
   "leagueRank": 337,
-  "posRankFinal": 53,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 53
  },
  {
   "name": "Nick Chubb",
@@ -9025,8 +9362,9 @@
   "rank": 338,
   "leagueBlend": 373.0,
   "leagueRank": 338,
-  "posRankFinal": 107,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 107
  },
  {
   "name": "Dont'e Thornton Jr.",
@@ -9046,8 +9384,9 @@
   "rank": 339,
   "leagueBlend": 374.0,
   "leagueRank": 339,
-  "posRankFinal": 136,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 136
  },
  {
   "name": "Mitchell Evans",
@@ -9068,8 +9407,9 @@
   "rank": 340,
   "leagueBlend": 375.67,
   "leagueRank": 340,
-  "posRankFinal": 54,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 54
  },
  {
   "name": "Jaylin Lane",
@@ -9089,8 +9429,9 @@
   "rank": 341,
   "leagueBlend": 376.0,
   "leagueRank": 341,
-  "posRankFinal": 137,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 137
  },
  {
   "name": "CJ Daniels",
@@ -9111,8 +9452,9 @@
   "rank": 342,
   "leagueBlend": 376.0,
   "leagueRank": 342,
-  "posRankFinal": 138,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 138
  },
  {
   "name": "Kevin Coleman Jr.",
@@ -9132,8 +9474,9 @@
   "rank": 343,
   "leagueBlend": 378.0,
   "leagueRank": 343,
-  "posRankFinal": 139,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 139
  },
  {
   "name": "Zavion Thomas",
@@ -9154,8 +9497,9 @@
   "rank": 344,
   "leagueBlend": 378.67,
   "leagueRank": 344,
-  "posRankFinal": 140,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 140
  },
  {
   "name": "Xavier Hutchinson",
@@ -9175,8 +9519,9 @@
   "rank": 345,
   "leagueBlend": 379.0,
   "leagueRank": 345,
-  "posRankFinal": 141,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 141
  },
  {
   "name": "J'Mari Taylor",
@@ -9196,8 +9541,9 @@
   "rank": 346,
   "leagueBlend": 380.0,
   "leagueRank": 346,
-  "posRankFinal": 108,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 108
  },
  {
   "name": "Jordan Whittington",
@@ -9218,8 +9564,9 @@
   "rank": 347,
   "leagueBlend": 383.0,
   "leagueRank": 347,
-  "posRankFinal": 142,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 142
  },
  {
   "name": "Zavier Scott",
@@ -9245,8 +9592,9 @@
   "rank": 348,
   "leagueBlend": 383.33,
   "leagueRank": 348,
-  "posRankFinal": 109,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 109
  },
  {
   "name": "Luke Musgrave",
@@ -9266,8 +9614,9 @@
   "rank": 349,
   "leagueBlend": 386.0,
   "leagueRank": 349,
-  "posRankFinal": 55,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 55
  },
  {
   "name": "Kalif Raymond",
@@ -9287,8 +9636,9 @@
   "rank": 350,
   "leagueBlend": 387.0,
   "leagueRank": 351,
-  "posRankFinal": 143,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 143
  },
  {
   "name": "Cade Klubnik",
@@ -9314,8 +9664,9 @@
   "rank": 351,
   "leagueBlend": 386.67,
   "leagueRank": 350,
-  "posRankFinal": 44,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 44
  },
  {
   "name": "Tommy Tremble",
@@ -9335,8 +9686,9 @@
   "rank": 352,
   "leagueBlend": 391.0,
   "leagueRank": 352,
-  "posRankFinal": 56,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 56
  },
  {
   "name": "Roschon Johnson",
@@ -9357,8 +9709,9 @@
   "rank": 353,
   "leagueBlend": 391.0,
   "leagueRank": 353,
-  "posRankFinal": 110,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 110
  },
  {
   "name": "Roman Wilson",
@@ -9379,8 +9732,9 @@
   "rank": 354,
   "leagueBlend": 391.0,
   "leagueRank": 354,
-  "posRankFinal": 144,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 144
  },
  {
   "name": "Nick Westbrook-Ikhine",
@@ -9400,8 +9754,9 @@
   "rank": 355,
   "leagueBlend": 392.0,
   "leagueRank": 355,
-  "posRankFinal": 145,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 145
  },
  {
   "name": "Ben Sinnott",
@@ -9421,8 +9776,9 @@
   "rank": 356,
   "leagueBlend": 393.0,
   "leagueRank": 356,
-  "posRankFinal": 57,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 57
  },
  {
   "name": "Sione Vaki",
@@ -9443,8 +9799,9 @@
   "rank": 357,
   "leagueBlend": 393.67,
   "leagueRank": 357,
-  "posRankFinal": 111,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 111
  },
  {
   "name": "Kyle Juszczyk",
@@ -9464,8 +9821,9 @@
   "rank": 358,
   "leagueBlend": 404.0,
   "leagueRank": 358,
-  "posRankFinal": 112,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 112
  },
  {
   "name": "Daniel Bellinger",
@@ -9485,8 +9843,9 @@
   "rank": 359,
   "leagueBlend": 405.0,
   "leagueRank": 359,
-  "posRankFinal": 58,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 58
  },
  {
   "name": "John Bates",
@@ -9506,8 +9865,9 @@
   "rank": 360,
   "leagueBlend": 406.0,
   "leagueRank": 360,
-  "posRankFinal": 59,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 59
  },
  {
   "name": "Austin Ekeler",
@@ -9527,8 +9887,9 @@
   "rank": 361,
   "leagueBlend": 407.0,
   "leagueRank": 361,
-  "posRankFinal": 113,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 113
  },
  {
   "name": "Colbie Young",
@@ -9549,8 +9910,9 @@
   "rank": 362,
   "leagueBlend": 407.0,
   "leagueRank": 362,
-  "posRankFinal": 146,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 146
  },
  {
   "name": "Dameon Pierce",
@@ -9570,8 +9932,9 @@
   "rank": 363,
   "leagueBlend": 408.0,
   "leagueRank": 363,
-  "posRankFinal": 114,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 114
  },
  {
   "name": "Marcus Mariota",
@@ -9591,8 +9954,9 @@
   "rank": 364,
   "leagueBlend": 410.0,
   "leagueRank": 364,
-  "posRankFinal": 45,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 45
  },
  {
   "name": "Miles Davis",
@@ -9618,8 +9982,9 @@
   "rank": 365,
   "leagueBlend": 414.67,
   "leagueRank": 365,
-  "posRankFinal": 115,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 115
  },
  {
   "name": "Rasheen Ali",
@@ -9639,8 +10004,9 @@
   "rank": 366,
   "leagueBlend": 418.0,
   "leagueRank": 366,
-  "posRankFinal": 116,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 116
  },
  {
   "name": "Jam Miller",
@@ -9660,8 +10026,9 @@
   "rank": 367,
   "leagueBlend": 420.0,
   "leagueRank": 367,
-  "posRankFinal": 117,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 117
  },
  {
   "name": "Damien Martinez",
@@ -9681,8 +10048,9 @@
   "rank": 368,
   "leagueBlend": 421.0,
   "leagueRank": 368,
-  "posRankFinal": 118,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 118
  },
  {
   "name": "Joe Milton III",
@@ -9702,8 +10070,9 @@
   "rank": 369,
   "leagueBlend": 421.0,
   "leagueRank": 369,
-  "posRankFinal": 46,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 46
  },
  {
   "name": "Deion Burks",
@@ -9723,8 +10092,9 @@
   "rank": 370,
   "leagueBlend": 425.0,
   "leagueRank": 370,
-  "posRankFinal": 147,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 147
  },
  {
   "name": "Austin Hooper",
@@ -9744,8 +10114,9 @@
   "rank": 371,
   "leagueBlend": 427.0,
   "leagueRank": 371,
-  "posRankFinal": 60,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 60
  },
  {
   "name": "Zach Ertz",
@@ -9765,8 +10136,9 @@
   "rank": 372,
   "leagueBlend": 429.0,
   "leagueRank": 372,
-  "posRankFinal": 61,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 61
  },
  {
   "name": "Greg Dortch",
@@ -9786,8 +10158,9 @@
   "rank": 373,
   "leagueBlend": 430.0,
   "leagueRank": 373,
-  "posRankFinal": 148,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 148
  },
  {
   "name": "Reggie Virgil",
@@ -9808,8 +10181,9 @@
   "rank": 374,
   "leagueBlend": 430.67,
   "leagueRank": 374,
-  "posRankFinal": 149,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 149
  },
  {
   "name": "Dyami Brown",
@@ -9829,8 +10203,9 @@
   "rank": 375,
   "leagueBlend": 431.0,
   "leagueRank": 375,
-  "posRankFinal": 150,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 150
  },
  {
   "name": "Xavier Restrepo",
@@ -9850,8 +10225,9 @@
   "rank": 376,
   "leagueBlend": 434.0,
   "leagueRank": 376,
-  "posRankFinal": 151,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 151
  },
  {
   "name": "Terrell Jennings",
@@ -9871,8 +10247,9 @@
   "rank": 377,
   "leagueBlend": 435.0,
   "leagueRank": 377,
-  "posRankFinal": 119,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 119
  },
  {
   "name": "Jonnu Smith",
@@ -9892,8 +10269,9 @@
   "rank": 378,
   "leagueBlend": 436.0,
   "leagueRank": 378,
-  "posRankFinal": 62,
-  "tier": 9
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 62
  },
  {
   "name": "Tommy Myers",
@@ -9913,8 +10291,9 @@
   "rank": 379,
   "leagueBlend": 437.0,
   "leagueRank": 379,
-  "posRankFinal": 63,
-  "tier": 9
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 63
  },
  {
   "name": "Jeremy McNichols",
@@ -9934,8 +10313,9 @@
   "rank": 380,
   "leagueBlend": 438.0,
   "leagueRank": 380,
-  "posRankFinal": 120,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 120
  },
  {
   "name": "Demarcus Robinson",
@@ -9955,8 +10335,9 @@
   "rank": 381,
   "leagueBlend": 439.0,
   "leagueRank": 381,
-  "posRankFinal": 152,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 152
  },
  {
   "name": "Ty Chandler",
@@ -9976,8 +10357,9 @@
   "rank": 382,
   "leagueBlend": 440.0,
   "leagueRank": 382,
-  "posRankFinal": 121,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 121
  },
  {
   "name": "Brandin Cooks",
@@ -9997,8 +10379,9 @@
   "rank": 383,
   "leagueBlend": 442.0,
   "leagueRank": 383,
-  "posRankFinal": 153,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 153
  },
  {
   "name": "Khalil Herbert",
@@ -10018,8 +10401,9 @@
   "rank": 384,
   "leagueBlend": 444.0,
   "leagueRank": 384,
-  "posRankFinal": 122,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 122
  },
  {
   "name": "Hunter Luepke",
@@ -10039,8 +10423,9 @@
   "rank": 385,
   "leagueBlend": 445.0,
   "leagueRank": 385,
-  "posRankFinal": 123,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 123
  },
  {
   "name": "Jahdae Walker",
@@ -10060,8 +10445,9 @@
   "rank": 386,
   "leagueBlend": 446.0,
   "leagueRank": 386,
-  "posRankFinal": 154,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 154
  },
  {
   "name": "DeAndre Hopkins",
@@ -10081,8 +10467,9 @@
   "rank": 387,
   "leagueBlend": 447.0,
   "leagueRank": 387,
-  "posRankFinal": 155,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 155
  },
  {
   "name": "Tai Felton",
@@ -10102,8 +10489,9 @@
   "rank": 388,
   "leagueBlend": 448.0,
   "leagueRank": 388,
-  "posRankFinal": 156,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 156
  },
  {
   "name": "Will Kacmarek",
@@ -10123,8 +10511,9 @@
   "rank": 389,
   "leagueBlend": 449.0,
   "leagueRank": 389,
-  "posRankFinal": 64,
-  "tier": 9
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 64
  },
  {
   "name": "Tyler Goodson",
@@ -10144,8 +10533,9 @@
   "rank": 390,
   "leagueBlend": 450.0,
   "leagueRank": 390,
-  "posRankFinal": 124,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 124
  },
  {
   "name": "Mitch Tinsley",
@@ -10165,8 +10555,9 @@
   "rank": 391,
   "leagueBlend": 451.0,
   "leagueRank": 391,
-  "posRankFinal": 157,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 157
  },
  {
   "name": "Dylan Laube",
@@ -10186,8 +10577,9 @@
   "rank": 392,
   "leagueBlend": 452.0,
   "leagueRank": 392,
-  "posRankFinal": 125,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 125
  },
  {
   "name": "Antonio Gibson",
@@ -10207,8 +10599,9 @@
   "rank": 393,
   "leagueBlend": 453.0,
   "leagueRank": 393,
-  "posRankFinal": 126,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 126
  },
  {
   "name": "Odell Beckham Jr.",
@@ -10228,8 +10621,9 @@
   "rank": 394,
   "leagueBlend": 454.0,
   "leagueRank": 394,
-  "posRankFinal": 158,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 158
  },
  {
   "name": "Jalen Milroe",
@@ -10249,8 +10643,9 @@
   "rank": 395,
   "leagueBlend": 454.0,
   "leagueRank": 395,
-  "posRankFinal": 47,
-  "tier": 9
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 47
  },
  {
   "name": "Tyler Lockett",
@@ -10270,8 +10665,9 @@
   "rank": 396,
   "leagueBlend": 456.0,
   "leagueRank": 396,
-  "posRankFinal": 159,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 159
  },
  {
   "name": "Xavier Smith",
@@ -10291,8 +10687,9 @@
   "rank": 397,
   "leagueBlend": 457.0,
   "leagueRank": 397,
-  "posRankFinal": 160,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 160
  },
  {
   "name": "Elijah Moore",
@@ -10312,8 +10709,9 @@
   "rank": 398,
   "leagueBlend": 458.0,
   "leagueRank": 398,
-  "posRankFinal": 161,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 161
  },
  {
   "name": "Tanner Koziol",
@@ -10333,8 +10731,9 @@
   "rank": 399,
   "leagueBlend": 459.0,
   "leagueRank": 399,
-  "posRankFinal": 65,
-  "tier": 9
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 65
  },
  {
   "name": "Diontae Johnson",
@@ -10354,8 +10753,9 @@
   "rank": 400,
   "leagueBlend": 461.0,
   "leagueRank": 400,
-  "posRankFinal": 162,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 162
  },
  {
   "name": "Elijah Higgins",
@@ -10375,8 +10775,9 @@
   "rank": 401,
   "leagueBlend": 462.0,
   "leagueRank": 401,
-  "posRankFinal": 66,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 66
  },
  {
   "name": "Theo Wease Jr.",
@@ -10396,8 +10797,9 @@
   "rank": 402,
   "leagueBlend": 463.0,
   "leagueRank": 402,
-  "posRankFinal": 163,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 163
  },
  {
   "name": "Josh Oliver",
@@ -10417,8 +10819,9 @@
   "rank": 403,
   "leagueBlend": 464.0,
   "leagueRank": 403,
-  "posRankFinal": 67,
-  "tier": 9
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 67
  },
  {
   "name": "Adam Trautman",
@@ -10438,8 +10841,9 @@
   "rank": 404,
   "leagueBlend": 465.0,
   "leagueRank": 404,
-  "posRankFinal": 68,
-  "tier": 9
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 68
  },
  {
   "name": "Miles Sanders",
@@ -10459,8 +10863,9 @@
   "rank": 405,
   "leagueBlend": 466.0,
   "leagueRank": 405,
-  "posRankFinal": 127,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 127
  },
  {
   "name": "Riley Leonard",
@@ -10480,8 +10885,9 @@
   "rank": 406,
   "leagueBlend": 466.0,
   "leagueRank": 406,
-  "posRankFinal": 48,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 48
  },
  {
   "name": "Raheem Mostert",
@@ -10501,8 +10907,9 @@
   "rank": 407,
   "leagueBlend": 468.0,
   "leagueRank": 407,
-  "posRankFinal": 128,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 128
  },
  {
   "name": "Jermaine Burton",
@@ -10522,8 +10929,9 @@
   "rank": 408,
   "leagueBlend": 469.0,
   "leagueRank": 408,
-  "posRankFinal": 164,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 164
  },
  {
   "name": "Jackson Hawes",
@@ -10543,8 +10951,9 @@
   "rank": 409,
   "leagueBlend": 470.0,
   "leagueRank": 409,
-  "posRankFinal": 69,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 69
  },
  {
   "name": "Quinn Ewers",
@@ -10564,8 +10973,9 @@
   "rank": 410,
   "leagueBlend": 470.0,
   "leagueRank": 410,
-  "posRankFinal": 49,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 49
  },
  {
   "name": "Elijah Mitchell",
@@ -10585,8 +10995,9 @@
   "rank": 411,
   "leagueBlend": 472.0,
   "leagueRank": 411,
-  "posRankFinal": 129,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 129
  },
  {
   "name": "Mo Alie-Cox",
@@ -10606,8 +11017,9 @@
   "rank": 412,
   "leagueBlend": 473.0,
   "leagueRank": 412,
-  "posRankFinal": 70,
-  "tier": 9
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 70
  },
  {
   "name": "Reggie Gilliam",
@@ -10627,8 +11039,9 @@
   "rank": 413,
   "leagueBlend": 474.0,
   "leagueRank": 413,
-  "posRankFinal": 130,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 130
  },
  {
   "name": "Marquez Valdes-Scantling",
@@ -10648,8 +11061,9 @@
   "rank": 414,
   "leagueBlend": 475.0,
   "leagueRank": 414,
-  "posRankFinal": 165,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 165
  },
  {
   "name": "Michael Woods II",
@@ -10669,8 +11083,9 @@
   "rank": 415,
   "leagueBlend": 477.0,
   "leagueRank": 415,
-  "posRankFinal": 166,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 166
  },
  {
   "name": "Van Jefferson",
@@ -10690,8 +11105,9 @@
   "rank": 416,
   "leagueBlend": 478.0,
   "leagueRank": 416,
-  "posRankFinal": 167,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 167
  },
  {
   "name": "Marlin Klein",
@@ -10711,8 +11127,9 @@
   "rank": 417,
   "leagueBlend": 479.0,
   "leagueRank": 417,
-  "posRankFinal": 71,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 71
  },
  {
   "name": "Jimmy Horn Jr.",
@@ -10732,8 +11149,9 @@
   "rank": 418,
   "leagueBlend": 480.0,
   "leagueRank": 418,
-  "posRankFinal": 168,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 168
  },
  {
   "name": "Robert Henry Jr.",
@@ -10753,8 +11171,9 @@
   "rank": 419,
   "leagueBlend": 481.0,
   "leagueRank": 419,
-  "posRankFinal": 131,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 131
  },
  {
   "name": "Max Bredeson",
@@ -10774,8 +11193,9 @@
   "rank": 420,
   "leagueBlend": 482.0,
   "leagueRank": 420,
-  "posRankFinal": 132,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 132
  },
  {
   "name": "Zamir White",
@@ -10795,8 +11215,9 @@
   "rank": 421,
   "leagueBlend": 483.0,
   "leagueRank": 421,
-  "posRankFinal": 133,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 133
  },
  {
   "name": "Gabe Davis",
@@ -10816,8 +11237,9 @@
   "rank": 422,
   "leagueBlend": 484.0,
   "leagueRank": 422,
-  "posRankFinal": 169,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 169
  },
  {
   "name": "Sincere McCormick",
@@ -10837,8 +11259,9 @@
   "rank": 423,
   "leagueBlend": 485.0,
   "leagueRank": 423,
-  "posRankFinal": 134,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 134
  },
  {
   "name": "Gardner Minshew II",
@@ -10858,8 +11281,9 @@
   "rank": 424,
   "leagueBlend": 485.0,
   "leagueRank": 424,
-  "posRankFinal": 50,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 50
  },
  {
   "name": "Tim Patrick",
@@ -10879,8 +11303,9 @@
   "rank": 425,
   "leagueBlend": 487.0,
   "leagueRank": 425,
-  "posRankFinal": 170,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 170
  },
  {
   "name": "Luke Schoonmaker",
@@ -10900,8 +11325,9 @@
   "rank": 426,
   "leagueBlend": 488.0,
   "leagueRank": 426,
-  "posRankFinal": 72,
-  "tier": 9
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 72
  },
  {
   "name": "David Sills V",
@@ -10921,8 +11347,9 @@
   "rank": 427,
   "leagueBlend": 489.0,
   "leagueRank": 427,
-  "posRankFinal": 171,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 171
  },
  {
   "name": "Cam Akers",
@@ -10942,8 +11369,9 @@
   "rank": 428,
   "leagueBlend": 490.0,
   "leagueRank": 428,
-  "posRankFinal": 135,
-  "tier": 13
+  "tier": 12,
+  "tierSrc": "fp",
+  "posRankFinal": 135
  },
  {
   "name": "Taysom Hill",
@@ -10963,8 +11391,9 @@
   "rank": 429,
   "leagueBlend": 492.0,
   "leagueRank": 429,
-  "posRankFinal": 73,
-  "tier": 9
+  "tier": 9,
+  "tierSrc": "fp",
+  "posRankFinal": 73
  },
  {
   "name": "Frank Gore Jr.",
@@ -10984,8 +11413,9 @@
   "rank": 430,
   "leagueBlend": 493.0,
   "leagueRank": 430,
-  "posRankFinal": 136,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 136
  },
  {
   "name": "Gus Edwards",
@@ -11005,8 +11435,9 @@
   "rank": 431,
   "leagueBlend": 494.0,
   "leagueRank": 431,
-  "posRankFinal": 137,
-  "tier": 13
+  "tier": 12,
+  "tierSrc": "band",
+  "posRankFinal": 137
  },
  {
   "name": "Trey Lance",
@@ -11026,8 +11457,9 @@
   "rank": 432,
   "leagueBlend": 494.0,
   "leagueRank": 432,
-  "posRankFinal": 51,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 51
  },
  {
   "name": "Tyrod Taylor",
@@ -11047,8 +11479,9 @@
   "rank": 433,
   "leagueBlend": 495.0,
   "leagueRank": 433,
-  "posRankFinal": 52,
-  "tier": 9
+  "tier": 7,
+  "tierSrc": "fp",
+  "posRankFinal": 52
  },
  {
   "name": "JuJu Smith-Schuster",
@@ -11068,8 +11501,9 @@
   "rank": 434,
   "leagueBlend": 497.0,
   "leagueRank": 434,
-  "posRankFinal": 172,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 172
  },
  {
   "name": "Jaydn Ott",
@@ -11089,8 +11523,9 @@
   "rank": 435,
   "leagueBlend": 498.0,
   "leagueRank": 435,
-  "posRankFinal": 138,
-  "tier": 13
+  "tier": 10,
+  "tierSrc": "fp",
+  "posRankFinal": 138
  },
  {
   "name": "Cash Jones",
@@ -11110,8 +11545,9 @@
   "rank": 436,
   "leagueBlend": 499.0,
   "leagueRank": 436,
-  "posRankFinal": 139,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 139
  },
  {
   "name": "Juice Wells Jr.",
@@ -11131,8 +11567,9 @@
   "rank": 437,
   "leagueBlend": 500.0,
   "leagueRank": 437,
-  "posRankFinal": 173,
-  "tier": 13
+  "tier": 12,
+  "tierSrc": "fp",
+  "posRankFinal": 173
  },
  {
   "name": "Lil'Jordan Humphrey",
@@ -11152,8 +11589,9 @@
   "rank": 438,
   "leagueBlend": 501.0,
   "leagueRank": 438,
-  "posRankFinal": 174,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 174
  },
  {
   "name": "Myles Montgomery",
@@ -11173,8 +11611,9 @@
   "rank": 439,
   "leagueBlend": 502.0,
   "leagueRank": 439,
-  "posRankFinal": 140,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 140
  },
  {
   "name": "Jacob Cowing",
@@ -11194,8 +11633,9 @@
   "rank": 440,
   "leagueBlend": 504.0,
   "leagueRank": 440,
-  "posRankFinal": 175,
-  "tier": 13
+  "tier": 11,
+  "tierSrc": "fp",
+  "posRankFinal": 175
  },
  {
   "name": "Michael Trigg",
@@ -11215,7 +11655,8 @@
   "rank": 441,
   "leagueBlend": 505.0,
   "leagueRank": 441,
-  "posRankFinal": 74,
-  "tier": 9
+  "tier": 8,
+  "tierSrc": "fp",
+  "posRankFinal": 74
  }
 ]

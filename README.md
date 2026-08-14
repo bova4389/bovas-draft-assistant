@@ -31,12 +31,22 @@ would have dragged good players down for no reason.
 
 ## Tiers
 
-Public 2026 draft tiers were not available — Boris Chen's files still hold last
-season's data, and FantasyPros only exports *overall* tiers, not per-position.
-So position tiers are computed here: 1-D Jenks natural breaks (optimal dynamic
-programming) over the blended rank inside each position, which is the same
-"cluster players the experts treat as interchangeable" idea. Pool depth and tier
-count per position are set in `POOL` in `merge.py`.
+Straight from FantasyPros' per-position exports (`fp_QB.csv` … `fp_TE.csv`) —
+analyst-set, not derived. 439 of 441 players match by name; the two they omit
+get banded into whichever tier their blended rank falls inside, and are marked
+`tierSrc: "band"` in `merged.json`.
+
+QB has 9 tiers, RB 12, WR 13, TE 11.
+
+Because the blend is only 50% FantasyPros, blended rank and FantasyPros tier
+occasionally disagree. Position tabs therefore sort **tier-major** (tier first,
+blended rank within the tier) so the tier bars stay in order; the Overall tab
+sorts purely by blended rank and shows the tier as a badge.
+
+An earlier build computed tiers with Jenks natural breaks because no 2026
+per-position tiers were published anywhere — Boris Chen's fftiers S3 files still
+serve last season's data. That code is retained below the `raise SystemExit` in
+`merge.py` for reference only.
 
 ## The 6-point passing TD adjustment
 

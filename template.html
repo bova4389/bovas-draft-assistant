@@ -415,7 +415,14 @@ function rowHTML(p, idx, taken, showTier){
 function drawList(){
   const taken = takenBy();
   const q = $("#q").value.trim().toLowerCase();
-  let list = sorted();
+
+  // On a position tab the list runs tier-major, so the tier bars stay in order
+  // even where the blended rank disagrees with FantasyPros' tier assignment.
+  // Within a tier, and everywhere else, the blended rank decides.
+  const byTierOrder = POS.includes(S.tab) && !q;
+  let list = PLAYERS.slice().sort(byTierOrder
+    ? (a, b) => (a.tr - b.tr) || (rankOf(a) - rankOf(b))
+    : (a, b) => rankOf(a) - rankOf(b));
 
   if (S.tab !== "ALL") list = list.filter(p => p.p === S.tab);
   if (q) list = list.filter(p => p.n.toLowerCase().includes(q) || p.t.toLowerCase() === q);
@@ -439,7 +446,7 @@ function drawList(){
 
   let html = addBanner();
   let tier = null;
-  const byTier = S.tab !== "ALL" && !q;
+  const byTier = byTierOrder;
   for (const p of list){
     if (byTier && p.tr !== tier){
       tier = p.tr;

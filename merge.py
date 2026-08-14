@@ -202,9 +202,66 @@ for i, p in enumerate(sorted(players, key=lambda p: p['leagueBlend']), 1):
     p['leagueRank'] = i
 
 # -------------------------------------------------------------------- tiers
-# 1-D Jenks natural breaks (optimal DP) over the blended rank inside each
-# position — the same "cluster players the experts treat as interchangeable"
-# idea Boris Chen uses, since his 2026 draft tiers were never published.
+# FantasyPros' own per-position tiers, straight from their position exports.
+# They are analyst-set, so they win outright over anything derived here; the
+# banding below only covers players their position files leave out.
+POSITIONS = ['QB', 'RB', 'WR', 'TE']
+
+fp_tier = {}
+for pos in POSITIONS:
+    with open('fp_%s.csv' % pos, encoding='utf-8-sig') as f:
+        for r in csv.DictReader(f):
+            fp_tier[(pos, key_full(r['PLAYER NAME']))] = int(r['TIERS'])
+
+untiered = []
+for p in players:
+    t = fp_tier.get((p['pos'], key_full(p['name'])))
+    if t:
+        p['tier'], p['tierSrc'] = t, 'fp'
+    else:
+        untiered.append(p)
+
+# Anyone FantasyPros skips is slotted into whichever tier band their blended
+# rank falls inside, so nobody vanishes off a position tab.
+for pos in POSITIONS:
+    edges = sorted(
+        {p['tier']: p['blend']
+         for p in sorted((x for x in players
+                          if x['pos'] == pos and x.get('tierSrc') == 'fp'),
+                         key=lambda x: -x['blend'])}.items())
+    for p in (x for x in untiered if x['pos'] == pos):
+        t = edges[-1][0] if edges else 1
+        for tier, lo in edges:
+            if p['blend'] < lo:
+                t = max(1, tier - 1)
+                break
+        p['tier'], p['tierSrc'] = t, 'band'
+
+# Position rank follows the blended order so each tab reads 1, 2, 3 ...
+for pos in POSITIONS:
+    for i, p in enumerate(sorted((x for x in players if x['pos'] == pos),
+                                 key=lambda x: x['blend']), 1):
+        p['posRankFinal'] = i
+
+print('\ntiers from FantasyPros: %d   banded fallback: %d'
+      % (sum(1 for p in players if p.get('tierSrc') == 'fp'), len(untiered)))
+for pos in POSITIONS:
+    g = sorted((p for p in players if p['pos'] == pos and p['tier'] <= 6),
+               key=lambda x: (x['tier'], x['blend']))
+    print('\n%s' % pos)
+    cur = None
+    for p in g:
+        if p['tier'] != cur:
+            cur = p['tier']
+            print('\n  T%d:' % cur, end='')
+        print(' %s%s' % (p['name'], '*' if p.get('tierSrc') == 'band' else ''), end='')
+    print()
+
+json.dump(players, open('merged.json', 'w'), indent=1)
+print('\n\nwrote %d players' % len(players))
+raise SystemExit
+
+# --- superseded by the FantasyPros exports above; kept for reference --------
 def jenks(vals, k):
     n = len(vals)
     k = min(k, n)
