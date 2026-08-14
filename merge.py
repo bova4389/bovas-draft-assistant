@@ -176,30 +176,17 @@ players.sort(key=lambda p: p['blend'])
 for i, p in enumerate(players, 1):
     p['rank'] = i
 
-# --------------------------------------------------- league-specific tweak
-# This league pays 6 points per passing TD (Sleeper `pass_td: 6`) while every
-# public ranking assumes 4. That widens the gap between elite and streamer QBs,
-# historically worth about a round to a round and a half at the top.
-QB_SHIFT = [(4, 10), (10, 7), (16, 4)]  # (through QB rank, spots to move up)
-
-
-def qb_shift(qb_rank):
-    for cutoff, spots in QB_SHIFT:
-        if qb_rank <= cutoff:
-            return spots
-    return 1
-
-
-qb_n = 0
-for p in players:
-    if p['pos'] == 'QB':
-        qb_n += 1
-        p['leagueBlend'] = max(0.1, p['blend'] - qb_shift(qb_n))
-    else:
-        p['leagueBlend'] = p['blend']
-
-for i, p in enumerate(sorted(players, key=lambda p: p['leagueBlend']), 1):
-    p['leagueRank'] = i
+# ------------------------------------------- no league-specific adjustment
+# Deliberately none. Two of this league's settings push in opposite directions
+# and roughly cancel:
+#   - 6 points per passing TD (public rankings assume 4) lifts QBs;
+#   - three flex spots on top of 2RB/2WR drain RB/WR far faster than the
+#     rankings assume, which lifts those.
+# An earlier build shifted QBs up but had no way to do the RB/WR half honestly
+# (that needs value-over-replacement, which needs projected points, and all
+# three sources are rank-only). Correcting one side alone just biased the board
+# toward QBs, so the ranking below is straight blended consensus. The old shift
+# is in git history if it is ever wanted back.
 
 # -------------------------------------------------------------------- tiers
 # FantasyPros' own per-position tiers, straight from their position exports.

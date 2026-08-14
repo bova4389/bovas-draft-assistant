@@ -48,14 +48,21 @@ per-position tiers were published anywhere — Boris Chen's fftiers S3 files sti
 serve last season's data. That code is retained below the `raise SystemExit` in
 `merge.py` for reference only.
 
-## The 6-point passing TD adjustment
+## No league-specific adjustment — on purpose
 
-Every public ranking assumes 4-point passing TDs. This league pays 6, which
-widens the gap between elite and streamer QBs — historically about a round to a
-round and a half at the top. The **6pt QB** toggle applies it (QB1–4 up 10
-spots, QB5–10 up 7, QB11–16 up 4, rest up 1). Turn it off to see straight
-consensus. It only changes where QBs sit in the *overall* list; it never
-reorders QBs among themselves, so QB tiers are unaffected either way.
+Two of this league's settings pull in opposite directions and roughly cancel:
+
+- **6 points per passing TD** (public rankings assume 4) lifts QBs;
+- **three flex spots** on top of 2RB/2WR drain RB/WR far faster than the
+  rankings assume, which lifts those.
+
+An earlier build shifted QBs up for the first one, but there was no honest way
+to do the RB/WR half: that needs value-over-replacement, VOR needs projected
+points, and all three sources are rank-only. Correcting one side alone just
+biased the board toward QBs. So the ranking is straight blended consensus, and
+Josh Allen sits at overall 27 where the experts put him.
+
+The old shift is in git history if it is ever wanted back.
 
 ## Rebuilding
 

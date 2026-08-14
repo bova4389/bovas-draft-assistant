@@ -8,11 +8,11 @@ users_raw = json.load(open('users.json'))
 
 # Short keys keep the embedded blob small enough to stay comfortable on an iPad.
 out = []
-for p in sorted(players, key=lambda x: x['leagueRank']):
+for p in sorted(players, key=lambda x: x['rank']):
     out.append({
         'n': p['name'], 't': p['team'], 'p': p['pos'],
         'b': p['bye'], 'tr': p['tier'], 'pr': p['posRankFinal'],
-        'r': p['rank'], 'lr': p['leagueRank'],
+        'r': p['rank'],
         'fp': p.get('fp'), 'yh': p.get('yahoo'), 'jy': p.get('jyj'),
         'sp': p.get('spread'),
         'i': bool(p.get('inj')), 'rk': bool(p.get('rookie')),

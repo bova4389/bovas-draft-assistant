@@ -242,7 +242,6 @@ dialog select,dialog input{
     <input id="q" type="search" placeholder="Search any player..." autocomplete="off"
            autocorrect="off" autocapitalize="off" spellcheck="false">
     <button id="filter" class="on">Hide drafted</button>
-    <button id="mode" class="on" title="Adjust for this league's 6-point passing TDs">6pt QB</button>
   </div>
 </header>
 
@@ -290,7 +289,6 @@ const S = Object.assign({
   slot: LEAGUE.defaultMe,
   tab: "ALL",
   filter: "hide",   // hide | all | only  (drafted players)
-  league: true,     // apply the 6-point-passing-TD adjustment
   sync: "off",
   viewTeam: 0,      // which team the Rosters tab is showing (0 = mine)
   addTo: 0,         // when set, taps assign to this slot instead of the clock
@@ -332,8 +330,8 @@ const takenBy = () => {                 // player index -> slot
 };
 
 /* ---------------------------------------------------------------- ranking */
-function rankOf(p){ return S.league ? p.lr : p.r; }
-function sorted(){ return PLAYERS.slice().sort((a,b) => rankOf(a) - rankOf(b)); }
+// Straight blended consensus - see merge.py for why no league adjustment is applied.
+function rankOf(p){ return p.r; }
 
 /* ------------------------------------------------------------------- draft */
 function draft(idx, slot){
@@ -601,10 +599,6 @@ $("#filter").addEventListener("click", () => {
   S.filter = FILTERS[(i + 1) % FILTERS.length][0];
   drawFilter(); save(); drawList();
 });
-$("#mode").addEventListener("click", e => {
-  S.league = !S.league; e.target.classList.toggle("on", S.league); save(); render();
-  toast(S.league ? "Ranks adjusted for 6pt passing TDs" : "Straight consensus ranks");
-});
 $("#undo").addEventListener("click", undo);
 
 /* ----------------------------------------------------------------- setup */
@@ -693,8 +687,8 @@ if (typeof S.hide === "boolean" && !FILTERS.some(f => f[0] === S.filter)){
   S.filter = S.hide ? "hide" : "all";
 }
 delete S.hide;
+delete S.league;
 drawFilter();
-$("#mode").classList.toggle("on", S.league);
 render();
 startSync();
 </script>

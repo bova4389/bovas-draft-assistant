@@ -22,8 +22,6 @@
   "sources": 3,
   "spread": 2,
   "rank": 1,
-  "leagueBlend": 1.5,
-  "leagueRank": 1,
   "tier": 1,
   "tierSrc": "fp",
   "posRankFinal": 1
@@ -51,8 +49,6 @@
   "sources": 3,
   "spread": 3,
   "rank": 2,
-  "leagueBlend": 2.25,
-  "leagueRank": 2,
   "tier": 1,
   "tierSrc": "fp",
   "posRankFinal": 1
@@ -80,8 +76,6 @@
   "sources": 3,
   "spread": 2,
   "rank": 3,
-  "leagueBlend": 3.0,
-  "leagueRank": 3,
   "tier": 1,
   "tierSrc": "fp",
   "posRankFinal": 2
@@ -109,8 +103,6 @@
   "sources": 3,
   "spread": 2,
   "rank": 4,
-  "leagueBlend": 3.25,
-  "leagueRank": 4,
   "tier": 1,
   "tierSrc": "fp",
   "posRankFinal": 2
@@ -138,8 +130,6 @@
   "sources": 3,
   "spread": 3,
   "rank": 5,
-  "leagueBlend": 6.25,
-  "leagueRank": 5,
   "tier": 1,
   "tierSrc": "fp",
   "posRankFinal": 3
@@ -167,8 +157,6 @@
   "sources": 3,
   "spread": 4,
   "rank": 6,
-  "leagueBlend": 7.0,
-  "leagueRank": 6,
   "tier": 1,
   "tierSrc": "fp",
   "posRankFinal": 4
@@ -196,8 +184,6 @@
   "sources": 3,
   "spread": 3,
   "rank": 7,
-  "leagueBlend": 7.0,
-  "leagueRank": 7,
   "tier": 1,
   "tierSrc": "fp",
   "posRankFinal": 3
@@ -225,8 +211,6 @@
   "sources": 3,
   "spread": 5,
   "rank": 8,
-  "leagueBlend": 8.25,
-  "leagueRank": 8,
   "tier": 2,
   "tierSrc": "fp",
   "posRankFinal": 4
@@ -254,8 +238,6 @@
   "sources": 3,
   "spread": 6,
   "rank": 9,
-  "leagueBlend": 9.0,
-  "leagueRank": 9,
   "tier": 2,
   "tierSrc": "fp",
   "posRankFinal": 5
@@ -283,8 +265,6 @@
   "sources": 3,
   "spread": 3,
   "rank": 10,
-  "leagueBlend": 10.25,
-  "leagueRank": 10,
   "tier": 2,
   "tierSrc": "fp",
   "posRankFinal": 6
@@ -312,8 +292,6 @@
   "sources": 3,
   "spread": 10,
   "rank": 11,
-  "leagueBlend": 12.0,
-  "leagueRank": 11,
   "tier": 2,
   "tierSrc": "fp",
   "posRankFinal": 5
@@ -341,8 +319,6 @@
   "sources": 3,
   "spread": 2,
   "rank": 12,
-  "leagueBlend": 13.5,
-  "leagueRank": 12,
   "tier": 2,
   "tierSrc": "fp",
   "posRankFinal": 6
@@ -370,8 +346,6 @@
   "sources": 3,
   "spread": 10,
   "rank": 13,
-  "leagueBlend": 15.0,
-  "leagueRank": 13,
   "tier": 2,
   "tierSrc": "fp",
   "posRankFinal": 7
@@ -399,8 +373,6 @@
   "sources": 3,
   "spread": 8,
   "rank": 14,
-  "leagueBlend": 16.25,
-  "leagueRank": 14,
   "tier": 2,
   "tierSrc": "fp",
   "posRankFinal": 8
@@ -428,8 +400,6 @@
   "sources": 3,
   "spread": 5,
   "rank": 15,
-  "leagueBlend": 16.25,
-  "leagueRank": 15,
   "tier": 2,
   "tierSrc": "fp",
   "posRankFinal": 7
@@ -457,8 +427,6 @@
   "sources": 3,
   "spread": 12,
   "rank": 16,
-  "leagueBlend": 16.75,
-  "leagueRank": 16,
   "tier": 2,
   "tierSrc": "fp",
   "posRankFinal": 8
@@ -486,8 +454,6 @@
   "sources": 3,
   "spread": 12,
   "rank": 17,
-  "leagueBlend": 17.75,
-  "leagueRank": 18,
   "tier": 2,
   "tierSrc": "fp",
   "posRankFinal": 9
@@ -515,8 +481,6 @@
   "sources": 3,
   "spread": 4,
   "rank": 18,
-  "leagueBlend": 18.5,
-  "leagueRank": 19,
   "tier": 1,
   "tierSrc": "fp",
   "posRankFinal": 1
@@ -544,8 +508,6 @@
   "sources": 3,
   "spread": 15,
   "rank": 19,
-  "leagueBlend": 19.5,
-  "leagueRank": 20,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 9
@@ -573,8 +535,6 @@
   "sources": 3,
   "spread": 18,
   "rank": 20,
-  "leagueBlend": 20.0,
-  "leagueRank": 21,
   "tier": 1,
   "tierSrc": "fp",
   "posRankFinal": 2
@@ -602,8 +562,6 @@
   "sources": 3,
   "spread": 4,
   "rank": 21,
-  "leagueBlend": 20.0,
-  "leagueRank": 22,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 10
@@ -631,8 +589,6 @@
   "sources": 3,
   "spread": 15,
   "rank": 22,
-  "leagueBlend": 21.5,
-  "leagueRank": 23,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 10
@@ -660,8 +616,6 @@
   "sources": 3,
   "spread": 6,
   "rank": 23,
-  "leagueBlend": 22.25,
-  "leagueRank": 24,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 11
@@ -689,8 +643,6 @@
   "sources": 3,
   "spread": 8,
   "rank": 24,
-  "leagueBlend": 24.25,
-  "leagueRank": 25,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 11
@@ -718,8 +670,6 @@
   "sources": 3,
   "spread": 14,
   "rank": 25,
-  "leagueBlend": 25.75,
-  "leagueRank": 26,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 12
@@ -747,8 +697,6 @@
   "sources": 3,
   "spread": 14,
   "rank": 26,
-  "leagueBlend": 27.0,
-  "leagueRank": 27,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 13
@@ -776,8 +724,6 @@
   "sources": 3,
   "spread": 6,
   "rank": 27,
-  "leagueBlend": 17.25,
-  "leagueRank": 17,
   "tier": 1,
   "tierSrc": "fp",
   "posRankFinal": 1
@@ -805,8 +751,6 @@
   "sources": 3,
   "spread": 16,
   "rank": 28,
-  "leagueBlend": 29.25,
-  "leagueRank": 29,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 14
@@ -834,8 +778,6 @@
   "sources": 3,
   "spread": 19,
   "rank": 29,
-  "leagueBlend": 30.75,
-  "leagueRank": 30,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 12
@@ -863,8 +805,6 @@
   "sources": 3,
   "spread": 4,
   "rank": 30,
-  "leagueBlend": 31.25,
-  "leagueRank": 31,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 15
@@ -892,8 +832,6 @@
   "sources": 3,
   "spread": 11,
   "rank": 31,
-  "leagueBlend": 32.0,
-  "leagueRank": 32,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 16
@@ -921,8 +859,6 @@
   "sources": 3,
   "spread": 13,
   "rank": 32,
-  "leagueBlend": 32.75,
-  "leagueRank": 33,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 17
@@ -950,8 +886,6 @@
   "sources": 3,
   "spread": 14,
   "rank": 33,
-  "leagueBlend": 34.0,
-  "leagueRank": 34,
   "tier": 1,
   "tierSrc": "fp",
   "posRankFinal": 3
@@ -979,8 +913,6 @@
   "sources": 3,
   "spread": 13,
   "rank": 34,
-  "leagueBlend": 34.25,
-  "leagueRank": 35,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 13
@@ -1008,8 +940,6 @@
   "sources": 3,
   "spread": 12,
   "rank": 35,
-  "leagueBlend": 35.25,
-  "leagueRank": 36,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 18
@@ -1037,8 +967,6 @@
   "sources": 3,
   "spread": 14,
   "rank": 36,
-  "leagueBlend": 35.25,
-  "leagueRank": 37,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 14
@@ -1066,8 +994,6 @@
   "sources": 3,
   "spread": 18,
   "rank": 37,
-  "leagueBlend": 28.0,
-  "leagueRank": 28,
   "tier": 1,
   "tierSrc": "fp",
   "posRankFinal": 2
@@ -1095,8 +1021,6 @@
   "sources": 3,
   "spread": 11,
   "rank": 38,
-  "leagueBlend": 38.5,
-  "leagueRank": 38,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 19
@@ -1124,8 +1048,6 @@
   "sources": 3,
   "spread": 13,
   "rank": 39,
-  "leagueBlend": 39.0,
-  "leagueRank": 40,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 20
@@ -1153,8 +1075,6 @@
   "sources": 3,
   "spread": 11,
   "rank": 40,
-  "leagueBlend": 39.25,
-  "leagueRank": 41,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 15
@@ -1182,8 +1102,6 @@
   "sources": 3,
   "spread": 8,
   "rank": 41,
-  "leagueBlend": 39.5,
-  "leagueRank": 42,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 16
@@ -1211,8 +1129,6 @@
   "sources": 3,
   "spread": 23,
   "rank": 42,
-  "leagueBlend": 40.75,
-  "leagueRank": 43,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 21
@@ -1240,8 +1156,6 @@
   "sources": 3,
   "spread": 10,
   "rank": 43,
-  "leagueBlend": 41.0,
-  "leagueRank": 44,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 17
@@ -1269,8 +1183,6 @@
   "sources": 3,
   "spread": 24,
   "rank": 44,
-  "leagueBlend": 42.5,
-  "leagueRank": 46,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 18
@@ -1298,8 +1210,6 @@
   "sources": 3,
   "spread": 20,
   "rank": 45,
-  "leagueBlend": 47.25,
-  "leagueRank": 47,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 19
@@ -1327,8 +1237,6 @@
   "sources": 3,
   "spread": 5,
   "rank": 46,
-  "leagueBlend": 47.75,
-  "leagueRank": 48,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 22
@@ -1356,8 +1264,6 @@
   "sources": 3,
   "spread": 21,
   "rank": 47,
-  "leagueBlend": 38.5,
-  "leagueRank": 39,
   "tier": 1,
   "tierSrc": "fp",
   "posRankFinal": 3
@@ -1385,8 +1291,6 @@
   "sources": 3,
   "spread": 18,
   "rank": 48,
-  "leagueBlend": 48.75,
-  "leagueRank": 50,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 23
@@ -1414,8 +1318,6 @@
   "sources": 3,
   "spread": 18,
   "rank": 49,
-  "leagueBlend": 42.0,
-  "leagueRank": 45,
   "tier": 2,
   "tierSrc": "fp",
   "posRankFinal": 4
@@ -1443,8 +1345,6 @@
   "sources": 3,
   "spread": 6,
   "rank": 50,
-  "leagueBlend": 52.5,
-  "leagueRank": 51,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 24
@@ -1472,8 +1372,6 @@
   "sources": 3,
   "spread": 6,
   "rank": 51,
-  "leagueBlend": 53.5,
-  "leagueRank": 52,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 25
@@ -1501,8 +1399,6 @@
   "sources": 3,
   "spread": 17,
   "rank": 52,
-  "leagueBlend": 54.25,
-  "leagueRank": 54,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 20
@@ -1530,8 +1426,6 @@
   "sources": 3,
   "spread": 18,
   "rank": 53,
-  "leagueBlend": 54.25,
-  "leagueRank": 55,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 21
@@ -1559,8 +1453,6 @@
   "sources": 3,
   "spread": 14,
   "rank": 54,
-  "leagueBlend": 47.75,
-  "leagueRank": 49,
   "tier": 2,
   "tierSrc": "fp",
   "posRankFinal": 5
@@ -1588,8 +1480,6 @@
   "sources": 3,
   "spread": 17,
   "rank": 55,
-  "leagueBlend": 54.75,
-  "leagueRank": 56,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 22
@@ -1617,8 +1507,6 @@
   "sources": 3,
   "spread": 16,
   "rank": 56,
-  "leagueBlend": 55.0,
-  "leagueRank": 57,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 23
@@ -1646,8 +1534,6 @@
   "sources": 3,
   "spread": 21,
   "rank": 57,
-  "leagueBlend": 55.25,
-  "leagueRank": 58,
   "tier": 1,
   "tierSrc": "fp",
   "posRankFinal": 4
@@ -1675,8 +1561,6 @@
   "sources": 3,
   "spread": 9,
   "rank": 58,
-  "leagueBlend": 55.25,
-  "leagueRank": 59,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 26
@@ -1704,8 +1588,6 @@
   "sources": 3,
   "spread": 21,
   "rank": 59,
-  "leagueBlend": 56.0,
-  "leagueRank": 60,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 27
@@ -1733,8 +1615,6 @@
   "sources": 3,
   "spread": 21,
   "rank": 60,
-  "leagueBlend": 59.5,
-  "leagueRank": 61,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 28
@@ -1762,8 +1642,6 @@
   "sources": 3,
   "spread": 19,
   "rank": 61,
-  "leagueBlend": 59.75,
-  "leagueRank": 62,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 24
@@ -1791,8 +1669,6 @@
   "sources": 3,
   "spread": 8,
   "rank": 62,
-  "leagueBlend": 53.75,
-  "leagueRank": 53,
   "tier": 2,
   "tierSrc": "fp",
   "posRankFinal": 6
@@ -1820,8 +1696,6 @@
   "sources": 3,
   "spread": 5,
   "rank": 63,
-  "leagueBlend": 62.25,
-  "leagueRank": 64,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 25
@@ -1849,8 +1723,6 @@
   "sources": 3,
   "spread": 35,
   "rank": 64,
-  "leagueBlend": 63.75,
-  "leagueRank": 65,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 29
@@ -1878,8 +1750,6 @@
   "sources": 3,
   "spread": 19,
   "rank": 65,
-  "leagueBlend": 65.0,
-  "leagueRank": 66,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 26
@@ -1907,8 +1777,6 @@
   "sources": 3,
   "spread": 2,
   "rank": 66,
-  "leagueBlend": 66.0,
-  "leagueRank": 67,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 30
@@ -1936,8 +1804,6 @@
   "sources": 3,
   "spread": 8,
   "rank": 67,
-  "leagueBlend": 67.0,
-  "leagueRank": 69,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 31
@@ -1965,8 +1831,6 @@
   "sources": 3,
   "spread": 8,
   "rank": 68,
-  "leagueBlend": 61.75,
-  "leagueRank": 63,
   "tier": 2,
   "tierSrc": "fp",
   "posRankFinal": 7
@@ -1994,8 +1858,6 @@
   "sources": 3,
   "spread": 24,
   "rank": 69,
-  "leagueBlend": 69.5,
-  "leagueRank": 70,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 32
@@ -2023,8 +1885,6 @@
   "sources": 3,
   "spread": 11,
   "rank": 70,
-  "leagueBlend": 70.25,
-  "leagueRank": 71,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 27
@@ -2052,8 +1912,6 @@
   "sources": 3,
   "spread": 13,
   "rank": 71,
-  "leagueBlend": 73.0,
-  "leagueRank": 73,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 28
@@ -2081,8 +1939,6 @@
   "sources": 3,
   "spread": 12,
   "rank": 72,
-  "leagueBlend": 66.5,
-  "leagueRank": 68,
   "tier": 2,
   "tierSrc": "fp",
   "posRankFinal": 8
@@ -2110,8 +1966,6 @@
   "sources": 3,
   "spread": 20,
   "rank": 73,
-  "leagueBlend": 74.0,
-  "leagueRank": 74,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 29
@@ -2139,8 +1993,6 @@
   "sources": 3,
   "spread": 6,
   "rank": 74,
-  "leagueBlend": 75.0,
-  "leagueRank": 75,
   "tier": 2,
   "tierSrc": "fp",
   "posRankFinal": 5
@@ -2168,8 +2020,6 @@
   "sources": 3,
   "spread": 24,
   "rank": 75,
-  "leagueBlend": 75.5,
-  "leagueRank": 77,
   "tier": 2,
   "tierSrc": "fp",
   "posRankFinal": 6
@@ -2197,8 +2047,6 @@
   "sources": 3,
   "spread": 17,
   "rank": 76,
-  "leagueBlend": 76.25,
-  "leagueRank": 78,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 33
@@ -2226,8 +2074,6 @@
   "sources": 3,
   "spread": 5,
   "rank": 77,
-  "leagueBlend": 70.5,
-  "leagueRank": 72,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 9
@@ -2255,8 +2101,6 @@
   "sources": 3,
   "spread": 7,
   "rank": 78,
-  "leagueBlend": 78.0,
-  "leagueRank": 79,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 34
@@ -2284,8 +2128,6 @@
   "sources": 3,
   "spread": 23,
   "rank": 79,
-  "leagueBlend": 81.75,
-  "leagueRank": 80,
   "tier": 2,
   "tierSrc": "fp",
   "posRankFinal": 7
@@ -2313,8 +2155,6 @@
   "sources": 3,
   "spread": 15,
   "rank": 80,
-  "leagueBlend": 75.25,
-  "leagueRank": 76,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 10
@@ -2342,8 +2182,6 @@
   "sources": 3,
   "spread": 8,
   "rank": 81,
-  "leagueBlend": 83.0,
-  "leagueRank": 81,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 35
@@ -2371,8 +2209,6 @@
   "sources": 3,
   "spread": 38,
   "rank": 82,
-  "leagueBlend": 83.0,
-  "leagueRank": 82,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 30
@@ -2400,8 +2236,6 @@
   "sources": 3,
   "spread": 17,
   "rank": 83,
-  "leagueBlend": 84.75,
-  "leagueRank": 83,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 31
@@ -2429,8 +2263,6 @@
   "sources": 3,
   "spread": 20,
   "rank": 84,
-  "leagueBlend": 86.0,
-  "leagueRank": 84,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 36
@@ -2458,8 +2290,6 @@
   "sources": 3,
   "spread": 15,
   "rank": 85,
-  "leagueBlend": 87.25,
-  "leagueRank": 85,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 37
@@ -2487,8 +2317,6 @@
   "sources": 3,
   "spread": 31,
   "rank": 86,
-  "leagueBlend": 87.5,
-  "leagueRank": 87,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 38
@@ -2516,8 +2344,6 @@
   "sources": 3,
   "spread": 27,
   "rank": 87,
-  "leagueBlend": 87.75,
-  "leagueRank": 88,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 39
@@ -2545,8 +2371,6 @@
   "sources": 3,
   "spread": 23,
   "rank": 88,
-  "leagueBlend": 88.25,
-  "leagueRank": 89,
   "tier": 2,
   "tierSrc": "fp",
   "posRankFinal": 8
@@ -2574,8 +2398,6 @@
   "sources": 3,
   "spread": 35,
   "rank": 89,
-  "leagueBlend": 88.25,
-  "leagueRank": 90,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 32
@@ -2603,8 +2425,6 @@
   "sources": 3,
   "spread": 23,
   "rank": 90,
-  "leagueBlend": 87.25,
-  "leagueRank": 86,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 11
@@ -2632,8 +2452,6 @@
   "sources": 3,
   "spread": 36,
   "rank": 91,
-  "leagueBlend": 92.5,
-  "leagueRank": 91,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 40
@@ -2661,8 +2479,6 @@
   "sources": 3,
   "spread": 24,
   "rank": 92,
-  "leagueBlend": 94.5,
-  "leagueRank": 93,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 41
@@ -2690,8 +2506,6 @@
   "sources": 3,
   "spread": 13,
   "rank": 93,
-  "leagueBlend": 95.75,
-  "leagueRank": 95,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 33
@@ -2719,8 +2533,6 @@
   "sources": 3,
   "spread": 13,
   "rank": 94,
-  "leagueBlend": 96.25,
-  "leagueRank": 96,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 42
@@ -2748,8 +2560,6 @@
   "sources": 3,
   "spread": 3,
   "rank": 95,
-  "leagueBlend": 93.25,
-  "leagueRank": 92,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 12
@@ -2777,8 +2587,6 @@
   "sources": 3,
   "spread": 28,
   "rank": 96,
-  "leagueBlend": 98.25,
-  "leagueRank": 98,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 43
@@ -2806,8 +2614,6 @@
   "sources": 3,
   "spread": 32,
   "rank": 97,
-  "leagueBlend": 99.0,
-  "leagueRank": 99,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 34
@@ -2835,8 +2641,6 @@
   "sources": 3,
   "spread": 22,
   "rank": 98,
-  "leagueBlend": 95.5,
-  "leagueRank": 94,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 13
@@ -2864,8 +2668,6 @@
   "sources": 3,
   "spread": 21,
   "rank": 99,
-  "leagueBlend": 99.75,
-  "leagueRank": 100,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 35
@@ -2893,8 +2695,6 @@
   "sources": 3,
   "spread": 38,
   "rank": 100,
-  "leagueBlend": 100.5,
-  "leagueRank": 101,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 44
@@ -2922,8 +2722,6 @@
   "sources": 3,
   "spread": 7,
   "rank": 101,
-  "leagueBlend": 101.5,
-  "leagueRank": 102,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 45
@@ -2951,8 +2749,6 @@
   "sources": 3,
   "spread": 16,
   "rank": 102,
-  "leagueBlend": 97.75,
-  "leagueRank": 97,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 14
@@ -2980,8 +2776,6 @@
   "sources": 3,
   "spread": 49,
   "rank": 103,
-  "leagueBlend": 102.75,
-  "leagueRank": 103,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 36
@@ -3009,8 +2803,6 @@
   "sources": 3,
   "spread": 19,
   "rank": 104,
-  "leagueBlend": 104.75,
-  "leagueRank": 105,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 37
@@ -3038,8 +2830,6 @@
   "sources": 3,
   "spread": 19,
   "rank": 105,
-  "leagueBlend": 105.0,
-  "leagueRank": 106,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 46
@@ -3067,8 +2857,6 @@
   "sources": 3,
   "spread": 14,
   "rank": 106,
-  "leagueBlend": 105.0,
-  "leagueRank": 107,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 47
@@ -3096,8 +2884,6 @@
   "sources": 3,
   "spread": 17,
   "rank": 107,
-  "leagueBlend": 105.25,
-  "leagueRank": 108,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 38
@@ -3125,8 +2911,6 @@
   "sources": 3,
   "spread": 24,
   "rank": 108,
-  "leagueBlend": 106.5,
-  "leagueRank": 109,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 9
@@ -3154,8 +2938,6 @@
   "sources": 3,
   "spread": 9,
   "rank": 109,
-  "leagueBlend": 103.25,
-  "leagueRank": 104,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 15
@@ -3177,8 +2959,6 @@
   "sources": 2,
   "spread": 35,
   "rank": 110,
-  "leagueBlend": 109.33,
-  "leagueRank": 111,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 48
@@ -3206,8 +2986,6 @@
   "sources": 3,
   "spread": 8,
   "rank": 111,
-  "leagueBlend": 110.5,
-  "leagueRank": 112,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 10
@@ -3235,8 +3013,6 @@
   "sources": 3,
   "spread": 26,
   "rank": 112,
-  "leagueBlend": 111.0,
-  "leagueRank": 113,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 39
@@ -3264,8 +3040,6 @@
   "sources": 3,
   "spread": 48,
   "rank": 113,
-  "leagueBlend": 111.5,
-  "leagueRank": 114,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 11
@@ -3293,8 +3067,6 @@
   "sources": 3,
   "spread": 12,
   "rank": 114,
-  "leagueBlend": 107.75,
-  "leagueRank": 110,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 16
@@ -3322,8 +3094,6 @@
   "sources": 3,
   "spread": 23,
   "rank": 115,
-  "leagueBlend": 112.5,
-  "leagueRank": 115,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 40
@@ -3351,8 +3121,6 @@
   "sources": 3,
   "spread": 32,
   "rank": 116,
-  "leagueBlend": 114.0,
-  "leagueRank": 116,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 41
@@ -3380,8 +3148,6 @@
   "sources": 3,
   "spread": 37,
   "rank": 117,
-  "leagueBlend": 114.75,
-  "leagueRank": 117,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 49
@@ -3409,8 +3175,6 @@
   "sources": 1,
   "spread": null,
   "rank": 118,
-  "leagueBlend": 115.0,
-  "leagueRank": 119,
   "tier": 6,
   "tierSrc": "band",
   "posRankFinal": 50
@@ -3438,8 +3202,6 @@
   "sources": 3,
   "spread": 21,
   "rank": 119,
-  "leagueBlend": 114.75,
-  "leagueRank": 118,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 17
@@ -3467,8 +3229,6 @@
   "sources": 3,
   "spread": 40,
   "rank": 120,
-  "leagueBlend": 116.0,
-  "leagueRank": 120,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 12
@@ -3496,8 +3256,6 @@
   "sources": 3,
   "spread": 26,
   "rank": 121,
-  "leagueBlend": 120.0,
-  "leagueRank": 121,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 51
@@ -3525,8 +3283,6 @@
   "sources": 3,
   "spread": 11,
   "rank": 122,
-  "leagueBlend": 120.25,
-  "leagueRank": 122,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 13
@@ -3554,8 +3310,6 @@
   "sources": 3,
   "spread": 13,
   "rank": 123,
-  "leagueBlend": 121.0,
-  "leagueRank": 123,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 18
@@ -3583,8 +3337,6 @@
   "sources": 3,
   "spread": 16,
   "rank": 124,
-  "leagueBlend": 122.75,
-  "leagueRank": 124,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 19
@@ -3612,8 +3364,6 @@
   "sources": 3,
   "spread": 17,
   "rank": 125,
-  "leagueBlend": 124.25,
-  "leagueRank": 125,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 52
@@ -3641,8 +3391,6 @@
   "sources": 3,
   "spread": 31,
   "rank": 126,
-  "leagueBlend": 124.5,
-  "leagueRank": 126,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 42
@@ -3670,8 +3418,6 @@
   "sources": 3,
   "spread": 17,
   "rank": 127,
-  "leagueBlend": 125.0,
-  "leagueRank": 127,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 53
@@ -3699,8 +3445,6 @@
   "sources": 3,
   "spread": 18,
   "rank": 128,
-  "leagueBlend": 125.5,
-  "leagueRank": 128,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 14
@@ -3728,8 +3472,6 @@
   "sources": 3,
   "spread": 7,
   "rank": 129,
-  "leagueBlend": 125.75,
-  "leagueRank": 129,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 54
@@ -3757,8 +3499,6 @@
   "sources": 3,
   "spread": 7,
   "rank": 130,
-  "leagueBlend": 128.75,
-  "leagueRank": 131,
   "tier": 3,
   "tierSrc": "fp",
   "posRankFinal": 15
@@ -3786,8 +3526,6 @@
   "sources": 3,
   "spread": 11,
   "rank": 131,
-  "leagueBlend": 128.5,
-  "leagueRank": 130,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 20
@@ -3815,8 +3553,6 @@
   "sources": 3,
   "spread": 1,
   "rank": 132,
-  "leagueBlend": 128.75,
-  "leagueRank": 132,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 21
@@ -3844,8 +3580,6 @@
   "sources": 3,
   "spread": 7,
   "rank": 133,
-  "leagueBlend": 130.25,
-  "leagueRank": 133,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 43
@@ -3873,8 +3607,6 @@
   "sources": 3,
   "spread": 16,
   "rank": 134,
-  "leagueBlend": 131.0,
-  "leagueRank": 134,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 55
@@ -3902,8 +3634,6 @@
   "sources": 3,
   "spread": 29,
   "rank": 135,
-  "leagueBlend": 132.75,
-  "leagueRank": 135,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 56
@@ -3931,8 +3661,6 @@
   "sources": 3,
   "spread": 21,
   "rank": 136,
-  "leagueBlend": 132.75,
-  "leagueRank": 136,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 44
@@ -3960,8 +3688,6 @@
   "sources": 3,
   "spread": 22,
   "rank": 137,
-  "leagueBlend": 141.0,
-  "leagueRank": 137,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 45
@@ -3989,8 +3715,6 @@
   "sources": 3,
   "spread": 6,
   "rank": 138,
-  "leagueBlend": 141.0,
-  "leagueRank": 138,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 46
@@ -4012,8 +3736,6 @@
   "sources": 2,
   "spread": 7,
   "rank": 139,
-  "leagueBlend": 141.67,
-  "leagueRank": 139,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 57
@@ -4041,8 +3763,6 @@
   "sources": 3,
   "spread": 38,
   "rank": 140,
-  "leagueBlend": 143.5,
-  "leagueRank": 140,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 47
@@ -4070,8 +3790,6 @@
   "sources": 3,
   "spread": 9,
   "rank": 141,
-  "leagueBlend": 145.75,
-  "leagueRank": 142,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 48
@@ -4099,8 +3817,6 @@
   "sources": 3,
   "spread": 26,
   "rank": 142,
-  "leagueBlend": 145.25,
-  "leagueRank": 141,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 22
@@ -4128,8 +3844,6 @@
   "sources": 3,
   "spread": 21,
   "rank": 143,
-  "leagueBlend": 146.25,
-  "leagueRank": 143,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 49
@@ -4157,8 +3871,6 @@
   "sources": 3,
   "spread": 34,
   "rank": 144,
-  "leagueBlend": 146.5,
-  "leagueRank": 144,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 58
@@ -4186,8 +3898,6 @@
   "sources": 3,
   "spread": 32,
   "rank": 145,
-  "leagueBlend": 147.0,
-  "leagueRank": 145,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 50
@@ -4215,8 +3925,6 @@
   "sources": 3,
   "spread": 27,
   "rank": 146,
-  "leagueBlend": 147.5,
-  "leagueRank": 146,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 16
@@ -4244,8 +3952,6 @@
   "sources": 3,
   "spread": 17,
   "rank": 147,
-  "leagueBlend": 147.75,
-  "leagueRank": 147,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 23
@@ -4273,8 +3979,6 @@
   "sources": 3,
   "spread": 10,
   "rank": 148,
-  "leagueBlend": 150.0,
-  "leagueRank": 148,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 59
@@ -4302,8 +4006,6 @@
   "sources": 3,
   "spread": 45,
   "rank": 149,
-  "leagueBlend": 150.25,
-  "leagueRank": 149,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 51
@@ -4331,8 +4033,6 @@
   "sources": 3,
   "spread": 18,
   "rank": 150,
-  "leagueBlend": 152.5,
-  "leagueRank": 151,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 17
@@ -4360,8 +4060,6 @@
   "sources": 3,
   "spread": 46,
   "rank": 151,
-  "leagueBlend": 152.25,
-  "leagueRank": 150,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 24
@@ -4389,8 +4087,6 @@
   "sources": 3,
   "spread": 12,
   "rank": 152,
-  "leagueBlend": 153.75,
-  "leagueRank": 152,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 25
@@ -4418,8 +4114,6 @@
   "sources": 3,
   "spread": 7,
   "rank": 153,
-  "leagueBlend": 157.0,
-  "leagueRank": 153,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 52
@@ -4447,8 +4141,6 @@
   "sources": 3,
   "spread": 39,
   "rank": 154,
-  "leagueBlend": 157.25,
-  "leagueRank": 154,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 18
@@ -4476,8 +4168,6 @@
   "sources": 3,
   "spread": 45,
   "rank": 155,
-  "leagueBlend": 158.25,
-  "leagueRank": 155,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 53
@@ -4505,8 +4195,6 @@
   "sources": 3,
   "spread": 22,
   "rank": 156,
-  "leagueBlend": 158.5,
-  "leagueRank": 156,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 60
@@ -4534,8 +4222,6 @@
   "sources": 3,
   "spread": 11,
   "rank": 157,
-  "leagueBlend": 159.0,
-  "leagueRank": 157,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 19
@@ -4563,8 +4249,6 @@
   "sources": 3,
   "spread": 11,
   "rank": 158,
-  "leagueBlend": 161.25,
-  "leagueRank": 158,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 54
@@ -4592,8 +4276,6 @@
   "sources": 3,
   "spread": 17,
   "rank": 159,
-  "leagueBlend": 161.5,
-  "leagueRank": 159,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 26
@@ -4621,8 +4303,6 @@
   "sources": 3,
   "spread": 24,
   "rank": 160,
-  "leagueBlend": 162.5,
-  "leagueRank": 160,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 61
@@ -4650,8 +4330,6 @@
   "sources": 3,
   "spread": 54,
   "rank": 161,
-  "leagueBlend": 163.5,
-  "leagueRank": 161,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 62
@@ -4679,8 +4357,6 @@
   "sources": 3,
   "spread": 54,
   "rank": 162,
-  "leagueBlend": 165.0,
-  "leagueRank": 162,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 63
@@ -4708,8 +4384,6 @@
   "sources": 3,
   "spread": 109,
   "rank": 163,
-  "leagueBlend": 167.25,
-  "leagueRank": 163,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 64
@@ -4737,8 +4411,6 @@
   "sources": 3,
   "spread": 23,
   "rank": 164,
-  "leagueBlend": 167.25,
-  "leagueRank": 164,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 20
@@ -4766,8 +4438,6 @@
   "sources": 3,
   "spread": 33,
   "rank": 165,
-  "leagueBlend": 167.25,
-  "leagueRank": 165,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 65
@@ -4795,8 +4465,6 @@
   "sources": 3,
   "spread": 53,
   "rank": 166,
-  "leagueBlend": 167.75,
-  "leagueRank": 166,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 66
@@ -4824,8 +4492,6 @@
   "sources": 3,
   "spread": 25,
   "rank": 167,
-  "leagueBlend": 168.25,
-  "leagueRank": 167,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 55
@@ -4853,8 +4519,6 @@
   "sources": 3,
   "spread": 39,
   "rank": 168,
-  "leagueBlend": 169.25,
-  "leagueRank": 168,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 67
@@ -4882,8 +4546,6 @@
   "sources": 3,
   "spread": 23,
   "rank": 169,
-  "leagueBlend": 173.25,
-  "leagueRank": 169,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 68
@@ -4911,8 +4573,6 @@
   "sources": 3,
   "spread": 32,
   "rank": 170,
-  "leagueBlend": 174.0,
-  "leagueRank": 170,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 21
@@ -4940,8 +4600,6 @@
   "sources": 3,
   "spread": 53,
   "rank": 171,
-  "leagueBlend": 175.5,
-  "leagueRank": 171,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 56
@@ -4969,8 +4627,6 @@
   "sources": 3,
   "spread": 32,
   "rank": 172,
-  "leagueBlend": 178.25,
-  "leagueRank": 172,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 22
@@ -4998,8 +4654,6 @@
   "sources": 3,
   "spread": 57,
   "rank": 173,
-  "leagueBlend": 180.5,
-  "leagueRank": 173,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 57
@@ -5027,8 +4681,6 @@
   "sources": 3,
   "spread": 17,
   "rank": 174,
-  "leagueBlend": 181.0,
-  "leagueRank": 174,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 69
@@ -5056,8 +4708,6 @@
   "sources": 3,
   "spread": 30,
   "rank": 175,
-  "leagueBlend": 182.0,
-  "leagueRank": 175,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 70
@@ -5085,8 +4735,6 @@
   "sources": 3,
   "spread": 85,
   "rank": 176,
-  "leagueBlend": 185.75,
-  "leagueRank": 176,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 58
@@ -5114,8 +4762,6 @@
   "sources": 3,
   "spread": 72,
   "rank": 177,
-  "leagueBlend": 189.25,
-  "leagueRank": 177,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 23
@@ -5143,8 +4789,6 @@
   "sources": 3,
   "spread": 59,
   "rank": 178,
-  "leagueBlend": 193.25,
-  "leagueRank": 178,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 59
@@ -5172,8 +4816,6 @@
   "sources": 3,
   "spread": 31,
   "rank": 179,
-  "leagueBlend": 196.25,
-  "leagueRank": 179,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 24
@@ -5201,8 +4843,6 @@
   "sources": 3,
   "spread": 22,
   "rank": 180,
-  "leagueBlend": 196.75,
-  "leagueRank": 180,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 71
@@ -5230,8 +4870,6 @@
   "sources": 3,
   "spread": 59,
   "rank": 181,
-  "leagueBlend": 197.25,
-  "leagueRank": 181,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 60
@@ -5259,8 +4897,6 @@
   "sources": 3,
   "spread": 20,
   "rank": 182,
-  "leagueBlend": 198.25,
-  "leagueRank": 182,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 61
@@ -5288,8 +4924,6 @@
   "sources": 3,
   "spread": 41,
   "rank": 183,
-  "leagueBlend": 198.5,
-  "leagueRank": 183,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 62
@@ -5317,8 +4951,6 @@
   "sources": 3,
   "spread": 53,
   "rank": 184,
-  "leagueBlend": 199.25,
-  "leagueRank": 184,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 72
@@ -5346,8 +4978,6 @@
   "sources": 3,
   "spread": 21,
   "rank": 185,
-  "leagueBlend": 199.75,
-  "leagueRank": 185,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 73
@@ -5375,8 +5005,6 @@
   "sources": 3,
   "spread": 61,
   "rank": 186,
-  "leagueBlend": 199.75,
-  "leagueRank": 186,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 27
@@ -5404,8 +5032,6 @@
   "sources": 3,
   "spread": 60,
   "rank": 187,
-  "leagueBlend": 201.0,
-  "leagueRank": 187,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 74
@@ -5433,8 +5059,6 @@
   "sources": 3,
   "spread": 37,
   "rank": 188,
-  "leagueBlend": 202.25,
-  "leagueRank": 188,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 75
@@ -5462,8 +5086,6 @@
   "sources": 3,
   "spread": 120,
   "rank": 189,
-  "leagueBlend": 206.0,
-  "leagueRank": 189,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 63
@@ -5491,8 +5113,6 @@
   "sources": 3,
   "spread": 25,
   "rank": 190,
-  "leagueBlend": 207.0,
-  "leagueRank": 190,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 64
@@ -5520,8 +5140,6 @@
   "sources": 3,
   "spread": 111,
   "rank": 191,
-  "leagueBlend": 209.0,
-  "leagueRank": 191,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 65
@@ -5549,8 +5167,6 @@
   "sources": 3,
   "spread": 34,
   "rank": 192,
-  "leagueBlend": 209.0,
-  "leagueRank": 192,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 76
@@ -5578,8 +5194,6 @@
   "sources": 3,
   "spread": 83,
   "rank": 193,
-  "leagueBlend": 209.75,
-  "leagueRank": 193,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 77
@@ -5607,8 +5221,6 @@
   "sources": 3,
   "spread": 7,
   "rank": 194,
-  "leagueBlend": 211.0,
-  "leagueRank": 194,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 78
@@ -5636,8 +5248,6 @@
   "sources": 3,
   "spread": 54,
   "rank": 195,
-  "leagueBlend": 211.25,
-  "leagueRank": 195,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 66
@@ -5665,8 +5275,6 @@
   "sources": 3,
   "spread": 56,
   "rank": 196,
-  "leagueBlend": 213.0,
-  "leagueRank": 196,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 79
@@ -5694,8 +5302,6 @@
   "sources": 3,
   "spread": 4,
   "rank": 197,
-  "leagueBlend": 213.25,
-  "leagueRank": 197,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 25
@@ -5723,8 +5329,6 @@
   "sources": 3,
   "spread": 49,
   "rank": 198,
-  "leagueBlend": 214.75,
-  "leagueRank": 198,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 80
@@ -5752,8 +5356,6 @@
   "sources": 3,
   "spread": 53,
   "rank": 199,
-  "leagueBlend": 215.25,
-  "leagueRank": 199,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 81
@@ -5781,8 +5383,6 @@
   "sources": 3,
   "spread": 35,
   "rank": 200,
-  "leagueBlend": 217.0,
-  "leagueRank": 200,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 82
@@ -5810,8 +5410,6 @@
   "sources": 3,
   "spread": 48,
   "rank": 201,
-  "leagueBlend": 217.5,
-  "leagueRank": 201,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 83
@@ -5839,8 +5437,6 @@
   "sources": 3,
   "spread": 44,
   "rank": 202,
-  "leagueBlend": 219.0,
-  "leagueRank": 202,
   "tier": 4,
   "tierSrc": "fp",
   "posRankFinal": 26
@@ -5868,8 +5464,6 @@
   "sources": 3,
   "spread": 71,
   "rank": 203,
-  "leagueBlend": 219.5,
-  "leagueRank": 203,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 27
@@ -5897,8 +5491,6 @@
   "sources": 3,
   "spread": 15,
   "rank": 204,
-  "leagueBlend": 220.0,
-  "leagueRank": 204,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 28
@@ -5926,8 +5518,6 @@
   "sources": 3,
   "spread": 31,
   "rank": 205,
-  "leagueBlend": 222.75,
-  "leagueRank": 205,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 28
@@ -5955,8 +5545,6 @@
   "sources": 3,
   "spread": 54,
   "rank": 206,
-  "leagueBlend": 226.0,
-  "leagueRank": 206,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 84
@@ -5978,8 +5566,6 @@
   "sources": 2,
   "spread": 20,
   "rank": 207,
-  "leagueBlend": 226.67,
-  "leagueRank": 207,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 85
@@ -6007,8 +5593,6 @@
   "sources": 3,
   "spread": 21,
   "rank": 208,
-  "leagueBlend": 229.0,
-  "leagueRank": 209,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 67
@@ -6036,8 +5620,6 @@
   "sources": 3,
   "spread": 33,
   "rank": 209,
-  "leagueBlend": 228.25,
-  "leagueRank": 208,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 29
@@ -6065,8 +5647,6 @@
   "sources": 3,
   "spread": 43,
   "rank": 210,
-  "leagueBlend": 237.75,
-  "leagueRank": 210,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 68
@@ -6094,8 +5674,6 @@
   "sources": 3,
   "spread": 64,
   "rank": 211,
-  "leagueBlend": 238.25,
-  "leagueRank": 211,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 69
@@ -6123,8 +5701,6 @@
   "sources": 3,
   "spread": 26,
   "rank": 212,
-  "leagueBlend": 239.5,
-  "leagueRank": 212,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 29
@@ -6152,8 +5728,6 @@
   "sources": 3,
   "spread": 10,
   "rank": 213,
-  "leagueBlend": 240.0,
-  "leagueRank": 213,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 70
@@ -6181,8 +5755,6 @@
   "sources": 3,
   "spread": 118,
   "rank": 214,
-  "leagueBlend": 240.75,
-  "leagueRank": 214,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 71
@@ -6210,8 +5782,6 @@
   "sources": 3,
   "spread": 58,
   "rank": 215,
-  "leagueBlend": 242.5,
-  "leagueRank": 215,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 86
@@ -6239,8 +5809,6 @@
   "sources": 3,
   "spread": 95,
   "rank": 216,
-  "leagueBlend": 242.5,
-  "leagueRank": 216,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 72
@@ -6268,8 +5836,6 @@
   "sources": 3,
   "spread": 46,
   "rank": 217,
-  "leagueBlend": 242.5,
-  "leagueRank": 217,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 30
@@ -6297,8 +5863,6 @@
   "sources": 3,
   "spread": 28,
   "rank": 218,
-  "leagueBlend": 243.5,
-  "leagueRank": 218,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 73
@@ -6320,8 +5884,6 @@
   "sources": 2,
   "spread": 14,
   "rank": 219,
-  "leagueBlend": 244.33,
-  "leagueRank": 219,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 74
@@ -6349,8 +5911,6 @@
   "sources": 3,
   "spread": 63,
   "rank": 220,
-  "leagueBlend": 244.75,
-  "leagueRank": 220,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 87
@@ -6378,8 +5938,6 @@
   "sources": 3,
   "spread": 14,
   "rank": 221,
-  "leagueBlend": 245.75,
-  "leagueRank": 221,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 30
@@ -6407,8 +5965,6 @@
   "sources": 3,
   "spread": 50,
   "rank": 222,
-  "leagueBlend": 246.0,
-  "leagueRank": 222,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 88
@@ -6436,8 +5992,6 @@
   "sources": 3,
   "spread": 30,
   "rank": 223,
-  "leagueBlend": 247.25,
-  "leagueRank": 223,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 75
@@ -6465,8 +6019,6 @@
   "sources": 3,
   "spread": 75,
   "rank": 224,
-  "leagueBlend": 247.75,
-  "leagueRank": 224,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 89
@@ -6488,8 +6040,6 @@
   "sources": 2,
   "spread": 13,
   "rank": 225,
-  "leagueBlend": 248.33,
-  "leagueRank": 225,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 90
@@ -6517,8 +6067,6 @@
   "sources": 3,
   "spread": 83,
   "rank": 226,
-  "leagueBlend": 249.25,
-  "leagueRank": 226,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 76
@@ -6546,8 +6094,6 @@
   "sources": 3,
   "spread": 96,
   "rank": 227,
-  "leagueBlend": 249.5,
-  "leagueRank": 227,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 91
@@ -6575,8 +6121,6 @@
   "sources": 3,
   "spread": 48,
   "rank": 228,
-  "leagueBlend": 249.5,
-  "leagueRank": 228,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 31
@@ -6604,8 +6148,6 @@
   "sources": 3,
   "spread": 17,
   "rank": 229,
-  "leagueBlend": 251.0,
-  "leagueRank": 229,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 32
@@ -6633,8 +6175,6 @@
   "sources": 3,
   "spread": 46,
   "rank": 230,
-  "leagueBlend": 251.5,
-  "leagueRank": 230,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 92
@@ -6662,8 +6202,6 @@
   "sources": 3,
   "spread": 61,
   "rank": 231,
-  "leagueBlend": 253.0,
-  "leagueRank": 231,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 93
@@ -6685,8 +6223,6 @@
   "sources": 2,
   "spread": 36,
   "rank": 232,
-  "leagueBlend": 257.0,
-  "leagueRank": 232,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 94
@@ -6708,8 +6244,6 @@
   "sources": 2,
   "spread": 32,
   "rank": 233,
-  "leagueBlend": 257.33,
-  "leagueRank": 233,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 95
@@ -6737,8 +6271,6 @@
   "sources": 3,
   "spread": 158,
   "rank": 234,
-  "leagueBlend": 258.5,
-  "leagueRank": 234,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 77
@@ -6766,8 +6298,6 @@
   "sources": 3,
   "spread": 34,
   "rank": 235,
-  "leagueBlend": 260.0,
-  "leagueRank": 235,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 96
@@ -6795,8 +6325,6 @@
   "sources": 3,
   "spread": 118,
   "rank": 236,
-  "leagueBlend": 261.0,
-  "leagueRank": 236,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 97
@@ -6824,8 +6352,6 @@
   "sources": 3,
   "spread": 103,
   "rank": 237,
-  "leagueBlend": 261.25,
-  "leagueRank": 237,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 78
@@ -6847,8 +6373,6 @@
   "sources": 2,
   "spread": 31,
   "rank": 238,
-  "leagueBlend": 262.33,
-  "leagueRank": 238,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 98
@@ -6876,8 +6400,6 @@
   "sources": 3,
   "spread": 71,
   "rank": 239,
-  "leagueBlend": 262.75,
-  "leagueRank": 239,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 79
@@ -6905,8 +6427,6 @@
   "sources": 3,
   "spread": 16,
   "rank": 240,
-  "leagueBlend": 264.5,
-  "leagueRank": 240,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 80
@@ -6934,8 +6454,6 @@
   "sources": 3,
   "spread": 47,
   "rank": 241,
-  "leagueBlend": 264.5,
-  "leagueRank": 241,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 31
@@ -6963,8 +6481,6 @@
   "sources": 3,
   "spread": 18,
   "rank": 242,
-  "leagueBlend": 268.0,
-  "leagueRank": 242,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 33
@@ -6992,8 +6508,6 @@
   "sources": 3,
   "spread": 116,
   "rank": 243,
-  "leagueBlend": 270.0,
-  "leagueRank": 243,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 81
@@ -7021,8 +6535,6 @@
   "sources": 3,
   "spread": 149,
   "rank": 244,
-  "leagueBlend": 272.25,
-  "leagueRank": 244,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 82
@@ -7050,8 +6562,6 @@
   "sources": 3,
   "spread": 16,
   "rank": 245,
-  "leagueBlend": 272.5,
-  "leagueRank": 245,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 32
@@ -7079,8 +6589,6 @@
   "sources": 3,
   "spread": 46,
   "rank": 246,
-  "leagueBlend": 274.5,
-  "leagueRank": 246,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 99
@@ -7102,8 +6610,6 @@
   "sources": 2,
   "spread": 59,
   "rank": 247,
-  "leagueBlend": 275.67,
-  "leagueRank": 247,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 100
@@ -7125,8 +6631,6 @@
   "sources": 2,
   "spread": 35,
   "rank": 248,
-  "leagueBlend": 275.67,
-  "leagueRank": 248,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 101
@@ -7148,8 +6652,6 @@
   "sources": 2,
   "spread": 79,
   "rank": 249,
-  "leagueBlend": 277.67,
-  "leagueRank": 249,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 102
@@ -7177,8 +6679,6 @@
   "sources": 3,
   "spread": 20,
   "rank": 250,
-  "leagueBlend": 279.25,
-  "leagueRank": 251,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 34
@@ -7206,8 +6706,6 @@
   "sources": 3,
   "spread": 22,
   "rank": 251,
-  "leagueBlend": 278.25,
-  "leagueRank": 250,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 33
@@ -7235,8 +6733,6 @@
   "sources": 3,
   "spread": 41,
   "rank": 252,
-  "leagueBlend": 280.25,
-  "leagueRank": 254,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 83
@@ -7258,8 +6754,6 @@
   "sources": 2,
   "spread": 107,
   "rank": 253,
-  "leagueBlend": 280.33,
-  "leagueRank": 255,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 103
@@ -7287,8 +6781,6 @@
   "sources": 3,
   "spread": 22,
   "rank": 254,
-  "leagueBlend": 279.75,
-  "leagueRank": 252,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 34
@@ -7316,8 +6808,6 @@
   "sources": 3,
   "spread": 36,
   "rank": 255,
-  "leagueBlend": 280.0,
-  "leagueRank": 253,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 35
@@ -7339,8 +6829,6 @@
   "sources": 2,
   "spread": 7,
   "rank": 256,
-  "leagueBlend": 283.67,
-  "leagueRank": 256,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 84
@@ -7368,8 +6856,6 @@
   "sources": 3,
   "spread": 34,
   "rank": 257,
-  "leagueBlend": 284.75,
-  "leagueRank": 257,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 35
@@ -7397,8 +6883,6 @@
   "sources": 3,
   "spread": 97,
   "rank": 258,
-  "leagueBlend": 285.75,
-  "leagueRank": 258,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 104
@@ -7420,8 +6904,6 @@
   "sources": 2,
   "spread": 60,
   "rank": 259,
-  "leagueBlend": 286.0,
-  "leagueRank": 259,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 105
@@ -7449,8 +6931,6 @@
   "sources": 3,
   "spread": 23,
   "rank": 260,
-  "leagueBlend": 286.25,
-  "leagueRank": 260,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 106
@@ -7478,8 +6958,6 @@
   "sources": 3,
   "spread": 80,
   "rank": 261,
-  "leagueBlend": 287.5,
-  "leagueRank": 261,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 36
@@ -7507,8 +6985,6 @@
   "sources": 3,
   "spread": 66,
   "rank": 262,
-  "leagueBlend": 288.5,
-  "leagueRank": 262,
   "tier": 5,
   "tierSrc": "fp",
   "posRankFinal": 37
@@ -7536,8 +7012,6 @@
   "sources": 3,
   "spread": 56,
   "rank": 263,
-  "leagueBlend": 290.5,
-  "leagueRank": 263,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 85
@@ -7565,8 +7039,6 @@
   "sources": 3,
   "spread": 58,
   "rank": 264,
-  "leagueBlend": 291.25,
-  "leagueRank": 264,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 86
@@ -7594,8 +7066,6 @@
   "sources": 3,
   "spread": 92,
   "rank": 265,
-  "leagueBlend": 292.5,
-  "leagueRank": 265,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 87
@@ -7623,8 +7093,6 @@
   "sources": 3,
   "spread": 88,
   "rank": 266,
-  "leagueBlend": 295.0,
-  "leagueRank": 266,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 88
@@ -7651,8 +7119,6 @@
   "sources": 2,
   "spread": 93,
   "rank": 267,
-  "leagueBlend": 295.0,
-  "leagueRank": 267,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 107
@@ -7680,8 +7146,6 @@
   "sources": 3,
   "spread": 101,
   "rank": 268,
-  "leagueBlend": 295.25,
-  "leagueRank": 268,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 108
@@ -7709,8 +7173,6 @@
   "sources": 3,
   "spread": 105,
   "rank": 269,
-  "leagueBlend": 295.75,
-  "leagueRank": 269,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 109
@@ -7732,8 +7194,6 @@
   "sources": 2,
   "spread": 18,
   "rank": 270,
-  "leagueBlend": 297.0,
-  "leagueRank": 270,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 89
@@ -7760,8 +7220,6 @@
   "sources": 2,
   "spread": 142,
   "rank": 271,
-  "leagueBlend": 299.67,
-  "leagueRank": 271,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 90
@@ -7789,8 +7247,6 @@
   "sources": 3,
   "spread": 43,
   "rank": 272,
-  "leagueBlend": 301.0,
-  "leagueRank": 272,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 38
@@ -7812,8 +7268,6 @@
   "sources": 2,
   "spread": 1,
   "rank": 273,
-  "leagueBlend": 301.67,
-  "leagueRank": 273,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 110
@@ -7834,8 +7288,6 @@
   "sources": 1,
   "spread": null,
   "rank": 274,
-  "leagueBlend": 305.0,
-  "leagueRank": 274,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 91
@@ -7857,8 +7309,6 @@
   "sources": 2,
   "spread": 34,
   "rank": 275,
-  "leagueBlend": 305.33,
-  "leagueRank": 275,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 92
@@ -7879,8 +7329,6 @@
   "sources": 1,
   "spread": null,
   "rank": 276,
-  "leagueBlend": 306.0,
-  "leagueRank": 276,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 111
@@ -7902,8 +7350,6 @@
   "sources": 2,
   "spread": 2,
   "rank": 277,
-  "leagueBlend": 307.33,
-  "leagueRank": 278,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 93
@@ -7925,8 +7371,6 @@
   "sources": 2,
   "spread": 41,
   "rank": 278,
-  "leagueBlend": 307.33,
-  "leagueRank": 279,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 39
@@ -7953,8 +7397,6 @@
   "sources": 2,
   "spread": 53,
   "rank": 279,
-  "leagueBlend": 307.33,
-  "leagueRank": 280,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 40
@@ -7981,8 +7423,6 @@
   "sources": 2,
   "spread": 57,
   "rank": 280,
-  "leagueBlend": 307.0,
-  "leagueRank": 277,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 36
@@ -8004,8 +7444,6 @@
   "sources": 2,
   "spread": 61,
   "rank": 281,
-  "leagueBlend": 311.67,
-  "leagueRank": 281,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 112
@@ -8032,8 +7470,6 @@
   "sources": 2,
   "spread": 56,
   "rank": 282,
-  "leagueBlend": 312.33,
-  "leagueRank": 282,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 41
@@ -8055,8 +7491,6 @@
   "sources": 2,
   "spread": 50,
   "rank": 283,
-  "leagueBlend": 312.67,
-  "leagueRank": 283,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 113
@@ -8084,8 +7518,6 @@
   "sources": 3,
   "spread": 113,
   "rank": 284,
-  "leagueBlend": 314.25,
-  "leagueRank": 284,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 114
@@ -8106,8 +7538,6 @@
   "sources": 1,
   "spread": null,
   "rank": 285,
-  "leagueBlend": 315.0,
-  "leagueRank": 285,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 94
@@ -8134,8 +7564,6 @@
   "sources": 2,
   "spread": 62,
   "rank": 286,
-  "leagueBlend": 315.33,
-  "leagueRank": 286,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 42
@@ -8157,8 +7585,6 @@
   "sources": 2,
   "spread": 48,
   "rank": 287,
-  "leagueBlend": 316.0,
-  "leagueRank": 287,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 115
@@ -8180,8 +7606,6 @@
   "sources": 2,
   "spread": 20,
   "rank": 288,
-  "leagueBlend": 316.33,
-  "leagueRank": 288,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 116
@@ -8202,8 +7626,6 @@
   "sources": 1,
   "spread": null,
   "rank": 289,
-  "leagueBlend": 318.0,
-  "leagueRank": 289,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 95
@@ -8224,8 +7646,6 @@
   "sources": 1,
   "spread": null,
   "rank": 290,
-  "leagueBlend": 320.0,
-  "leagueRank": 291,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 96
@@ -8253,8 +7673,6 @@
   "sources": 3,
   "spread": 67,
   "rank": 291,
-  "leagueBlend": 319.5,
-  "leagueRank": 290,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 37
@@ -8276,8 +7694,6 @@
   "sources": 2,
   "spread": 23,
   "rank": 292,
-  "leagueBlend": 320.67,
-  "leagueRank": 292,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 97
@@ -8304,8 +7720,6 @@
   "sources": 2,
   "spread": 63,
   "rank": 293,
-  "leagueBlend": 321.0,
-  "leagueRank": 293,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 43
@@ -8326,8 +7740,6 @@
   "sources": 1,
   "spread": null,
   "rank": 294,
-  "leagueBlend": 322.0,
-  "leagueRank": 294,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 98
@@ -8348,8 +7760,6 @@
   "sources": 1,
   "spread": null,
   "rank": 295,
-  "leagueBlend": 324.0,
-  "leagueRank": 295,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 99
@@ -8371,8 +7781,6 @@
   "sources": 2,
   "spread": 29,
   "rank": 296,
-  "leagueBlend": 324.33,
-  "leagueRank": 296,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 44
@@ -8394,8 +7802,6 @@
   "sources": 2,
   "spread": 44,
   "rank": 297,
-  "leagueBlend": 324.67,
-  "leagueRank": 297,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 100
@@ -8422,8 +7828,6 @@
   "sources": 2,
   "spread": 84,
   "rank": 298,
-  "leagueBlend": 326.0,
-  "leagueRank": 298,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 38
@@ -8445,8 +7849,6 @@
   "sources": 2,
   "spread": 1,
   "rank": 299,
-  "leagueBlend": 327.67,
-  "leagueRank": 299,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 117
@@ -8467,8 +7869,6 @@
   "sources": 1,
   "spread": null,
   "rank": 300,
-  "leagueBlend": 329.0,
-  "leagueRank": 302,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 101
@@ -8496,8 +7896,6 @@
   "sources": 3,
   "spread": 62,
   "rank": 301,
-  "leagueBlend": 328.5,
-  "leagueRank": 300,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 39
@@ -8524,8 +7922,6 @@
   "sources": 2,
   "spread": 79,
   "rank": 302,
-  "leagueBlend": 328.67,
-  "leagueRank": 301,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 40
@@ -8546,8 +7942,6 @@
   "sources": 1,
   "spread": null,
   "rank": 303,
-  "leagueBlend": 330.0,
-  "leagueRank": 303,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 118
@@ -8568,8 +7962,6 @@
   "sources": 1,
   "spread": null,
   "rank": 304,
-  "leagueBlend": 333.0,
-  "leagueRank": 304,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 119
@@ -8591,8 +7983,6 @@
   "sources": 2,
   "spread": 18,
   "rank": 305,
-  "leagueBlend": 334.0,
-  "leagueRank": 305,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 120
@@ -8614,8 +8004,6 @@
   "sources": 2,
   "spread": 47,
   "rank": 306,
-  "leagueBlend": 335.33,
-  "leagueRank": 306,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 45
@@ -8636,8 +8024,6 @@
   "sources": 1,
   "spread": null,
   "rank": 307,
-  "leagueBlend": 337.0,
-  "leagueRank": 307,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 46
@@ -8658,8 +8044,6 @@
   "sources": 1,
   "spread": null,
   "rank": 308,
-  "leagueBlend": 338.0,
-  "leagueRank": 308,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 121
@@ -8686,8 +8070,6 @@
   "sources": 2,
   "spread": 136,
   "rank": 309,
-  "leagueBlend": 338.67,
-  "leagueRank": 309,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 122
@@ -8708,8 +8090,6 @@
   "sources": 1,
   "spread": null,
   "rank": 310,
-  "leagueBlend": 339.0,
-  "leagueRank": 310,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 123
@@ -8731,8 +8111,6 @@
   "sources": 2,
   "spread": 17,
   "rank": 311,
-  "leagueBlend": 340.33,
-  "leagueRank": 311,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 124
@@ -8754,8 +8132,6 @@
   "sources": 2,
   "spread": 41,
   "rank": 312,
-  "leagueBlend": 340.33,
-  "leagueRank": 312,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 125
@@ -8777,8 +8153,6 @@
   "sources": 2,
   "spread": 37,
   "rank": 313,
-  "leagueBlend": 340.67,
-  "leagueRank": 313,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 126
@@ -8799,8 +8173,6 @@
   "sources": 1,
   "spread": null,
   "rank": 314,
-  "leagueBlend": 341.0,
-  "leagueRank": 314,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 127
@@ -8821,8 +8193,6 @@
   "sources": 1,
   "spread": null,
   "rank": 315,
-  "leagueBlend": 344.0,
-  "leagueRank": 315,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 47
@@ -8849,8 +8219,6 @@
   "sources": 2,
   "spread": 90,
   "rank": 316,
-  "leagueBlend": 344.0,
-  "leagueRank": 316,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 41
@@ -8872,8 +8240,6 @@
   "sources": 2,
   "spread": 41,
   "rank": 317,
-  "leagueBlend": 345.33,
-  "leagueRank": 317,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 48
@@ -8894,8 +8260,6 @@
   "sources": 1,
   "spread": null,
   "rank": 318,
-  "leagueBlend": 348.0,
-  "leagueRank": 318,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 49
@@ -8922,8 +8286,6 @@
   "sources": 2,
   "spread": 159,
   "rank": 319,
-  "leagueBlend": 349.0,
-  "leagueRank": 319,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 128
@@ -8944,8 +8306,6 @@
   "sources": 1,
   "spread": null,
   "rank": 320,
-  "leagueBlend": 350.0,
-  "leagueRank": 320,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 102
@@ -8967,8 +8327,6 @@
   "sources": 2,
   "spread": 23,
   "rank": 321,
-  "leagueBlend": 352.33,
-  "leagueRank": 321,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 103
@@ -8990,8 +8348,6 @@
   "sources": 2,
   "spread": 6,
   "rank": 322,
-  "leagueBlend": 356.0,
-  "leagueRank": 323,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 129
@@ -9018,8 +8374,6 @@
   "sources": 2,
   "spread": 113,
   "rank": 323,
-  "leagueBlend": 355.33,
-  "leagueRank": 322,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 42
@@ -9041,8 +8395,6 @@
   "sources": 2,
   "spread": 73,
   "rank": 324,
-  "leagueBlend": 356.67,
-  "leagueRank": 324,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 104
@@ -9063,8 +8415,6 @@
   "sources": 1,
   "spread": null,
   "rank": 325,
-  "leagueBlend": 357.0,
-  "leagueRank": 325,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 130
@@ -9086,8 +8436,6 @@
   "sources": 2,
   "spread": 25,
   "rank": 326,
-  "leagueBlend": 358.67,
-  "leagueRank": 327,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 131
@@ -9109,8 +8457,6 @@
   "sources": 2,
   "spread": 37,
   "rank": 327,
-  "leagueBlend": 358.67,
-  "leagueRank": 328,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 105
@@ -9137,8 +8483,6 @@
   "sources": 2,
   "spread": 116,
   "rank": 328,
-  "leagueBlend": 358.33,
-  "leagueRank": 326,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 43
@@ -9159,8 +8503,6 @@
   "sources": 1,
   "spread": null,
   "rank": 329,
-  "leagueBlend": 361.0,
-  "leagueRank": 329,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 106
@@ -9182,8 +8524,6 @@
   "sources": 2,
   "spread": 62,
   "rank": 330,
-  "leagueBlend": 362.33,
-  "leagueRank": 330,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 50
@@ -9204,8 +8544,6 @@
   "sources": 1,
   "spread": null,
   "rank": 331,
-  "leagueBlend": 363.0,
-  "leagueRank": 331,
   "tier": 6,
   "tierSrc": "fp",
   "posRankFinal": 51
@@ -9226,8 +8564,6 @@
   "sources": 1,
   "spread": null,
   "rank": 332,
-  "leagueBlend": 366.0,
-  "leagueRank": 332,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 52
@@ -9248,8 +8584,6 @@
   "sources": 1,
   "spread": null,
   "rank": 333,
-  "leagueBlend": 369.0,
-  "leagueRank": 333,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 132
@@ -9271,8 +8605,6 @@
   "sources": 2,
   "spread": 83,
   "rank": 334,
-  "leagueBlend": 369.33,
-  "leagueRank": 334,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 133
@@ -9293,8 +8625,6 @@
   "sources": 1,
   "spread": null,
   "rank": 335,
-  "leagueBlend": 370.0,
-  "leagueRank": 335,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 134
@@ -9316,8 +8646,6 @@
   "sources": 2,
   "spread": 88,
   "rank": 336,
-  "leagueBlend": 370.67,
-  "leagueRank": 336,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 135
@@ -9338,8 +8666,6 @@
   "sources": 1,
   "spread": null,
   "rank": 337,
-  "leagueBlend": 372.0,
-  "leagueRank": 337,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 53
@@ -9360,8 +8686,6 @@
   "sources": 1,
   "spread": null,
   "rank": 338,
-  "leagueBlend": 373.0,
-  "leagueRank": 338,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 107
@@ -9382,8 +8706,6 @@
   "sources": 1,
   "spread": null,
   "rank": 339,
-  "leagueBlend": 374.0,
-  "leagueRank": 339,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 136
@@ -9405,8 +8727,6 @@
   "sources": 2,
   "spread": 76,
   "rank": 340,
-  "leagueBlend": 375.67,
-  "leagueRank": 340,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 54
@@ -9427,8 +8747,6 @@
   "sources": 1,
   "spread": null,
   "rank": 341,
-  "leagueBlend": 376.0,
-  "leagueRank": 341,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 137
@@ -9450,8 +8768,6 @@
   "sources": 2,
   "spread": 57,
   "rank": 342,
-  "leagueBlend": 376.0,
-  "leagueRank": 342,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 138
@@ -9472,8 +8788,6 @@
   "sources": 1,
   "spread": null,
   "rank": 343,
-  "leagueBlend": 378.0,
-  "leagueRank": 343,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 139
@@ -9495,8 +8809,6 @@
   "sources": 2,
   "spread": 52,
   "rank": 344,
-  "leagueBlend": 378.67,
-  "leagueRank": 344,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 140
@@ -9517,8 +8829,6 @@
   "sources": 1,
   "spread": null,
   "rank": 345,
-  "leagueBlend": 379.0,
-  "leagueRank": 345,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 141
@@ -9539,8 +8849,6 @@
   "sources": 1,
   "spread": null,
   "rank": 346,
-  "leagueBlend": 380.0,
-  "leagueRank": 346,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 108
@@ -9562,8 +8870,6 @@
   "sources": 2,
   "spread": 48,
   "rank": 347,
-  "leagueBlend": 383.0,
-  "leagueRank": 347,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 142
@@ -9590,8 +8896,6 @@
   "sources": 2,
   "spread": 179,
   "rank": 348,
-  "leagueBlend": 383.33,
-  "leagueRank": 348,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 109
@@ -9612,8 +8916,6 @@
   "sources": 1,
   "spread": null,
   "rank": 349,
-  "leagueBlend": 386.0,
-  "leagueRank": 349,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 55
@@ -9634,8 +8936,6 @@
   "sources": 1,
   "spread": null,
   "rank": 350,
-  "leagueBlend": 387.0,
-  "leagueRank": 351,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 143
@@ -9662,8 +8962,6 @@
   "sources": 2,
   "spread": 136,
   "rank": 351,
-  "leagueBlend": 386.67,
-  "leagueRank": 350,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 44
@@ -9684,8 +8982,6 @@
   "sources": 1,
   "spread": null,
   "rank": 352,
-  "leagueBlend": 391.0,
-  "leagueRank": 352,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 56
@@ -9707,8 +9003,6 @@
   "sources": 2,
   "spread": 57,
   "rank": 353,
-  "leagueBlend": 391.0,
-  "leagueRank": 353,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 110
@@ -9730,8 +9024,6 @@
   "sources": 2,
   "spread": 66,
   "rank": 354,
-  "leagueBlend": 391.0,
-  "leagueRank": 354,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 144
@@ -9752,8 +9044,6 @@
   "sources": 1,
   "spread": null,
   "rank": 355,
-  "leagueBlend": 392.0,
-  "leagueRank": 355,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 145
@@ -9774,8 +9064,6 @@
   "sources": 1,
   "spread": null,
   "rank": 356,
-  "leagueBlend": 393.0,
-  "leagueRank": 356,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 57
@@ -9797,8 +9085,6 @@
   "sources": 2,
   "spread": 88,
   "rank": 357,
-  "leagueBlend": 393.67,
-  "leagueRank": 357,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 111
@@ -9819,8 +9105,6 @@
   "sources": 1,
   "spread": null,
   "rank": 358,
-  "leagueBlend": 404.0,
-  "leagueRank": 358,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 112
@@ -9841,8 +9125,6 @@
   "sources": 1,
   "spread": null,
   "rank": 359,
-  "leagueBlend": 405.0,
-  "leagueRank": 359,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 58
@@ -9863,8 +9145,6 @@
   "sources": 1,
   "spread": null,
   "rank": 360,
-  "leagueBlend": 406.0,
-  "leagueRank": 360,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 59
@@ -9885,8 +9165,6 @@
   "sources": 1,
   "spread": null,
   "rank": 361,
-  "leagueBlend": 407.0,
-  "leagueRank": 361,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 113
@@ -9908,8 +9186,6 @@
   "sources": 2,
   "spread": 102,
   "rank": 362,
-  "leagueBlend": 407.0,
-  "leagueRank": 362,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 146
@@ -9930,8 +9206,6 @@
   "sources": 1,
   "spread": null,
   "rank": 363,
-  "leagueBlend": 408.0,
-  "leagueRank": 363,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 114
@@ -9952,8 +9226,6 @@
   "sources": 1,
   "spread": null,
   "rank": 364,
-  "leagueBlend": 410.0,
-  "leagueRank": 364,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 45
@@ -9980,8 +9252,6 @@
   "sources": 2,
   "spread": 229,
   "rank": 365,
-  "leagueBlend": 414.67,
-  "leagueRank": 365,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 115
@@ -10002,8 +9272,6 @@
   "sources": 1,
   "spread": null,
   "rank": 366,
-  "leagueBlend": 418.0,
-  "leagueRank": 366,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 116
@@ -10024,8 +9292,6 @@
   "sources": 1,
   "spread": null,
   "rank": 367,
-  "leagueBlend": 420.0,
-  "leagueRank": 367,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 117
@@ -10046,8 +9312,6 @@
   "sources": 1,
   "spread": null,
   "rank": 368,
-  "leagueBlend": 421.0,
-  "leagueRank": 368,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 118
@@ -10068,8 +9332,6 @@
   "sources": 1,
   "spread": null,
   "rank": 369,
-  "leagueBlend": 421.0,
-  "leagueRank": 369,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 46
@@ -10090,8 +9352,6 @@
   "sources": 1,
   "spread": null,
   "rank": 370,
-  "leagueBlend": 425.0,
-  "leagueRank": 370,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 147
@@ -10112,8 +9372,6 @@
   "sources": 1,
   "spread": null,
   "rank": 371,
-  "leagueBlend": 427.0,
-  "leagueRank": 371,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 60
@@ -10134,8 +9392,6 @@
   "sources": 1,
   "spread": null,
   "rank": 372,
-  "leagueBlend": 429.0,
-  "leagueRank": 372,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 61
@@ -10156,8 +9412,6 @@
   "sources": 1,
   "spread": null,
   "rank": 373,
-  "leagueBlend": 430.0,
-  "leagueRank": 373,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 148
@@ -10179,8 +9433,6 @@
   "sources": 2,
   "spread": 136,
   "rank": 374,
-  "leagueBlend": 430.67,
-  "leagueRank": 374,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 149
@@ -10201,8 +9453,6 @@
   "sources": 1,
   "spread": null,
   "rank": 375,
-  "leagueBlend": 431.0,
-  "leagueRank": 375,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 150
@@ -10223,8 +9473,6 @@
   "sources": 1,
   "spread": null,
   "rank": 376,
-  "leagueBlend": 434.0,
-  "leagueRank": 376,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 151
@@ -10245,8 +9493,6 @@
   "sources": 1,
   "spread": null,
   "rank": 377,
-  "leagueBlend": 435.0,
-  "leagueRank": 377,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 119
@@ -10267,8 +9513,6 @@
   "sources": 1,
   "spread": null,
   "rank": 378,
-  "leagueBlend": 436.0,
-  "leagueRank": 378,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 62
@@ -10289,8 +9533,6 @@
   "sources": 1,
   "spread": null,
   "rank": 379,
-  "leagueBlend": 437.0,
-  "leagueRank": 379,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 63
@@ -10311,8 +9553,6 @@
   "sources": 1,
   "spread": null,
   "rank": 380,
-  "leagueBlend": 438.0,
-  "leagueRank": 380,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 120
@@ -10333,8 +9573,6 @@
   "sources": 1,
   "spread": null,
   "rank": 381,
-  "leagueBlend": 439.0,
-  "leagueRank": 381,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 152
@@ -10355,8 +9593,6 @@
   "sources": 1,
   "spread": null,
   "rank": 382,
-  "leagueBlend": 440.0,
-  "leagueRank": 382,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 121
@@ -10377,8 +9613,6 @@
   "sources": 1,
   "spread": null,
   "rank": 383,
-  "leagueBlend": 442.0,
-  "leagueRank": 383,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 153
@@ -10399,8 +9633,6 @@
   "sources": 1,
   "spread": null,
   "rank": 384,
-  "leagueBlend": 444.0,
-  "leagueRank": 384,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 122
@@ -10421,8 +9653,6 @@
   "sources": 1,
   "spread": null,
   "rank": 385,
-  "leagueBlend": 445.0,
-  "leagueRank": 385,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 123
@@ -10443,8 +9673,6 @@
   "sources": 1,
   "spread": null,
   "rank": 386,
-  "leagueBlend": 446.0,
-  "leagueRank": 386,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 154
@@ -10465,8 +9693,6 @@
   "sources": 1,
   "spread": null,
   "rank": 387,
-  "leagueBlend": 447.0,
-  "leagueRank": 387,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 155
@@ -10487,8 +9713,6 @@
   "sources": 1,
   "spread": null,
   "rank": 388,
-  "leagueBlend": 448.0,
-  "leagueRank": 388,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 156
@@ -10509,8 +9733,6 @@
   "sources": 1,
   "spread": null,
   "rank": 389,
-  "leagueBlend": 449.0,
-  "leagueRank": 389,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 64
@@ -10531,8 +9753,6 @@
   "sources": 1,
   "spread": null,
   "rank": 390,
-  "leagueBlend": 450.0,
-  "leagueRank": 390,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 124
@@ -10553,8 +9773,6 @@
   "sources": 1,
   "spread": null,
   "rank": 391,
-  "leagueBlend": 451.0,
-  "leagueRank": 391,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 157
@@ -10575,8 +9793,6 @@
   "sources": 1,
   "spread": null,
   "rank": 392,
-  "leagueBlend": 452.0,
-  "leagueRank": 392,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 125
@@ -10597,8 +9813,6 @@
   "sources": 1,
   "spread": null,
   "rank": 393,
-  "leagueBlend": 453.0,
-  "leagueRank": 393,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 126
@@ -10619,8 +9833,6 @@
   "sources": 1,
   "spread": null,
   "rank": 394,
-  "leagueBlend": 454.0,
-  "leagueRank": 394,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 158
@@ -10641,8 +9853,6 @@
   "sources": 1,
   "spread": null,
   "rank": 395,
-  "leagueBlend": 454.0,
-  "leagueRank": 395,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 47
@@ -10663,8 +9873,6 @@
   "sources": 1,
   "spread": null,
   "rank": 396,
-  "leagueBlend": 456.0,
-  "leagueRank": 396,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 159
@@ -10685,8 +9893,6 @@
   "sources": 1,
   "spread": null,
   "rank": 397,
-  "leagueBlend": 457.0,
-  "leagueRank": 397,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 160
@@ -10707,8 +9913,6 @@
   "sources": 1,
   "spread": null,
   "rank": 398,
-  "leagueBlend": 458.0,
-  "leagueRank": 398,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 161
@@ -10729,8 +9933,6 @@
   "sources": 1,
   "spread": null,
   "rank": 399,
-  "leagueBlend": 459.0,
-  "leagueRank": 399,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 65
@@ -10751,8 +9953,6 @@
   "sources": 1,
   "spread": null,
   "rank": 400,
-  "leagueBlend": 461.0,
-  "leagueRank": 400,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 162
@@ -10773,8 +9973,6 @@
   "sources": 1,
   "spread": null,
   "rank": 401,
-  "leagueBlend": 462.0,
-  "leagueRank": 401,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 66
@@ -10795,8 +9993,6 @@
   "sources": 1,
   "spread": null,
   "rank": 402,
-  "leagueBlend": 463.0,
-  "leagueRank": 402,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 163
@@ -10817,8 +10013,6 @@
   "sources": 1,
   "spread": null,
   "rank": 403,
-  "leagueBlend": 464.0,
-  "leagueRank": 403,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 67
@@ -10839,8 +10033,6 @@
   "sources": 1,
   "spread": null,
   "rank": 404,
-  "leagueBlend": 465.0,
-  "leagueRank": 404,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 68
@@ -10861,8 +10053,6 @@
   "sources": 1,
   "spread": null,
   "rank": 405,
-  "leagueBlend": 466.0,
-  "leagueRank": 405,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 127
@@ -10883,8 +10073,6 @@
   "sources": 1,
   "spread": null,
   "rank": 406,
-  "leagueBlend": 466.0,
-  "leagueRank": 406,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 48
@@ -10905,8 +10093,6 @@
   "sources": 1,
   "spread": null,
   "rank": 407,
-  "leagueBlend": 468.0,
-  "leagueRank": 407,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 128
@@ -10927,8 +10113,6 @@
   "sources": 1,
   "spread": null,
   "rank": 408,
-  "leagueBlend": 469.0,
-  "leagueRank": 408,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 164
@@ -10949,8 +10133,6 @@
   "sources": 1,
   "spread": null,
   "rank": 409,
-  "leagueBlend": 470.0,
-  "leagueRank": 409,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 69
@@ -10971,8 +10153,6 @@
   "sources": 1,
   "spread": null,
   "rank": 410,
-  "leagueBlend": 470.0,
-  "leagueRank": 410,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 49
@@ -10993,8 +10173,6 @@
   "sources": 1,
   "spread": null,
   "rank": 411,
-  "leagueBlend": 472.0,
-  "leagueRank": 411,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 129
@@ -11015,8 +10193,6 @@
   "sources": 1,
   "spread": null,
   "rank": 412,
-  "leagueBlend": 473.0,
-  "leagueRank": 412,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 70
@@ -11037,8 +10213,6 @@
   "sources": 1,
   "spread": null,
   "rank": 413,
-  "leagueBlend": 474.0,
-  "leagueRank": 413,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 130
@@ -11059,8 +10233,6 @@
   "sources": 1,
   "spread": null,
   "rank": 414,
-  "leagueBlend": 475.0,
-  "leagueRank": 414,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 165
@@ -11081,8 +10253,6 @@
   "sources": 1,
   "spread": null,
   "rank": 415,
-  "leagueBlend": 477.0,
-  "leagueRank": 415,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 166
@@ -11103,8 +10273,6 @@
   "sources": 1,
   "spread": null,
   "rank": 416,
-  "leagueBlend": 478.0,
-  "leagueRank": 416,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 167
@@ -11125,8 +10293,6 @@
   "sources": 1,
   "spread": null,
   "rank": 417,
-  "leagueBlend": 479.0,
-  "leagueRank": 417,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 71
@@ -11147,8 +10313,6 @@
   "sources": 1,
   "spread": null,
   "rank": 418,
-  "leagueBlend": 480.0,
-  "leagueRank": 418,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 168
@@ -11169,8 +10333,6 @@
   "sources": 1,
   "spread": null,
   "rank": 419,
-  "leagueBlend": 481.0,
-  "leagueRank": 419,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 131
@@ -11191,8 +10353,6 @@
   "sources": 1,
   "spread": null,
   "rank": 420,
-  "leagueBlend": 482.0,
-  "leagueRank": 420,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 132
@@ -11213,8 +10373,6 @@
   "sources": 1,
   "spread": null,
   "rank": 421,
-  "leagueBlend": 483.0,
-  "leagueRank": 421,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 133
@@ -11235,8 +10393,6 @@
   "sources": 1,
   "spread": null,
   "rank": 422,
-  "leagueBlend": 484.0,
-  "leagueRank": 422,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 169
@@ -11257,8 +10413,6 @@
   "sources": 1,
   "spread": null,
   "rank": 423,
-  "leagueBlend": 485.0,
-  "leagueRank": 423,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 134
@@ -11279,8 +10433,6 @@
   "sources": 1,
   "spread": null,
   "rank": 424,
-  "leagueBlend": 485.0,
-  "leagueRank": 424,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 50
@@ -11301,8 +10453,6 @@
   "sources": 1,
   "spread": null,
   "rank": 425,
-  "leagueBlend": 487.0,
-  "leagueRank": 425,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 170
@@ -11323,8 +10473,6 @@
   "sources": 1,
   "spread": null,
   "rank": 426,
-  "leagueBlend": 488.0,
-  "leagueRank": 426,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 72
@@ -11345,8 +10493,6 @@
   "sources": 1,
   "spread": null,
   "rank": 427,
-  "leagueBlend": 489.0,
-  "leagueRank": 427,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 171
@@ -11367,8 +10513,6 @@
   "sources": 1,
   "spread": null,
   "rank": 428,
-  "leagueBlend": 490.0,
-  "leagueRank": 428,
   "tier": 12,
   "tierSrc": "fp",
   "posRankFinal": 135
@@ -11389,8 +10533,6 @@
   "sources": 1,
   "spread": null,
   "rank": 429,
-  "leagueBlend": 492.0,
-  "leagueRank": 429,
   "tier": 9,
   "tierSrc": "fp",
   "posRankFinal": 73
@@ -11411,8 +10553,6 @@
   "sources": 1,
   "spread": null,
   "rank": 430,
-  "leagueBlend": 493.0,
-  "leagueRank": 430,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 136
@@ -11433,8 +10573,6 @@
   "sources": 1,
   "spread": null,
   "rank": 431,
-  "leagueBlend": 494.0,
-  "leagueRank": 431,
   "tier": 12,
   "tierSrc": "band",
   "posRankFinal": 137
@@ -11455,8 +10593,6 @@
   "sources": 1,
   "spread": null,
   "rank": 432,
-  "leagueBlend": 494.0,
-  "leagueRank": 432,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 51
@@ -11477,8 +10613,6 @@
   "sources": 1,
   "spread": null,
   "rank": 433,
-  "leagueBlend": 495.0,
-  "leagueRank": 433,
   "tier": 7,
   "tierSrc": "fp",
   "posRankFinal": 52
@@ -11499,8 +10633,6 @@
   "sources": 1,
   "spread": null,
   "rank": 434,
-  "leagueBlend": 497.0,
-  "leagueRank": 434,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 172
@@ -11521,8 +10653,6 @@
   "sources": 1,
   "spread": null,
   "rank": 435,
-  "leagueBlend": 498.0,
-  "leagueRank": 435,
   "tier": 10,
   "tierSrc": "fp",
   "posRankFinal": 138
@@ -11543,8 +10673,6 @@
   "sources": 1,
   "spread": null,
   "rank": 436,
-  "leagueBlend": 499.0,
-  "leagueRank": 436,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 139
@@ -11565,8 +10693,6 @@
   "sources": 1,
   "spread": null,
   "rank": 437,
-  "leagueBlend": 500.0,
-  "leagueRank": 437,
   "tier": 12,
   "tierSrc": "fp",
   "posRankFinal": 173
@@ -11587,8 +10713,6 @@
   "sources": 1,
   "spread": null,
   "rank": 438,
-  "leagueBlend": 501.0,
-  "leagueRank": 438,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 174
@@ -11609,8 +10733,6 @@
   "sources": 1,
   "spread": null,
   "rank": 439,
-  "leagueBlend": 502.0,
-  "leagueRank": 439,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 140
@@ -11631,8 +10753,6 @@
   "sources": 1,
   "spread": null,
   "rank": 440,
-  "leagueBlend": 504.0,
-  "leagueRank": 440,
   "tier": 11,
   "tierSrc": "fp",
   "posRankFinal": 175
@@ -11653,8 +10773,6 @@
   "sources": 1,
   "spread": null,
   "rank": 441,
-  "leagueBlend": 505.0,
-  "leagueRank": 441,
   "tier": 8,
   "tierSrc": "fp",
   "posRankFinal": 74
