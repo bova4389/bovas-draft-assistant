@@ -1,0 +1,273 @@
+"""Merge FantasyPros (primary) + Yahoo + JYJ into one ranked player set."""
+import csv, json, re, unicodedata, collections
+
+TEAM = {  # normalise every source to Sleeper-style codes
+    'SFO': 'SF', 'LVR': 'LV', 'KAN': 'KC', 'NWE': 'NE', 'GNB': 'GB',
+    'TAM': 'TB', 'NOR': 'NO', 'JAX': 'JAC', 'WSH': 'WAS', 'LA': 'LAR',
+}
+SUFFIX = {'jr', 'sr', 'ii', 'iii', 'iv', 'v'}
+# Nickname/legal-name splits between sources, keyed on the normalised form.
+ALIAS = {'marquise brown': 'hollywood brown'}
+
+
+def team(t):
+    t = (t or '').strip().upper()
+    return TEAM.get(t, t)
+
+
+def norm(name):
+    """Lowercase, strip accents/punctuation/suffixes -> comparable token list."""
+    s = unicodedata.normalize('NFKD', name or '')
+    s = ''.join(c for c in s if not unicodedata.combining(c))
+    s = s.lower().replace('.', ' ').replace("'", '').replace('-', ' ')
+    toks = [t for t in re.split(r'\s+', s) if t and t not in SUFFIX]
+    return toks
+
+
+def key_full(name):
+    k = ' '.join(norm(name))
+    return ALIAS.get(k, k)
+
+
+def stars(v):
+    """'4 out of 5' -> 4; '-' or blank -> None."""
+    m = re.match(r'\s*(\d)', v or '')
+    return int(m.group(1)) if m else None
+
+
+def key_abbrev(name):
+    """(first-initial, final-surname-token).
+
+    Deliberately loose so the three sources' name styles collapse together:
+    'A. St. Brown'/'Amon-Ra St. Brown' -> ('a','brown'), 'AJ Brown'/'A.J. Brown'
+    -> ('a','brown'), 'J. Smith-Njigba' -> ('j','njigba'). Collisions are then
+    resolved by position, team, and rank proximity in `attach`.
+    """
+    toks = norm(name)
+    if not toks:
+        return None
+    return (toks[0][0], toks[-1] if len(toks) > 1 else toks[0])
+
+
+# ---------------------------------------------------------------- FantasyPros
+players = []
+with open('fp_all.csv', encoding='utf-8-sig') as f:
+    for r in csv.DictReader(f):
+        pos = re.sub(r'\d+', '', r['POS']).strip()
+        if pos in ('K', 'DST'):
+            continue
+        players.append({
+            'name': r['PLAYER NAME'].strip(),
+            'team': team(r['TEAM']),
+            'pos': pos,
+            'posRank': int(re.sub(r'\D', '', r['POS'])),
+            'bye': int(r['BYE WEEK']) if r['BYE WEEK'].strip().isdigit() else None,
+            'fp': int(r['RK'].strip('"')),
+            'fpTier': int(r['TIERS']) if r['TIERS'].strip() else None,
+            'upside': stars(r['UPSIDE ']),
+            'bust': stars(r['BUST ']),
+            'sos': stars(r['SOS SEASON']),
+            'ecrVsAdp': (r['ECR VS. ADP'] or '').strip(),
+        })
+
+by_full = collections.defaultdict(list)
+by_abbrev = collections.defaultdict(list)
+for p in players:
+    by_full[key_full(p['name'])].append(p)
+    by_abbrev[key_abbrev(p['name'])].append(p)
+
+
+def resolve(cands, pos, tm, rank, field):
+    """Narrow same-key candidates by position, then team, then rank proximity.
+
+    `field` is the source column being filled; already-filled players are
+    dropped first so two same-named players can't both take the same rank
+    (Bijan vs Brian Robinson, both ATL RB).
+    """
+    c = [x for x in cands if x.get(field) is None] or list(cands)
+    c = [x for x in c if x['pos'] == pos] or c
+    if len(c) > 1:
+        c = [x for x in c if x['team'] == tm] or c
+    if len(c) > 1:
+        c = [min(c, key=lambda x: abs(x['fp'] - rank))]
+    return c[0] if len(c) == 1 else None
+
+
+# --------------------------------------------------------------------- Yahoo
+y_miss = []
+for line in open('yahoo300.txt', encoding='utf-8').read().splitlines()[1:]:
+    rank, name, tm, pos, avg = line.split('|')
+    if pos in ('K', 'DST'):
+        continue
+    p = resolve(by_abbrev.get(key_abbrev(name), []), pos, team(tm), int(rank), 'yahoo')
+    if p:
+        p['yahoo'] = int(rank)
+    else:
+        y_miss.append(f'{rank} {name} {tm} {pos}')
+
+# ----------------------------------------------------------------------- JYJ
+j_miss, j_bad = [], []
+for line in open('jyj.txt', encoding='utf-8').read().splitlines()[1:]:
+    f = line.split('|')
+    # The five leading and three trailing columns are always present; the
+    # optional middle three (adp, consensus, injury) can lose a delimiter when
+    # all are blank, so anchor from both ends rather than trusting positions.
+    if len(f) < 8:
+        j_bad.append(line)
+        continue
+    head, tail = f[:5], f[-3:]
+    mid = f[5:-3] + [''] * 3
+    f = head + mid[:3] + tail
+    rank, name, tm, pos = f[0], f[1], f[2], f[3]
+    if pos in ('PK', 'DEF'):
+        continue
+    cands = by_full.get(key_full(name)) or by_abbrev.get(key_abbrev(name)) or []
+    p = resolve(cands, pos, team(tm), int(rank), 'jyj')
+    if not p:
+        # Keep anyone JYJ ranks clearly startable: FantasyPros' export has a
+        # few real omissions (e.g. Ricky Pearsall) and a draft board that
+        # silently hides a rosterable player is worse than one extra row.
+        # Past ~130 the only JYJ-exclusive names are fullbacks and camp bodies.
+        if int(rank) <= 130:
+            p = {'name': name, 'team': team(tm), 'pos': pos, 'posRank': None,
+                 'bye': int(f[4]) if f[4].isdigit() else None, 'fp': None,
+                 'fpTier': None, 'upside': None, 'bust': None, 'sos': None,
+                 'ecrVsAdp': '', 'jyj': int(rank), 'onlyJyj': True}
+            players.append(p)
+        else:
+            j_miss.append(f'{rank} {name} {tm} {pos}')
+            continue
+    p['jyj'] = int(rank)
+    p['inj'] = 'Inj' in (f[7] or '')
+    p['rookie'] = 'R' in (f[7] or '').replace('Inj', '')
+    p['oline'] = f[8] or None
+    p['sosEarly'] = int(f[9]) if f[9] else None
+    p['sosPlayoff'] = int(f[10]) if f[10] else None
+
+print(f'FantasyPros skill players: {len(players)}')
+print(f'Yahoo matched: {sum(1 for p in players if p.get("yahoo"))}  unmatched: {len(y_miss)}')
+for m in y_miss:
+    print('   yahoo miss:', m)
+print(f'JYJ matched: {sum(1 for p in players if p.get("jyj"))}  unmatched: {len(j_miss)}')
+for m in j_miss:
+    print('   jyj miss:', m)
+
+
+# ------------------------------------------------------------------- blend
+# FantasyPros carries the most expert inputs and is the only PPR-specific
+# source, so it gets half the weight; Yahoo and JYJ split the rest. Weights
+# are renormalised over whichever sources actually rank a given player.
+WEIGHT = {'fp': 0.50, 'yahoo': 0.25, 'jyj': 0.25}
+DEEP = 400  # stand-in rank so one missing source can't inflate a player
+
+for p in players:
+    num = den = 0.0
+    for src, w in WEIGHT.items():
+        if p.get(src):
+            num += w * p[src]
+            den += w
+    p['blend'] = round(num / den, 2) if den else DEEP
+    p['sources'] = sum(1 for s in WEIGHT if p.get(s))
+    ranks = [p[s] for s in WEIGHT if p.get(s)]
+    # How far apart the sources are — a big spread is a real draft-room signal.
+    p['spread'] = (max(ranks) - min(ranks)) if len(ranks) > 1 else None
+
+players.sort(key=lambda p: p['blend'])
+for i, p in enumerate(players, 1):
+    p['rank'] = i
+
+# --------------------------------------------------- league-specific tweak
+# This league pays 6 points per passing TD (Sleeper `pass_td: 6`) while every
+# public ranking assumes 4. That widens the gap between elite and streamer QBs,
+# historically worth about a round to a round and a half at the top.
+QB_SHIFT = [(4, 10), (10, 7), (16, 4)]  # (through QB rank, spots to move up)
+
+
+def qb_shift(qb_rank):
+    for cutoff, spots in QB_SHIFT:
+        if qb_rank <= cutoff:
+            return spots
+    return 1
+
+
+qb_n = 0
+for p in players:
+    if p['pos'] == 'QB':
+        qb_n += 1
+        p['leagueBlend'] = max(0.1, p['blend'] - qb_shift(qb_n))
+    else:
+        p['leagueBlend'] = p['blend']
+
+for i, p in enumerate(sorted(players, key=lambda p: p['leagueBlend']), 1):
+    p['leagueRank'] = i
+
+# -------------------------------------------------------------------- tiers
+# 1-D Jenks natural breaks (optimal DP) over the blended rank inside each
+# position — the same "cluster players the experts treat as interchangeable"
+# idea Boris Chen uses, since his 2026 draft tiers were never published.
+def jenks(vals, k):
+    n = len(vals)
+    k = min(k, n)
+    if k <= 1:
+        return [0]
+    INF = float('inf')
+    cost = [[0.0] * n for _ in range(n)]
+    for i in range(n):
+        s = sq = 0.0
+        for j in range(i, n):
+            s += vals[j]
+            sq += vals[j] ** 2
+            m = j - i + 1
+            cost[i][j] = sq - s * s / m  # within-group variance
+    dp = [[INF] * (k + 1) for _ in range(n + 1)]
+    back = [[0] * (k + 1) for _ in range(n + 1)]
+    dp[0][0] = 0.0
+    for j in range(1, k + 1):
+        for i in range(1, n + 1):
+            for t in range(j - 1, i):
+                c = dp[t][j - 1] + cost[t][i - 1]
+                if c < dp[i][j]:
+                    dp[i][j] = c
+                    back[i][j] = t
+    starts, i = [], n
+    for j in range(k, 0, -1):
+        starts.append(back[i][j])
+        i = back[i][j]
+    return sorted(starts)
+
+
+# How deep each position stays relevant in a 12-team / 14-round / 3-flex draft,
+# and how many tiers to cut that pool into.
+POOL = {'QB': (26, 8), 'RB': (68, 12), 'WR': (78, 12), 'TE': (26, 8)}
+
+for pos, (depth, ntiers) in POOL.items():
+    group = [p for p in players if p['pos'] == pos]
+    group.sort(key=lambda p: p['blend'])
+    for i, p in enumerate(group, 1):
+        p['posRankFinal'] = i
+    pool = group[:depth]
+    starts = set(jenks([p['blend'] for p in pool], ntiers))
+    tier = 0
+    for i, p in enumerate(pool):
+        if i in starts:
+            tier += 1
+        p['tier'] = max(tier, 1)
+    for p in group[depth:]:
+        p['tier'] = ntiers + 1  # everyone past the useful pool
+
+print('\n--- tiers ---')
+for pos, (depth, ntiers) in POOL.items():
+    group = sorted([p for p in players if p['pos'] == pos and p['tier'] <= ntiers],
+                   key=lambda p: p['blend'])
+    print(f'\n{pos}')
+    cur = None
+    for p in group:
+        if p['tier'] != cur:
+            cur = p['tier']
+            print(f'  T{cur}:', end='')
+        print(f" {p['name']}", end='')
+    print()
+
+json.dump(players, open('merged.json', 'w'), indent=1)
+print(f'\nwrote {len(players)} players')
+
