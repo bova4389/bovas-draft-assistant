@@ -29,6 +29,29 @@ ZIP. It is dated 2026-02-24 — before free agency and the 2026 draft — so it 
 no rookies at all and stale teams (A.J. Brown on PHI, not NE). Blending it in
 would have dragged good players down for no reason.
 
+## ADP and Sleeper rank — draft-room value check
+
+Each row also shows two numbers next to the blended rank, so you can see where
+the room is likely to actually take a player relative to our own list:
+
+- **A (ADP)** — real-world average draft position, reconstructed as FantasyPros'
+  own rank plus their "ECR VS. ADP" differential (already in `fp_all.csv`, no
+  extra download).
+- **S (Sleeper rank)** — Sleeper's own `search_rank`, the field its app sorts
+  the default draft-room player list by. Fetched once via `fetch_sleeper.py`
+  (`python fetch_sleeper.py`, ~5MB, cached to `sleeper_players.json` and
+  gitignored) and matched into `merge.py`.
+
+A number turns **green** when it sits 50+ spots later than our rank (the room
+will likely let them fall — safe to wait) and **red** when it sits 50+ spots
+earlier (someone else will likely grab them first — reach now if you want them).
+
+Sleeper's player dump uses two round-number placeholders for "no meaningful
+rank" (`9999999` and `999`) instead of omitting the field, which `merge.py`
+filters out — otherwise an inactive/irrelevant same-initial-and-surname player
+(e.g. retired RB "Javorius Allen") can collide with a real starter ("Josh
+Allen", QB) and stamp them with the placeholder instead of a real rank.
+
 ## Tiers
 
 Straight from FantasyPros' per-position exports (`fp_QB.csv` … `fp_TE.csv`) —
@@ -67,8 +90,9 @@ The old shift is in git history if it is ever wanted back.
 ## Rebuilding
 
 ```bash
-python merge.py   # sources -> merged.json (+ prints tiers and match diagnostics)
-python build.py   # merged.json + template.html -> index.html
+python fetch_sleeper.py   # one-time: caches Sleeper's player list -> sleeper_players.json
+python merge.py           # sources -> merged.json (+ prints tiers and match diagnostics)
+python build.py           # merged.json + template.html -> index.html
 ```
 
 Edit `template.html` for UI changes, never `index.html` — it is generated, and

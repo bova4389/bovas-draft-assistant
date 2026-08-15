@@ -1,1 +1,3 @@
-# Nothing to ignore yet - the data files are needed to rebuild index.html
+# Sleeper's full player list (~16MB) - fetched on demand by fetch_sleeper.py,
+# not needed to rebuild index.html since merged.json already carries sr ranks.
+sleeper_players.json

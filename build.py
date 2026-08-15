@@ -15,6 +15,7 @@ for p in sorted(players, key=lambda x: x['rank']):
         'r': p['rank'],
         'fp': p.get('fp'), 'yh': p.get('yahoo'), 'jy': p.get('jyj'),
         'sp': p.get('spread'),
+        'adp': p.get('adp'), 'sr': p.get('sleeperRank'),
         'i': bool(p.get('inj')), 'rk': bool(p.get('rookie')),
         'only': bool(p.get('onlyJyj')),
     })

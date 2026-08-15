@@ -1,5 +1,5 @@
 """Merge FantasyPros (primary) + Yahoo + JYJ into one ranked player set."""
-import csv, json, re, unicodedata, collections
+import csv, json, os, re, unicodedata, collections
 
 TEAM = {  # normalise every source to Sleeper-style codes
     'SFO': 'SF', 'LVR': 'LV', 'KAN': 'KC', 'NWE': 'NE', 'GNB': 'GB',
@@ -70,6 +70,13 @@ with open('fp_all.csv', encoding='utf-8-sig') as f:
             'ecrVsAdp': (r['ECR VS. ADP'] or '').strip(),
         })
 
+# FantasyPros' "ECR VS. ADP" is signed ADP-minus-ECR (e.g. Chase RK=1, "+2" ->
+# ADP 3; Gibbs RK=2, "-1" -> ADP 1), so the real ADP number is just RK + diff.
+for p in players:
+    m = re.match(r'^([+-]?\d+)$', p['ecrVsAdp'])
+    diff = int(m.group(1)) if m else None
+    p['adp'] = (p['fp'] + diff) if (diff is not None and p.get('fp')) else None
+
 by_full = collections.defaultdict(list)
 by_abbrev = collections.defaultdict(list)
 for p in players:
@@ -89,7 +96,7 @@ def resolve(cands, pos, tm, rank, field):
     if len(c) > 1:
         c = [x for x in c if x['team'] == tm] or c
     if len(c) > 1:
-        c = [min(c, key=lambda x: abs(x['fp'] - rank))]
+        c = [min(c, key=lambda x: abs((x.get('fp') or rank) - rank))]
     return c[0] if len(c) == 1 else None
 
 
@@ -144,6 +151,58 @@ for line in open('jyj.txt', encoding='utf-8').read().splitlines()[1:]:
     p['sosEarly'] = int(f[9]) if f[9] else None
     p['sosPlayoff'] = int(f[10]) if f[10] else None
 
+# ------------------------------------------------------------------- Sleeper
+# Sleeper's own default overall ranking (search_rank), for the "what's my
+# draft room actually looking at" comparison. Read-only cache built once by
+# fetch_sleeper.py - merge.py never hits the network itself.
+# Rebuilt (not the original by_full/by_abbrev) so the JYJ-only additions
+# above - e.g. Ricky Pearsall, missing from FantasyPros' own export - are
+# still matchable here.
+by_full_all = collections.defaultdict(list)
+by_abbrev_all = collections.defaultdict(list)
+for p in players:
+    by_full_all[key_full(p['name'])].append(p)
+    by_abbrev_all[key_abbrev(p['name'])].append(p)
+
+s_miss = []
+if os.path.exists('sleeper_players.json'):
+    with open('sleeper_players.json', encoding='utf-8') as f:
+        sleeper = json.load(f)
+    # Sleeper uses (at least) two round-number placeholders for "no meaningful
+    # rank" rather than omitting the field: 9999999 (2226 of ~3900 skill-position
+    # entries) and 999 (269 entries - real ranks are all but unique, so 269
+    # players tied at exactly the same rank is not organic). Every genuine rank
+    # is otherwise a one-off value under ~2100. Both get dropped here, which is
+    # what actually stops false matches (see position guard below): e.g.
+    # inactive RB "Javorius Allen" (9999999) or a placeholder-ranked "Jayden
+    # Reed" duplicate (999) would otherwise collide by first-initial+surname or
+    # exact name with the real "Josh Allen"/"Jayden Reed" and overwrite their
+    # true rank.
+    SLEEPER_SENTINELS = {999, 9999999}
+    for sp in sleeper.values():
+        if sp.get('position') not in ('QB', 'RB', 'WR', 'TE') or not sp.get('search_rank') \
+                or sp['search_rank'] in SLEEPER_SENTINELS:
+            continue
+        name = sp.get('full_name') or ('%s %s' % (sp.get('first_name') or '', sp.get('last_name') or '')).strip()
+        pos, tm, rank = sp['position'], team(sp.get('team') or ''), sp['search_rank']
+        cands = by_full_all.get(key_full(name)) or by_abbrev_all.get(key_abbrev(name)) or []
+        # resolve()'s position filter falls back to the unfiltered list when it
+        # would otherwise empty out - fine for genuine same-source position
+        # typos, but Sleeper's dump includes decades of retired/inactive
+        # players, so an abbrev-only hit (e.g. RB "Javorius Allen", inactive)
+        # can collide with an unrelated real starter (QB "Josh Allen") purely
+        # by first-initial+surname. Require the position class to actually
+        # match before resolve() ever runs, so a same-position candidate has
+        # to be genuinely absent before we call it a real miss.
+        cands = [c for c in cands if c['pos'] == pos]
+        p = resolve(cands, pos, tm, rank, 'sleeperRank')
+        if p:
+            p['sleeperRank'] = rank
+        elif rank <= 300:  # deeper misses are just Sleeper's longer tail, not worth reporting
+            s_miss.append(f'{rank} {name} {tm} {pos}')
+else:
+    print('sleeper_players.json not found - run `python fetch_sleeper.py` first; skipping Sleeper ranks.')
+
 print(f'FantasyPros skill players: {len(players)}')
 print(f'Yahoo matched: {sum(1 for p in players if p.get("yahoo"))}  unmatched: {len(y_miss)}')
 for m in y_miss:
@@ -151,6 +210,10 @@ for m in y_miss:
 print(f'JYJ matched: {sum(1 for p in players if p.get("jyj"))}  unmatched: {len(j_miss)}')
 for m in j_miss:
     print('   jyj miss:', m)
+if os.path.exists('sleeper_players.json'):
+    print(f'Sleeper matched: {sum(1 for p in players if p.get("sleeperRank"))}  unmatched (rank<=300): {len(s_miss)}')
+    for m in sorted(s_miss, key=lambda x: int(x.split(" ")[0])):
+        print('   sleeper miss:', m)
 
 
 # ------------------------------------------------------------------- blend

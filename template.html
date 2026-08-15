@@ -11,6 +11,7 @@
   --qb:#f2555a; --rb:#28c76f; --wr:#3b93ff; --te:#f6a723;
   --bg:#0e1116; --panel:#161b23; --panel2:#1d232d; --line:#2a323f;
   --txt:#e8edf5; --dim:#8d99ab; --dimmer:#5d6879; --accent:#ffd166;
+  --value:#28c76f; --reach:#ff5d5d;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;padding:0}
@@ -109,6 +110,16 @@ main{padding:8px 8px 90px}
 }
 .gone .box{background:var(--dim);border-color:var(--dim)}
 .rk{flex:0 0 30px;text-align:right;font-size:13px;font-variant-numeric:tabular-nums;color:var(--dim)}
+/* ADP / Sleeper search_rank, shown next to the blended rank for a live-draft-room
+   value check: green when the room will likely let this player fall past our
+   rank, red when someone will grab them before our rank comes up. */
+.cmp{
+  flex:0 0 40px;display:flex;flex-direction:column;align-items:flex-end;gap:1px;
+  font-size:10px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.2;
+}
+.cmp span{color:var(--dimmer)}
+.cmp span.value{color:var(--value)}
+.cmp span.reach{color:var(--reach)}
 .mid{flex:1;min-width:0}
 .nm{font-weight:700;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .sub{font-size:11.5px;color:var(--dim);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -260,6 +271,13 @@ dialog select,dialog input{
     <option value="on">On - pull picks from Sleeper every 15s</option>
   </select>
   <div class="note" id="syncNote" style="margin-top:12px"></div>
+  <div class="note" style="margin-top:8px">
+    Each row's <b>A</b> (ADP) and <b>S</b> (Sleeper rank) numbers compare to our
+    own rank: <span style="color:var(--value);font-weight:800">green</span> means
+    the room usually lets them fall past our rank (fine to wait);
+    <span style="color:var(--reach);font-weight:800">red</span> means someone
+    else will likely take them first.
+  </div>
   <div style="font-size:11px;color:var(--dimmer);margin-top:10px;text-align:center">
     Build <span id="build"></span> &middot; <span id="pcount"></span> players
   </div>
@@ -321,6 +339,10 @@ function slotAt(pick){
 function label(pick){
   return (Math.floor(pick / TEAMS) + 1) + "." + String(pick % TEAMS + 1).padStart(2,"0");
 }
+// `pick` is the 0-indexed overall pick slot used throughout; the draft-room
+// number everyone actually says out loud is 1-indexed.
+function overallOf(pick){ return pick + 1; }
+function fullLabel(pick){ return label(pick) + " · Pick " + overallOf(pick); }
 function teamAt(slot){ return LEAGUE.teams[slot-1] || ("Team " + slot); }
 
 const takenBy = () => {                 // player index -> slot
@@ -374,11 +396,22 @@ function drawClock(){
   const n = S.picks.length;
   const done = n >= PICKS;
   const slot = done ? null : slotAt(n);
-  $("#pickno").textContent = done ? "Done" : label(n);
+  $("#pickno").textContent = done ? "Done" : fullLabel(n);
   const sel = $("#team");
   sel.innerHTML = LEAGUE.teams.map((t,i) =>
     `<option value="${i+1}" ${!done && i+1===slot?"selected":""}>${esc(t)}</option>`).join("");
   $("#clock").classList.toggle("mine", !done && slot === S.slot);
+}
+
+// How far ADP/Sleeper rank has to sit from our own rank before it's a real
+// draft-room signal rather than noise.
+const CMP_GAP = 50;
+function cmpClass(val, base){
+  if (val == null) return "";
+  const diff = val - base;   // later than us -> will likely fall -> value
+  if (diff >= CMP_GAP) return "value";
+  if (diff <= -CMP_GAP) return "reach";
+  return "";
 }
 
 /* Row markup for one player. */
@@ -397,9 +430,15 @@ function rowHTML(p, idx, taken, showTier){
     (p.only ? '<span class="tag new">JYJ only</span>' : "");
   const spread = p.sp != null && p.sp >= 25
     ? ` &middot; <span style="color:#c7a8ff">split ${p.sp}</span>` : "";
+  const rk = rankOf(p);
+  const cmp = `<div class="cmp">
+    <span class="${cmpClass(p.adp, rk)}" title="ADP (real-world average draft position)">A ${p.adp != null ? p.adp : "&ndash;"}</span>
+    <span class="${cmpClass(p.sr, rk)}" title="Sleeper's default rank">S ${p.sr != null ? p.sr : "&ndash;"}</span>
+  </div>`;
   return `<div class="row ${p.p} ${gone?"gone":""} ${isMine?"mine":""}" data-i="${idx}">
     <div class="box">${gone?"&#10003;":""}</div>
-    <div class="rk">${rankOf(p)}</div>
+    <div class="rk">${rk}</div>
+    ${cmp}
     <div class="mid">
       <div class="nm">${esc(p.n)}${flags}</div>
       <div class="sub">${p.t} &middot; Bye ${p.b || "-"} &middot; ${src}${spread}</div>
@@ -475,7 +514,7 @@ function drawBoard(){
         h += `<td class="${p.p}"><div class="bn">${esc(p.n)}</div>
               <div class="bp">${p.p}${p.pr} &middot; ${p.t}</div></td>`;
       } else {
-        h += `<td class="${onClock?"on":""}"><div class="bp">${label(pick)}</div></td>`;
+        h += `<td class="${onClock?"on":""}"><div class="bp">${label(pick)}<br>Pick ${overallOf(pick)}</div></td>`;
       }
     }
     h += "</tr>";
@@ -525,7 +564,7 @@ function drawTeam(){
       <div class="mid">
         <div class="nm">${esc(p.n)}</div>
         <div class="sub">${p.p}${p.pr} &middot; ${p.t} &middot; Bye ${p.b || "-"}
-          &middot; Tier ${p.tr} &middot; pick ${label(i)}</div>
+          &middot; Tier ${p.tr} &middot; ${fullLabel(i)}</div>
       </div>
       <div class="pickX" data-drop="${pk.player}" title="Remove">&times;</div>
     </div>`;
