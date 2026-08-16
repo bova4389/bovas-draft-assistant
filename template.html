@@ -130,6 +130,25 @@ main{padding:8px 8px 90px}
 .tag.inj{background:#5a1d1d;color:#ff9a9a}
 .tag.rk{background:#1d3a5a;color:#8dc4ff}
 .tag.new{background:#3d2a5a;color:#c7a8ff}
+/* ------------------------------------------- sleeper / bust spotlight tags */
+/* Its own flex column rather than a chip inside the name line: `.nm` sets
+   overflow:hidden for the ellipsis, which clips a pseudo-element hit area down
+   to the text height and leaves a ~20px target. Sitting in the row itself, the
+   badge gets a real 30px box that ::after grows to ~44px. Rows without a mark
+   simply omit it - `.mid` is flex:1 and absorbs the width, so every badge on
+   the right-hand side stays aligned either way. */
+.spot{
+  position:relative;flex:0 0 30px;height:30px;border-radius:8px;border:1.5px solid;
+  display:flex;align-items:center;justify-content:center;font-size:15px;
+  line-height:1;cursor:pointer;
+}
+/* z-index so the grown hit area actually wins: `.mid` is a later sibling and
+   would otherwise paint over the right-hand half of it. */
+.spot::after{content:"";position:absolute;inset:-7px;z-index:2}
+.spot.S{background:#123a2a;border-color:#28c76f}
+.spot.B{background:#3d1620;border-color:#ff5d5d}
+/* Dashed = your own hunch, so a personal mark never reads as a researched one. */
+.spot.own{border-style:dashed;background:transparent}
 .pos{
   flex:0 0 46px;text-align:center;border-radius:7px;padding:4px 0;
   font-size:12px;font-weight:800;color:#0e1116;
@@ -211,6 +230,41 @@ table.board td.WR{border-left:3px solid var(--wr)} table.board td.TE{border-left
 h3{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--dim);margin:16px 2px 8px}
 .note{font-size:12px;color:var(--dim);padding:8px 10px;background:var(--panel);
   border:1px solid var(--line);border-radius:9px;margin-bottom:10px;line-height:1.5}
+/* --------------------------------------------------- sleeper / bust cards */
+.spcard{
+  background:var(--panel);border:1px solid var(--line);border-left-width:4px;
+  border-radius:10px;padding:10px 11px;margin-bottom:8px;
+}
+.spcard.S{border-left-color:var(--value)}
+.spcard.B{border-left-color:var(--reach)}
+.spcard.gone{opacity:.45}
+.spcard.gone .spname{text-decoration:line-through}
+/* Brief flash when you arrive here by tapping a badge, so the card you asked
+   for is obvious after the scroll. */
+@keyframes spflash{from{background:#2f3f56}to{background:var(--panel)}}
+.spcard.flash{animation:spflash 1.5s ease-out}
+.sphead{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.spname{font-weight:700;font-size:15.5px}
+.spwhere{font-size:11.5px;color:var(--dim)}
+.spmeta{
+  font-size:11px;color:var(--dimmer);margin-top:5px;
+  font-variant-numeric:tabular-nums;
+}
+.spw{font-size:13px;line-height:1.5;color:#d3dbe8;margin-top:7px}
+.spsrc{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px;align-items:center}
+.spsrc span{
+  font-size:10px;font-weight:700;color:var(--dim);background:var(--panel2);
+  border:1px solid var(--line);border-radius:999px;padding:2px 7px;
+}
+.spconf{
+  font-size:11.5px;color:#ffd166;background:#3a2f10;border:1px solid #ffd16644;
+  border-radius:7px;padding:6px 8px;margin-top:7px;line-height:1.45;
+}
+.spdrop{
+  margin-left:auto;flex:0 0 34px;height:34px;border-radius:8px;
+  border:1px solid #5c3030;background:#3a1f1f;color:#ff9a9a;font-size:17px;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+}
 /* ------------------------------------------------------------------ misc */
 .toast{
   position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom));
@@ -253,6 +307,7 @@ dialog select,dialog input{
     <input id="q" type="search" placeholder="Search any player..." autocomplete="off"
            autocorrect="off" autocapitalize="off" spellcheck="false">
     <button id="filter" class="on">Hide drafted</button>
+    <button id="markBtn" title="Add your own sleeper/bust icons">Mark</button>
   </div>
 </header>
 
@@ -278,6 +333,15 @@ dialog select,dialog input{
     <span style="color:var(--reach);font-weight:800">red</span> means someone
     else will likely take them first.
   </div>
+  <div class="note" style="margin-top:8px">
+    <b>split</b> on a row is how far apart our three ranking sources are on that
+    player &mdash; their highest rank minus their lowest. Split 2 means
+    FantasyPros, Yahoo and JYJ all agree; split 60 means one source likes him five
+    rounds more than another, so the blended rank is an average of two very
+    different opinions rather than a settled one. It only appears at 25 or above,
+    where the disagreement stops being noise. High-split players are where the
+    sleeper and bust cases live.
+  </div>
   <div style="font-size:11px;color:var(--dimmer);margin-top:10px;text-align:center">
     Build <span id="build"></span> &middot; <span id="pcount"></span> players
   </div>
@@ -292,6 +356,142 @@ dialog select,dialog input{
 const PLAYERS = /*PLAYERS_JSON*/;
 const LEAGUE  = /*LEAGUE_JSON*/;
 PLAYERS.forEach((p, i) => { p._i = i; });   // stable id used by picks + storage
+
+/* ------------------------------------------------ sleeper / bust spotlight
+   Hand-curated from seven national lists, every one of them published on or
+   after 2026-07-01 (anything from the spring is pre-camp guesswork). Sources
+   and dates:
+     ESPN   - sleepers/busts/breakouts panel, Aug 11 2026
+     FP     - FantasyPros "13 players to avoid", Aug 2026
+     FP     - FantasyPros "do not draft: 6 busts", Aug 7 2026
+     CBS    - Jamey Eisenberg's do-not-draft list, Jul 25 2026
+     RW     - RotoWire sleepers: rookies and sophomores, Jul 27 2026
+     RW     - RotoWire "6 busts to avoid", Aug 4 2026
+     Sharks - Draft Sharks sleepers, Aug 4 2026
+     NFL    - NFL.com six late-round sleepers, Aug 2026
+   Sports Illustrated's 2026 breakout list was checked and DROPPED - it is
+   dated Dec 29 2025, before free agency, and its team assignments are stale.
+
+   `n` is matched to the player pool by the same normaliser the Sleeper sync
+   uses, so suffixes and punctuation do not have to line up. Teams are NOT
+   taken from the articles - several had them wrong - they come from the pool.
+   `k`: S = sleeper, B = bust. `c` = a genuine disagreement between sources,
+   which is worth seeing rather than hiding. */
+const SPOTLIGHT = [
+/* ------------------------------------------------------------- sleepers */
+{n:"Bhayshul Tuten", k:"S", s:["ESPN","RW"], w:
+ "Travis Etienne left for New Orleans and Tuten inherits the backfield, including the passing-down work. He turned seven of his 93 touches into touchdowns as a rookie on elite speed; the case is simply that the same explosiveness with a starter's volume is a top-24 back."},
+{n:"Jayden Higgins", k:"S", s:["ESPN","RW","Sharks"], w:
+ "Locked into a three-down boundary role opposite Nico Collins. Christian Kirk is gone, Collins has a history of lower-body issues, and Higgins already earned red-zone work with strong rookie efficiency. Houston's increased tight end usage eats into the slot, not the boundary."},
+{n:"Matthew Golden", k:"S", s:["ESPN","RW"], w:
+ "Romeo Doubs, Dontayvion Wicks and Malik Heath all left Green Bay, taking 138 targets with them. Golden is the flanker in year two after a slow rookie season, and nobody added to the room outranks him."},
+{n:"Tyler Shough", k:"S", s:["ESPN","Sharks"], w:
+ "Closed his rookie season with six straight games of 17 or more fantasy points and ranked QB12 in points per game. Kellen Moore's offense plays fast, and the Saints added Jordyn Tyson to a room that gets Chris Olave back. Going around QB20."},
+{n:"Jonathon Brooks", k:"S", s:["ESPN","Sharks"], w:
+ "Cleared for team activities after the ACL rehab, with the explosive three-down skill set that made him the first back off the board in 2024 still intact. Dave Canales runs the ball and the competition in front of him is thin. Rounds 9-10."},
+{n:"Isaiah Likely", k:"S", s:["ESPN","Sharks"], w:
+ "The trade out of Baltimore finally frees him from Mark Andrews. He has been efficient every time he has had a route share, and he steps in as Jaxson Dart's primary tight end -- low-end TE1 production at a late-round price."},
+{n:"Dalton Kincaid", k:"S", s:["NFL","Sharks"], w:
+ "Fourth among all tight ends in yards per route run since 2023 (2.79), a number buried by injuries and thin snap counts. He was producing early last season before the hamstring ended it. Round 11 or later."},
+{n:"Cam Ward", k:"S", s:["ESPN","Sharks"], w:
+ "Rough rookie box score, but the arm talent and athleticism flashed. Brian Daboll is a genuine coaching upgrade and Tennessee rebuilt the receiver room around him with Carnell Tate and Wan'Dale Robinson. Expect significant second-year growth."},
+{n:"Jalen McMillan", k:"S", s:["ESPN","Sharks"], w:
+ "Scored eight touchdowns as a rookie before getting hurt. Mike Evans is gone to San Francisco and somebody has to absorb that vacated volume in a Baker Mayfield offense that pushes the ball downfield."},
+{n:"Rashid Shaheed", k:"S", s:["Sharks"], w:
+ "A midseason trade masked what he is. Seattle handing him three years and $51M is the tell -- teams do not pay that for a rotational deep threat. Available in the 12th round."},
+{n:"Stefon Diggs", k:"S", s:["NFL"], w:
+ "Led the entire league with a 15.4% catch rate over expected and caught 83.3% of his targets. Now signed with his hometown Commanders. Rounds 9-10 for a plausible WR2."},
+{n:"Carnell Tate", k:"S", s:["ESPN"], w:
+ "The most pro-ready receiver in the 2026 draft class -- pristine route running and strong hands. Slots in immediately as a go-to target for Cam Ward in Tennessee."},
+{n:"Jordyn Tyson", k:"S", s:["ESPN"], w:
+ "A large part of the reason the same analysts like Tyler Shough. New Orleans needs a receiver opposite Chris Olave and Tyson has the profile to take that job as a rookie."},
+{n:"Denzel Boston", k:"S", s:["NFL"], w:
+ "Rave reviews in camp and already moved up to the first-team offense. Size and contested-catch ability give him red-zone value the rest of the Cleveland room does not have. Round 12 or later."},
+{n:"Tank Dell", k:"S", s:["NFL"], w:
+ "Back from the knee injury. Over his last four healthy games as a rookie he averaged 23 fantasy points per game. That ceiling costs a final-round pick."},
+{n:"Kyle Monangai", k:"S", s:["ESPN"], w:
+ "Ben Johnson's backfield hands him the David Montgomery role, goal-line work included. Real upside against a ninth-round cost."},
+{n:"Chris Rodriguez Jr.", k:"S", s:["NFL"], w:
+ "The cheaper side of the Etienne departure. Better efficiency than his competition at 4.6 yards per carry and a similar share of practice reps, but he goes several rounds later than Tuten. Round 10."},
+{n:"Terrance Ferguson", k:"S", s:["ESPN","Sharks"], w:
+ "Late-round tight end with a real path to snaps in a Rams offense that has fed the position whenever it has had anyone worth feeding."},
+{n:"Tre' Harris", k:"S", s:["RW"], w:
+ "Better hands and blocking than the receivers drafted ahead of him in Los Angeles. One McConkey or Johnston injury away from a starting role."},
+{n:"Nicholas Singleton", k:"S", s:["RW"], w:
+ "Pure handcuff logic: Tony Pollard's durability is limited and Tyjae Spears has a concussion history. Singleton is the RB3 who would inherit a real workload."},
+{n:"Jonah Coleman", k:"S", s:["RW"], w:
+ "Power back sitting behind the injury-prone J.K. Dobbins, and Denver's defense is projected to regress -- which means more game script where they have to run."},
+{n:"Zachariah Branch", k:"S", s:["RW"], w:
+ "Electric with the ball in his hands and a clear path to the WR2 job behind Drake London in Atlanta."},
+{n:"Isaac TeSlaa", k:"S", s:["RW"], w:
+ "Kalif Raymond is gone, and TeSlaa can grow from 438 snaps toward roughly 700 even in a crowded Detroit receiver room."},
+{n:"Luther Burden III", k:"S", s:["ESPN"], w:
+ "Chicago has 150 vacated targets from last season and Burden is elite with the ball in his hands, in an offense that took a real step forward.",
+ c:"Genuinely split. FantasyPros put him on their do-not-draft list the same month: crowded room, no proven production, and already priced as if the breakout has happened."},
+{n:"Jadarian Price", k:"S", s:["ESPN"], w:
+ "Averaged 6.0 yards per carry with 13 touchdowns on limited college volume, and lands in a better situation than the back drafted ahead of him.",
+ c:"ESPN's own panel could not agree -- he turns up on their sleeper, breakout AND bust lists in the same article. Volume, not talent, is the open question."},
+/* ---------------------------------------------------------------- busts */
+{n:"Travis Etienne", k:"B", s:["ESPN","FP","FP","CBS","RW"], w:
+ "The most-flagged player in this entire roundup -- five separate lists. Alvin Kamara restructured to stay in New Orleans, and Kellen Moore's offenses have historically underused running backs in the passing game, which was Etienne's whole fantasy case. Per-touch efficiency was poor across multiple metrics, and he is reportedly losing passing-down work in camp. That is an early-fourth pick on a timeshare back in a middling offense."},
+{n:"Christian McCaffrey", k:"B", s:["ESPN","FP","CBS"], w:
+ "450 total touches in 2025 at age 30 -- the third time in his career he has cleared 400. Both prior times he missed significant time the following season. Declining efficiency and an aging offensive line on top of it, at a top-seven overall price."},
+{n:"Rashee Rice", k:"B", s:["ESPN","FP","RW"], w:
+ "Cleanup surgery in May, ongoing suspension risk from the off-field case, and Kansas City's passing offense has actually declined since he arrived. A new running back may absorb more of his usage. RotoWire is blunt about the profile for a player going in the third round."},
+{n:"Tetairoa McMillan", k:"B", s:["FP","CBS"], w:
+ "His target share fell from 28% to 22% in the second half once Jalen Coker was healthy, and Coker outplayed him down the stretch. The talent is real, but Bryce Young's low-volume offense caps the pie and Carolina keeps adding bodies to the room."},
+{n:"Quinshon Judkins", k:"B", s:["FP","FP"], w:
+ "Season-ending fibula fracture, and the research on comparable injuries points to reduced production the following year. Modest per-touch efficiency even before that, behind a poor offensive line, in what projects as a bottom-five offense."},
+{n:"Jameson Williams", k:"B", s:["FP","CBS"], w:
+ "The split is stark: with Sam LaPorta healthy, Williams averaged 10.9 PPR points across nine games. He ranked 25th in yards per route run and 26th in red-zone targets among 109 qualifying receivers. LaPorta is healthy."},
+{n:"DK Metcalf", k:"B", s:["FP","CBS"], w:
+ "Career lows in targets (99) and yards (850), and he finished outside the top 36 receivers seven times despite a WR21 seasonal line. Aaron Rodgers does not consistently push the ball downfield, and Metcalf's weakness against two-high coverage is a persistent, measurable problem."},
+{n:"Bucky Irving", k:"B", s:["FP","RW"], w:
+ "Foot, shoulder, hip and hamstring injuries across two seasons. Efficiency metrics ranked poorly even when he did play, and Tampa Bay added Kenny Gainwell to a room that still has Sean Tucker."},
+{n:"Malik Nabers", k:"B", s:["ESPN","CBS"], w:
+ "Torn ACL and meniscus in Week 4 plus a follow-up procedure in the spring, so the return timeline is genuinely unclear. The Giants added receiver competition and John Harbaugh's offense will lean run-heavy."},
+{n:"De'Von Achane", k:"B", s:["ESPN","CBS"], w:
+ "Malik Willis targets running backs far less often than Tua did, which guts the receiving volume that makes Achane an early-second pick. Miami's 4.5-win projection caps the touchdown equity too."},
+{n:"Davante Adams", k:"B", s:["ESPN","CBS"], w:
+ "Age 33 and almost entirely touchdown-dependent. He scored 14 last season; in the seven games he did not score, he averaged just 9.3 PPR points. That is the floor you are buying at WR22."},
+{n:"Chuba Hubbard", k:"B", s:["ESPN","FP"], w:
+ "Ranked last in explosive runs among qualified backs and lost the starting job to Rico Dowdle during the season. The 2024 breakout increasingly looks like the outlier."},
+{n:"Harold Fannin Jr.", k:"B", s:["ESPN","CBS"], w:
+ "Kevin Stefanski is gone and his replacement Todd Monken is far less invested in tight ends. Cleveland added at the position, the quarterback situation is unsettled, and Fannin already posted about the best rookie numbers anyone could have projected. That is a TE6 price on a repeat you should not expect."},
+{n:"Travis Kelce", k:"B", s:["ESPN","FP"], w:
+ "A low-end TE1 at best. The per-route efficiency no longer supports a top-five ceiling and there is no clear path back to top-three status."},
+{n:"Matthew Stafford", k:"B", s:["ESPN","FP"], w:
+ "A 7.7% passing touchdown rate is not repeatable -- that single number is most of his 2025 season. He plays this year at 38, and repeating it needs an aging receiver room to stay healthy. Drafting him is chasing last year's production and nothing else."},
+{n:"TreVeyon Henderson", k:"B", s:["ESPN","CBS"], w:
+ "Rhamondre Stevenson dominated the snaps in 2025 and nothing has changed that. Across 16 games where Stevenson played significant snaps, Henderson averaged 6.4 PPR points."},
+{n:"Breece Hall", k:"B", s:["RW"], w:
+ "Vegas projects the Jets as the worst offense in the league. Aging Geno Smith or rookie Cade Klubnik at quarterback, with Frank Reich coaching. The talent is not the problem -- the environment is."},
+{n:"Garrett Wilson", k:"B", s:["RW"], w:
+ "The same Jets problem. Elite receiver, bottom-ranked scoring projection, and the team keeps spending first-round picks on other receivers."},
+{n:"Brian Thomas Jr.", k:"B", s:["FP"], w:
+ "A muddled receiver room with several mouths to feed, a quarterback who historically favors tight ends and slot receivers, and a first seven opponents stretch featuring some of the best cornerbacks in the league."},
+
+{n:"Lamar Jackson", k:"B", s:["FP"], w:
+ "As the second quarterback off the board there is no margin in the price. Rushing production came down last season, the injury history is real, and paying up at quarterback at this cost has a poor track record."},
+{n:"Aaron Jones", k:"B", s:["FP"], w:
+ "Age 32 with a long injury history and inefficient rushing metrics, splitting work with Jordan Mason. FantasyPros flags the entire Minnesota backfield as one to avoid."},
+{n:"Trey McBride", k:"B", s:["ESPN"], w:
+ "Multiple analysts on the same panel flagged him: defenses will be far more prepared for him this season, and he is priced as a top-two tight end."},
+{n:"Kyle Pitts", k:"B", s:["ESPN"], w:
+ "The draft capital keeps buying him a draft price he has not justified in several years running."},
+{n:"Alec Pierce", k:"B", s:["FP"], w:
+ "Left ankle surgery in March following an earlier PRP injection -- real durability flags. The volume path exists, but the health and quarterback questions do not clear up."},
+{n:"Sam Darnold", k:"B", s:["FP"], w:
+ "A good real-life quarterback and a poor fantasy one. Seattle's elite defense means they lead often, and they stop throwing when they do."},
+{n:"Oronde Gadsden", k:"B", s:["FP"], w:
+ "Only TE17 in fantasy points per game despite a hot stretch of five TE1 finishes. The Kolar and Njoku additions lock him into a committee."},
+{n:"DJ Moore", k:"B", s:["RW"], w:
+ "Production has been sliding and the system fit in Buffalo is a real question. The Bills' record of acquiring and developing receivers since 2024 is not encouraging.",
+ c:"Note the circularity: FantasyPros fades Khalil Shakir because Moore arrived, and RotoWire fades Moore because of how Buffalo handles receivers. They cannot both be right -- believing one is an argument for the other."},
+{n:"Khalil Shakir", k:"B", s:["FP"], w:
+ "Consistently unremarkable production without high-leverage usage, and the D.J. Moore arrival pushes him further down the target hierarchy.",
+ c:"See the DJ Moore card -- these two bust cases are each other's mirror image, and only one of them can hold."},
+];
 
 const TEAMS = LEAGUE.teams.length;      // 12
 const ROUNDS = LEAGUE.rounds;           // 14
@@ -310,6 +510,11 @@ const S = Object.assign({
   sync: "off",
   viewTeam: 0,      // which team the Rosters tab is showing (0 = mine)
   addTo: 0,         // when set, taps assign to this slot instead of the clock
+  // Your own sleeper/bust marks, keyed by player NAME rather than pool index:
+  // rebuilding merged.json reshuffles indexes, and a mark surviving that is
+  // worth more than matching how picks are stored.
+  marks: {},        // {"Player Name": "S" | "B"}
+  mark: false,      // marking mode - taps set a mark instead of drafting
 }, load());
 
 function load(){ try{ return JSON.parse(localStorage.getItem(KEY)) || {}; }catch(e){ return {}; } }
@@ -385,7 +590,32 @@ function toast(msg){
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
 const TABS = [["ALL","Overall"],["QB","QB"],["RB","RB"],["WR","WR"],["TE","TE"],
-              ["BOARD","Draft Board"],["TEAM","Rosters"]];
+              ["SPOT","Sleepers &amp; Busts"],["BOARD","Draft Board"],["TEAM","Rosters"]];
+
+/* ------------------------------------------------- spotlight resolution */
+// Article name -> pool index, via the same normaliser the Sleeper sync uses,
+// so "Aaron Jones" finds "Aaron Jones Sr." and "Tre' Harris" finds "Tre Harris".
+// Anything that does not resolve is dropped rather than rendered nameless.
+const SPOT = new Map();          // player index -> spotlight entry
+let SPOT_MISSING = [];
+function buildSpot(){
+  SPOTLIGHT.forEach(e => {
+    const i = NAMEIDX.get(nkey(e.n));
+    if (i == null){ SPOT_MISSING.push(e.n); return; }
+    SPOT.set(i, e);
+  });
+  if (SPOT_MISSING.length) console.warn("spotlight unmatched:", SPOT_MISSING);
+}
+// A researched entry always wins over a personal mark, so the permanent icons
+// stay permanent; `own` is what makes the badge render dashed.
+function markOf(p){
+  const e = SPOT.get(p._i);
+  if (e) return {k: e.k, own: false, e};
+  const m = S.marks[p.n];
+  return m ? {k: m, own: true, e: null} : null;
+}
+const MARKLBL = {S:"Sleeper", B:"Bust"};
+const MARKICO = {S:"🚀", B:"💣"};   // rocket / bomb
 
 function drawTabs(){
   $("#tabs").innerHTML = TABS.map(([k,l]) =>
@@ -424,6 +654,12 @@ function rowHTML(p, idx, taken, showTier){
     p.yh   != null ? "YH " + p.yh : null,
     p.jy   != null ? "JYJ " + p.jy : null,
   ].filter(Boolean).join("  &middot;  ");
+  const mk = markOf(p);
+  const spot = mk
+    ? `<div class="spot ${mk.k} ${mk.own?"own":""}" data-spot="${idx}" title="${
+        mk.own ? "Your own " : ""}${MARKLBL[mk.k].toLowerCase()} pick - tap for the write-up">${
+        MARKICO[mk.k]}</div>`
+    : "";
   const flags =
     (p.i ? '<span class="tag inj">INJ</span>' : "") +
     (p.rk ? '<span class="tag rk">R</span>' : "") +
@@ -439,6 +675,7 @@ function rowHTML(p, idx, taken, showTier){
     <div class="box">${gone?"&#10003;":""}</div>
     <div class="rk">${rk}</div>
     ${cmp}
+    ${spot}
     <div class="mid">
       <div class="nm">${esc(p.n)}${flags}</div>
       <div class="sub">${p.t} &middot; Bye ${p.b || "-"} &middot; ${src}${spread}</div>
@@ -496,6 +733,98 @@ function drawList(){
   main.innerHTML = html;
 }
 
+/* ------------------------------------------------- sleepers & busts tab */
+const SRCNAME = {
+  ESPN:"ESPN, Aug 11", FP:"FantasyPros, Aug", CBS:"CBS Eisenberg, Jul 25",
+  RW:"RotoWire, Jul 27 / Aug 4", Sharks:"Draft Sharks, Aug 4", NFL:"NFL.com, Aug",
+};
+
+function spCard(p, e, taken){
+  const slot = taken.get(p._i);
+  const gone = slot != null;
+  const own = !e.s;                       // your own mark, no article behind it
+  // Sources repeat on purpose when two separate lists from one outlet flagged
+  // the same player, so count them but show each outlet once.
+  const uniq = [...new Set(e.s || [])];
+  const hits = (e.s || []).length;
+  return `<div class="spcard ${e.k} ${gone?"gone":""}" id="sp-${p._i}">
+    <div class="sphead">
+      <span class="pos ${p.p}">${p.p}${p.pr}</span>
+      <span class="spname">${esc(p.n)}</span>
+      <span class="spwhere">${p.t} &middot; Bye ${p.b || "-"}</span>
+      ${gone ? `<span class="taken">${esc(teamAt(slot))}</span>` : ""}
+      ${own ? `<div class="spdrop" data-unmark="${esc(p.n)}" title="Remove your mark">&times;</div>` : ""}
+    </div>
+    <div class="spmeta">Our rank ${rankOf(p)} &middot; Tier ${p.tr} &middot; ADP ${
+      p.adp != null ? p.adp : "-"}${
+      p.sp != null && p.sp >= 25 ? " &middot; split " + p.sp : ""}${
+      hits > 1 ? " &middot; flagged by " + hits + " lists" : ""}</div>
+    <div class="spw">${esc(e.w)}</div>
+    ${e.c ? `<div class="spconf">${esc(e.c)}</div>` : ""}
+    ${uniq.length ? `<div class="spsrc">${
+      uniq.map(s => `<span>${esc(SRCNAME[s] || s)}</span>`).join("")}</div>` : ""}
+  </div>`;
+}
+
+function drawSpot(){
+  const taken = takenBy();
+  // Researched entries first, ordered by our own board so the tab reads in the
+  // order the players will actually come off it.
+  const pick = kind => [...SPOT.entries()]
+    .filter(([, e]) => e.k === kind)
+    .map(([i, e]) => ({p: PLAYERS[i], e}))
+    .sort((a, b) => rankOf(a.p) - rankOf(b.p));
+  const mineOf = kind => Object.keys(S.marks)
+    .filter(n => S.marks[n] === kind)
+    .map(n => PLAYERS.find(p => p.n === n))
+    .filter(p => p && !SPOT.has(p._i))
+    .sort((a, b) => rankOf(a) - rankOf(b))
+    .map(p => ({p, e: {k: kind, w: "Your own " + MARKLBL[kind].toLowerCase() +
+      " pick - no article behind this one."}}));
+
+  const S1 = pick("S"), B1 = pick("B"), S2 = mineOf("S"), B2 = mineOf("B");
+  const sec = (title, arr) => arr.length
+    ? `<h3>${title} <span style="color:var(--dimmer)">${arr.length}</span></h3>` +
+      arr.map(x => spCard(x.p, x.e, taken)).join("")
+    : "";
+
+  main.innerHTML =
+    `<div class="note">
+       Curated from seven national lists, all published <b>on or after July 1</b>
+       &mdash; ESPN (Aug 11), FantasyPros (Aug 7 + Aug), CBS/Eisenberg (Jul 25),
+       RotoWire (Jul 27 + Aug 4), Draft Sharks (Aug 4), NFL.com (Aug). Teams and
+       ranks come from our own board, not the articles &mdash; several had them wrong.
+       <br><br>
+       ${MARKICO.S} on a player row means sleeper, ${MARKICO.B} means bust; tap the
+       icon anywhere in the app to jump to that write-up. A <b>dashed</b> icon is one
+       you added yourself. Use <b>Mark</b> in the toolbar to add or clear your own.
+       <br><br>
+       <b>split</b> is how far apart the three ranking sources are on a player &mdash;
+       the highest rank minus the lowest. Ja'Marr Chase at split 2 means all three
+       essentially agree; a split of 60 means one source likes him a full five rounds
+       more than another. It only shows when it reaches 25, because that is the point
+       where the disagreement is a real signal rather than noise. High split is exactly
+       where sleepers and busts live.
+     </div>` +
+    sec("Sleepers &mdash; researched", S1) +
+    sec("Sleepers &mdash; yours", S2) +
+    sec("Busts &mdash; researched", B1) +
+    sec("Busts &mdash; yours", B2) +
+    (S1.length + B1.length + S2.length + B2.length ? "" :
+      '<div class="empty">No candidates.</div>');
+}
+
+// Arriving from a badge tap: scroll that card into view and flash it once.
+let spJump = null;
+function spScroll(){
+  if (spJump == null) return;
+  const el = document.getElementById("sp-" + spJump);
+  spJump = null;
+  if (!el) return;
+  el.scrollIntoView({block:"center"});
+  el.classList.add("flash");
+}
+
 function drawBoard(){
   const taken = takenBy();
   const byPick = new Map(S.picks.map((p,i) => [i, p]));
@@ -524,6 +853,12 @@ function drawBoard(){
 
 /* Banner shown at the top of the player list while assigning to a chosen team. */
 function addBanner(){
+  // Marking mode changes what a tap does, so it gets the same loud sticky
+  // banner the add-to-team mode uses - being stuck in it mid-draft would be
+  // far worse than the banner being noisy.
+  if (S.mark) return `<div class="addmode">Tap a player to cycle
+    ${MARKICO.S} sleeper &rarr; ${MARKICO.B} bust &rarr; off. No one gets drafted.
+    <button id="markDone">Done</button></div>`;
   if (!S.addTo) return "";
   return `<div class="addmode">Tap any player to add them to
     <b>${esc(teamAt(S.addTo))}</b><button id="addDone">Done</button></div>`;
@@ -589,10 +924,11 @@ function drawTeam(){
 
 function render(){
   drawTabs(); drawClock();
-  document.querySelector(".tools").style.display =
-    (S.tab === "BOARD" || S.tab === "TEAM") ? "none" : "flex";
+  const bare = S.tab === "BOARD" || S.tab === "TEAM" || S.tab === "SPOT";
+  document.querySelector(".tools").style.display = bare ? "none" : "flex";
   if (S.tab === "BOARD") drawBoard();
   else if (S.tab === "TEAM") drawTeam();
+  else if (S.tab === "SPOT"){ drawSpot(); spScroll(); }
   else drawList();
 }
 
@@ -606,6 +942,21 @@ main.addEventListener("click", e => {
   const x = e.target.closest(".pickX");
   if (x){ undraft(+x.dataset.drop); return; }
 
+  // The sleeper/bust badge is a link, not a draft tap - checked before .row.
+  const sp = e.target.closest(".spot");
+  if (sp){
+    spJump = +sp.dataset.spot;
+    S.tab = "SPOT"; save(); render();
+    return;
+  }
+  const un = e.target.closest("[data-unmark]");
+  if (un){
+    delete S.marks[un.dataset.unmark];
+    save(); render(); toast("Mark removed");
+    return;
+  }
+
+  if (e.target.closest("#markDone")){ S.mark = false; save(); render(); return; }
   if (e.target.closest("#addTo")){
     S.addTo = S.viewTeam || S.slot;
     S.tab = "ALL"; S.filter = "hide"; save(); render(); scrollTo(0,0);
@@ -615,9 +966,27 @@ main.addEventListener("click", e => {
 
   const r = e.target.closest(".row"); if (!r) return;
   const i = +r.dataset.i;
+  if (S.mark){ cycleMark(i); return; }
   if (takenBy().has(i)) undraft(i);
   else draft(i, S.addTo || +$("#team").value);
 });
+
+// none -> sleeper -> bust -> none. Researched players are left alone: their
+// icon is the whole point of the tab, so it stays permanent.
+function cycleMark(i){
+  const p = PLAYERS[i];
+  if (SPOT.has(i)){
+    toast(p.n + " is already a researched " + MARKLBL[SPOT.get(i).k].toLowerCase());
+    return;
+  }
+  const now = S.marks[p.n];
+  if (!now) S.marks[p.n] = "S";
+  else if (now === "S") S.marks[p.n] = "B";
+  else delete S.marks[p.n];
+  save(); drawList();
+  const set = S.marks[p.n];
+  toast(p.n + (set ? " -> " + MARKICO[set] + " " + MARKLBL[set] : " -> unmarked"));
+}
 main.addEventListener("change", e => {
   if (e.target.id !== "teamView") return;
   S.viewTeam = +e.target.value; save(); drawTeam();
@@ -639,6 +1008,12 @@ $("#filter").addEventListener("click", () => {
   drawFilter(); save(); drawList();
 });
 $("#undo").addEventListener("click", undo);
+$("#markBtn").addEventListener("click", () => {
+  S.mark = !S.mark;
+  if (S.mark) S.addTo = 0;          // the two tap-modes cannot both be live
+  drawMarkBtn(); save(); render(); scrollTo(0,0);
+});
+function drawMarkBtn(){ $("#markBtn").classList.toggle("on", S.mark); }
 
 /* ----------------------------------------------------------------- setup */
 const dlg = $("#setup");
@@ -727,7 +1102,11 @@ if (typeof S.hide === "boolean" && !FILTERS.some(f => f[0] === S.filter)){
 }
 delete S.hide;
 delete S.league;
+// Older saves predate marking; a missing object would throw on first tap.
+if (!S.marks || typeof S.marks !== "object") S.marks = {};
+buildSpot();
 drawFilter();
+drawMarkBtn();
 render();
 startSync();
 </script>
