@@ -73,6 +73,60 @@ A number turns **green** when it sits 50+ spots later than our rank (the room
 will likely let them fall — safe to wait) and **red** when it sits 50+ spots
 earlier (someone else will likely grab them first — reach now if you want them).
 
+## Suggest tab — live pick recommendations
+
+Optional (Setup → Pick suggestions), and it changes nothing else when off.
+
+The useful question mid-draft is not "who is best" but **"who will not survive
+the 11–13 picks until my next turn"**, so that is what it scores. At slot 6 the
+gaps are a steady 13, 11, 13, 11 — you never pick back-to-back, and 12 players
+leave the board every time.
+
+**There are no projected points anywhere in this.** All three ranking sources
+are rank-only, which is the same wall the 6pt-passing-TD adjustment hit. Real
+VOR needs projections, so anything printing a point total off this data would be
+inventing it. Everything below is ordinal on purpose.
+
+| Input | Where it comes from |
+|---|---|
+| Value | FantasyPros tiers, anchored on the blended board — flat inside a tier, because that is what a tier means |
+| When a player goes | `adp` blended with Sleeper's `search_rank`, converted to an ordinal within this pool |
+| How sure we are | How far those two signals disagree, which widens with rank |
+| Roster fit | The same `fillLineup()` the Rosters tab uses |
+| Risk | `spread`, `inj`, the curated sleeper/bust list, and your own marks |
+
+**Scoring:** `need × risk × fit × urgency × (value + 0.75 × dropoff)`, where
+dropoff is the value you lose at that position by waiting a turn — the term that
+makes it a decision rather than a ranking.
+
+Some deliberate calls:
+
+- **Value decays exponentially, not as a power law.** A power curve is so flat
+  past pick 100 that every remaining player scores within a few percent of every
+  other; the scarcity term washed out and roster need decided everything alone,
+  which briefly put a rank-200 backup QB above real starters.
+- **A 4th RB/WR is a starter, a 2nd QB is not.** Three flex spots and no
+  superflex. This asymmetry moves more picks than anything else in the formula.
+- **Risk preference inverts.** Early picks want agreement — a bust in round 2 is
+  unrecoverable. Late picks want variance: a "safe" 12th-rounder is worthless
+  because you will drop him in week 3 regardless, so only the ceiling counts.
+- **Bye weeks are a tiebreaker, nothing more.** With five bench spots and free
+  agency, a bye clash is a one-week annoyance; it only really bites at QB and TE
+  where you start exactly one. Two RBs out of one backfield is the genuine
+  roster-construction negative, and it is not a bye problem at all.
+- **Runs need three picks to count.** QB sits at a ~10% base rate, so one extra
+  in a twelve-pick window would otherwise register as the room accelerating 70%.
+- **Draft buttons only appear on your own pick**, so the tab cannot quietly hand
+  a player to whoever is actually on the clock.
+
+`Safe to wait on` is drawn from the players just below the recommendations, not
+from the whole board — filtering everything surfaces deep bench names that
+survive only because nobody wants them.
+
+Still to build: opponent-need modelling (we know all 11 other rosters from the
+pick feed, so we can predict what the next 12 picks actually target, which is
+much sharper than league-average ADP).
+
 ## The `split` number
 
 Some rows end with `split 49`. That is **the spread between our three ranking

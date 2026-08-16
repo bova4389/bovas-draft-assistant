@@ -72,6 +72,7 @@ nav button[data-p=WR].sel{background:var(--wr);border-color:var(--wr)}
 nav button[data-p=TE].sel{background:var(--te);border-color:var(--te);color:#3a2400}
 nav button[data-p=ALL].sel,nav button[data-p=BOARD].sel,nav button[data-p=TEAM].sel{
   background:#4a5568;border-color:#66748a;color:#fff}
+nav button[data-p=REC].sel{background:#8a6d1f;border-color:#b08f2c;color:#fff}
 /* ----------------------------------------------------------------- tools */
 .tools{display:flex;gap:6px;align-items:center;padding-bottom:8px}
 #q{
@@ -172,6 +173,49 @@ main{padding:8px 8px 90px}
 .row.mine .taken{background:#4a3d16;border-color:#ffd16688;color:#ffd166}
 .empty{text-align:center;color:var(--dim);padding:40px 20px}
 /* ----------------------------------------------------------------- board */
+/* --------------------------------------------------------- suggestions */
+.rechead{
+  font-size:12.5px;color:var(--dim);padding:9px 11px;background:var(--panel);
+  border:1px solid var(--line);border-radius:10px;margin-bottom:10px;line-height:1.5;
+}
+.rechead b{color:var(--txt);font-size:13.5px}
+.runwarn{margin-top:6px;color:#ffb4b4;font-weight:700}
+.reccard{
+  position:relative;background:var(--panel);border:1px solid var(--line);
+  border-radius:11px;padding:10px 11px;margin-bottom:9px;overflow:hidden;
+}
+.recbar{position:absolute;left:0;top:0;height:3px;background:#b08f2c;opacity:.85}
+.recmain{display:flex;align-items:center;gap:9px}
+.recn{
+  flex:0 0 26px;height:26px;border-radius:7px;background:#8a6d1f;color:#fff;
+  font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;
+}
+.reccard .nm{font-weight:700;font-size:15.5px}
+.reccard .sub{font-size:11.5px;color:var(--dim);margin-top:1px}
+.recwhy{list-style:none;margin:9px 0 0;padding:0;display:flex;flex-direction:column;gap:4px}
+.recwhy li{font-size:12.5px;color:var(--dim);padding-left:15px;position:relative;line-height:1.4}
+.recwhy li::before{position:absolute;left:0;top:0}
+.w-need::before{content:"\25C6";color:#7fa7e8}
+.w-gone::before{content:"\25B2";color:var(--reach)}
+.w-wait::before{content:"\25BC";color:var(--value)}
+.w-tier::before{content:"\25A0";color:#b08f2c}
+.w-odds::before{content:"\25CB";color:var(--dimmer)}
+.w-risk::before{content:"\2726";color:#c99adf}
+.w-fit::before{content:"\2194";color:var(--dimmer)}
+/* Drafting from a card is only offered on your own pick: the tab is about your
+   turn, so a Draft button here while someone else is on the clock would quietly
+   hand the player to them. */
+.recsoon{margin-top:9px;font-size:11.5px;color:var(--dimmer);text-align:center}
+.spotlink{color:#9db9e8;text-decoration:underline;cursor:pointer;
+  display:inline-block;padding:3px 0}
+.recdraft{width:100%;margin-top:10px;padding:11px;font-weight:700;font-size:14px}
+.recwait{
+  display:flex;align-items:center;gap:9px;padding:9px 11px;background:var(--panel);
+  border:1px solid var(--line);border-radius:9px;margin-bottom:6px;
+}
+.recwait .nm{flex:1;min-width:0;font-weight:600;font-size:14px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.recwait .odds{font-size:12px;color:var(--value);font-weight:800}
 .orderbar{
   display:flex;align-items:center;gap:8px;padding:0 2px 8px;
   font-size:12px;color:var(--dim);
@@ -328,6 +372,12 @@ dialog select,dialog input{
   <label>Draft order</label>
   <button id="orderBtn" style="width:100%">Sync draft order from Sleeper</button>
   <div class="note" id="orderNote" style="margin-top:8px"></div>
+
+  <label for="recSel">Pick suggestions</label>
+  <select id="recSel">
+    <option value="on">On - show the Suggest tab</option>
+    <option value="off">Off - hide it, rankings only</option>
+  </select>
 
   <label for="syncSel">Sleeper live sync</label>
   <select id="syncSel">
@@ -510,7 +560,7 @@ const ROUNDS = LEAGUE.rounds;           // 14
 const PICKS = TEAMS * ROUNDS;
 const POS = ["QB","RB","WR","TE"];
 const KEY = "mitchcup2026draft";
-const BUILD = "2026-08-16 10:49";   // shown in Setup, so a stale cached copy is obvious
+const BUILD = "2026-08-16 11:09";   // shown in Setup, so a stale cached copy is obvious
 
 /* ------------------------------------------------------------------ state */
 const S = Object.assign({
@@ -529,6 +579,7 @@ const S = Object.assign({
   mark: false,      // marking mode - taps set a mark instead of drafting
   order: null,      // team names by slot, pulled from Sleeper after this build
   orderAt: 0,       // when that pull happened
+  rec: true,        // show the Suggest tab
 }, load());
 
 // An order pulled from Sleeper on this device beats the one baked in at build
@@ -610,8 +661,9 @@ function toast(msg){
 }
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
-const TABS = [["ALL","Overall"],["QB","QB"],["RB","RB"],["WR","WR"],["TE","TE"],
-              ["SPOT","Sleepers &amp; Busts"],["BOARD","Draft Board"],["TEAM","Rosters"]];
+const ALLTABS = [["ALL","Overall"],["REC","Suggest"],["QB","QB"],["RB","RB"],["WR","WR"],["TE","TE"],
+                 ["SPOT","Sleepers &amp; Busts"],["BOARD","Draft Board"],["TEAM","Rosters"]];
+const TABS = () => ALLTABS.filter(t => t[0] !== "REC" || S.rec);
 
 /* ------------------------------------------------- spotlight resolution */
 // Article name -> pool index, via the same normaliser the Sleeper sync uses,
@@ -639,7 +691,7 @@ const MARKLBL = {S:"Sleeper", B:"Bust"};
 const MARKICO = {S:"🚀", B:"💣"};   // rocket / bomb
 
 function drawTabs(){
-  $("#tabs").innerHTML = TABS.map(([k,l]) =>
+  $("#tabs").innerHTML = TABS().map(([k,l]) =>
     `<button data-p="${k}" class="${S.tab===k?"sel":""}">${l}</button>`).join("");
 }
 
@@ -705,6 +757,273 @@ function rowHTML(p, idx, taken, showTier){
     <div class="pos ${p.p}">${p.p}${p.pr}</div>
     ${showTier ? `<div class="tierbadge ${p.p}">T${p.tr}</div>` : ""}
   </div>`;
+}
+
+/* ========================================================== recommender */
+// Everything here is ordinal on purpose. All three ranking sources are
+// rank-only, so there are no projected points and therefore no honest VOR:
+// anything that printed a point total from this data would be inventing it.
+// What we can do without projections is scarcity - who will not survive the
+// wait to your next pick - and that is what actually drives the suggestion.
+
+// Standard normal CDF (Abramowitz & Stegun 26.2.17), ample for pick odds.
+function ncdf(z){
+  const t = 1 / (1 + 0.2316419 * Math.abs(z));
+  const d = 0.3989422804014327 * Math.exp(-z * z / 2);
+  const p = d * t * (0.319381530 + t * (-0.356563782 + t * (1.781477937 +
+            t * (-1.821255978 + t * 1.330274429))));
+  return z > 0 ? 1 - p : p;
+}
+
+// Sleeper's search_rank is a global ordering over every NFL player, including
+// the kickers and defenses this pool strips, so the raw number is not a pick
+// number. Its ordinal position within our pool is. Converted that way it tracks
+// ADP closely - median gap 7.5 through pick 50, 22 by pick 168 - and the two
+// signals disagreeing gives a per-player uncertainty for free.
+const SR_ORD = new Map();
+PLAYERS.map((p, i) => ({i, sr: p.sr}))
+  .filter(x => x.sr != null)
+  .sort((a, b) => a.sr - b.sr)
+  .forEach((x, k) => SR_ORD.set(x.i, k + 1));
+
+// Where the room is expected to take each player, and how sure we are.
+// Sleeper's own list is weighted slightly higher than FantasyPros ADP because
+// this league drafts inside Sleeper, off exactly that default ordering.
+const MKT = PLAYERS.map((p, i) => {
+  const o = SR_ORD.has(i) ? SR_ORD.get(i) : null;
+  const a = p.adp != null ? p.adp : null;
+  let mu, dis;
+  if (o != null && a != null){ mu = 0.55 * o + 0.45 * a; dis = Math.abs(o - a); }
+  else if (o != null){ mu = o; dis = 0.25 * o; }
+  else if (a != null){ mu = a; dis = 0.25 * a; }
+  else { mu = p.r; dis = 0.35 * p.r; }   // neither signal: deep bench, wide open
+  return {mu, sd: Math.min(60, Math.max(4, 0.6 * dis + 0.12 * mu))};
+});
+
+// P(still on the board at pick `until`), given he is on the board at `now`.
+// A player who has already fallen past his ADP has not "used up" his odds - he
+// is still here, so his pick is still ahead of us - and the market having been
+// wrong about him once is a reason to widen, not narrow, the spread.
+function survival(i, now, until, stretch){
+  const m = MKT[i];
+  const fall = Math.max(0, now - m.mu);
+  const mu = Math.max(m.mu, now + 0.5);
+  const sd = Math.min(70, m.sd * (1 + Math.min(1, fall / 40)));
+  const gap = (until - now) * (stretch || 1);
+  return Math.min(1, Math.max(0, 1 - ncdf((now + gap - mu) / sd)));
+}
+
+// How hard the room is leaning on each position right now. Inert until a dozen
+// picks exist, so it costs nothing before the draft starts and sharpens once a
+// run is actually underway.
+const RUN_BASE = {QB: 0.10, RB: 0.33, WR: 0.42, TE: 0.15};
+function runPressure(){
+  const look = S.picks.slice(-12);
+  const out = {QB: 1, RB: 1, WR: 1, TE: 1};
+  if (look.length < 8) return out;
+  POS.forEach(x => {
+    const n = look.filter(pk => PLAYERS[pk.player].p === x).length;
+    const ratio = (n / look.length) / RUN_BASE[x];
+    // Under three picks at a position it is noise, not a run. QB sits at a ~10%
+    // base rate, so a single extra one in a twelve-pick window would otherwise
+    // read as the room accelerating 70%. A thin position can still go cold.
+    out[x] = n >= 3 ? Math.min(1.7, Math.max(0.75, ratio))
+                    : Math.min(1, Math.max(0.75, ratio));
+  });
+  return out;
+}
+
+// Value is flat inside a tier - that is what a tier means - and the tier as a
+// whole sits where the blended board puts it, which keeps QB4 and RB4
+// comparable. The curve is a shape assumption, stated as one: it only has to
+// space early ranks further apart than late ones, which every reasonable decay
+// does. A small nudge toward the player's own rank breaks ties inside a tier.
+const TKEY = p => p.p + p.tr;
+const TIER_ANCHOR = new Map();
+(() => {
+  const g = new Map();
+  PLAYERS.forEach(p => {
+    const k = TKEY(p);
+    if (!g.has(k)) g.set(k, []);
+    g.get(k).push(p.r);
+  });
+  g.forEach((arr, k) => { arr.sort((a, b) => a - b); TIER_ANCHOR.set(k, arr[arr.length >> 1]); });
+})();
+// Exponential rather than a power law: a power curve is so flat past pick 100
+// that every remaining player scores within a few percent of every other, the
+// scarcity term washes out, and the roster-need multiplier decides everything
+// on its own - which is how a rank-200 backup QB briefly outranked real
+// starters here. Constant proportional decay keeps rank-95 and rank-168
+// meaningfully apart all the way down the board.
+const curve = r => 100 * Math.exp(-(Math.max(1, r) - 1) / 70);
+function valueOf(p){
+  const anchor = TIER_ANCHOR.get(TKEY(p)) || p.r;
+  return curve(anchor) + 0.25 * (curve(p.r) - curve(anchor));
+}
+
+// Which overall picks a slot owns, snake included.
+function picksOwnedBy(slot){
+  const out = [];
+  for (let r = 0; r < ROUNDS; r++) out.push(r * TEAMS + (r % 2 === 0 ? slot - 1 : TEAMS - slot));
+  return out;
+}
+
+// Greedy starter fill: required slots first, then flexes, bench is the remainder.
+// Shared with the Rosters tab so both agree on what "startable" means.
+function fillLineup(list){
+  const pool = list.slice();
+  const take = pos => {
+    const i = pool.findIndex(p => pos.includes(p.p));
+    return i < 0 ? null : pool.splice(i, 1)[0];
+  };
+  const filled = LEAGUE.starters.map(s => ({slot: s.label, pos: s.pos, p: null}));
+  filled.forEach(f => { if (f.pos.length === 1) f.p = take(f.pos); });
+  filled.forEach(f => { if (f.pos.length > 1 && !f.p) f.p = take(f.pos); });
+  return {filled, bench: pool};
+}
+
+// What one more body at this position is actually worth to this roster. The
+// asymmetry matters more than anything else in the formula: with three flex
+// spots a 4th RB/WR is a real starter, while a 2nd QB starts nothing at all in
+// a league with no superflex.
+function needOf(pos, roster, picksLeft){
+  const {filled} = fillLineup(roster);
+  const openReq = filled.filter(f => !f.p && f.pos.length === 1);
+  const openFlex = filled.filter(f => !f.p && f.pos.length > 1);
+  const holes = openReq.length;
+  let f, why;
+  if (openReq.some(s => s.pos.includes(pos))){
+    f = 1; why = "fills your empty " + openReq.find(s => s.pos.includes(pos)).slot;
+    // Running out of picks to cover mandatory slots is the one hard constraint
+    // in the whole draft, so it gets to override value near the end.
+    if (holes > 0 && picksLeft <= holes + 1){ f *= 1.4; why += " - you are running out of picks for it"; }
+  } else if (openFlex.some(s => s.pos.includes(pos))){
+    f = 0.85; why = "fills your empty " + openFlex.find(s => s.pos.includes(pos)).slot;
+  } else if (pos === "QB"){
+    f = 0.30; why = "backup QB - starts nothing in this format";
+  } else if (pos === "TE"){
+    f = 0.45; why = "second TE - flex only";
+  } else {
+    f = 0.62; why = "bench depth";
+  }
+  return {f, why};
+}
+
+// Risk preference inverts across the draft. A bust in round 2 is unrecoverable,
+// so early picks want agreement. A "safe" 12th rounder is worthless - you will
+// drop him in week 3 either way - so late picks want the ceiling instead.
+function riskFit(i, size){
+  const p = PLAYERS[i];
+  const early = size < 5, late = size >= 8;
+  const wide = p.sp != null && p.sp >= 40;
+  let f = 1;
+  const why = [];
+  if (early){
+    if (wide){ f -= 0.12; why.push("sources disagree badly (split " + p.sp + ") for this early"); }
+    if (p.i){ f -= 0.10; why.push("injury flag"); }
+  }
+  if (late && wide){ f += 0.10; why.push("high variance (split " + p.sp + ") - what you want this late"); }
+  if (!early && !late && p.i) f -= 0.05;
+  const flag = SPOT.has(i) ? SPOT.get(i).k : null;
+  if (flag === "S"){ f += late ? 0.12 : 0.05; why.push("researched sleeper"); }
+  if (flag === "B"){ f -= early ? 0.12 : 0.06; why.push("researched bust"); }
+  const mk = S.marks[p.n];
+  if (mk === "S"){ f += 0.15; why.push("your own sleeper mark"); }
+  if (mk === "B"){ f -= 0.20; why.push("your own bust mark"); }
+  return {f, why};
+}
+
+// Bye weeks and team stacking, deliberately kept as tiebreakers. In a 14-round
+// league with five bench spots and free agency a bye clash is a one-week
+// annoyance; it only really bites at QB and TE, where you start exactly one.
+// Two RBs out of one backfield is the genuine negative here - they split the
+// carries - and it is not a bye-week problem at all.
+function fitAdj(p, roster){
+  let f = 1;
+  const why = [];
+  if (p.b){
+    const sameBye = roster.filter(x => x.b === p.b);
+    if ((p.p === "QB" || p.p === "TE") && sameBye.some(x => x.p === p.p)){
+      f -= 0.03; why.push("bye clash with your other " + p.p);
+    } else if (sameBye.length >= 3){
+      f -= 0.02; why.push("would be " + (sameBye.length + 1) + " players on the week " + p.b + " bye");
+    }
+  }
+  const mates = roster.filter(x => x.t === p.t);
+  if (p.p === "RB" && mates.some(x => x.p === "RB")){
+    f -= 0.07; why.push("same backfield as your other " + p.t + " RB");
+  }
+  if (mates.length >= 2){ f -= 0.04; why.push("would be your " + (mates.length + 1) + "th " + p.t + " player"); }
+  if ((p.p === "WR" || p.p === "TE") && mates.some(x => x.p === "QB")){
+    f += 0.03; why.push("stacks with your " + p.t + " QB");
+  }
+  if (p.p === "QB" && mates.some(x => x.p === "WR" || x.p === "TE")){
+    f += 0.03; why.push("stacks with your " + p.t + " pass catcher");
+  }
+  return {f, why};
+}
+
+// Expected value of the best player at `pos` who is still there next time.
+// This is the number that makes it a decision rather than a ranking: it says
+// what taking someone else now costs you at this position.
+function bestNextAt(pos, avail, now, until, press){
+  const list = avail.filter(i => PLAYERS[i].p === pos)
+                    .sort((a, b) => valueOf(PLAYERS[b]) - valueOf(PLAYERS[a]))
+                    .slice(0, 30);
+  let acc = 0, none = 1;
+  for (const i of list){
+    const s = survival(i, now, until, press[pos]);
+    acc += none * s * valueOf(PLAYERS[i]);
+    none *= (1 - s);
+    if (none < 0.002) break;
+  }
+  return acc;
+}
+
+function recommend(){
+  const now = S.picks.length;
+  const taken = takenBy();
+  const mineAhead = picksOwnedBy(S.slot).filter(x => x >= now);
+  const at = mineAhead[0];
+  const nextAt = mineAhead[1];
+  if (at == null) return null;                       // your draft is over
+  const roster = S.picks.filter(pk => pk.team === S.slot).map(pk => PLAYERS[pk.player]);
+  const avail = [];
+  PLAYERS.forEach((p, i) => { if (!taken.has(i)) avail.push(i); });
+  const press = runPressure();
+
+  const Enext = {};
+  POS.forEach(x => { Enext[x] = nextAt == null ? 0 : bestNextAt(x, avail, at, nextAt, press); });
+
+  // Anything outside the top ~70 by value is not a live option at this pick.
+  const pool = avail.slice().sort((a, b) => valueOf(PLAYERS[b]) - valueOf(PLAYERS[a])).slice(0, 70);
+  const left = new Map();                            // pos+tier -> how many remain
+  avail.forEach(i => { const k = TKEY(PLAYERS[i]); left.set(k, (left.get(k) || 0) + 1); });
+
+  const rows = pool.map(i => {
+    const p = PLAYERS[i];
+    const V = valueOf(p);
+    const drop = Math.max(0, V - Enext[p.p]);
+    const need = needOf(p.p, roster, mineAhead.length);
+    const risk = riskFit(i, roster.length);
+    const fit = fitAdj(p, roster);
+    const surv = nextAt == null ? 0 : survival(i, at, nextAt, press[p.p]);
+    // Two similar values are not a similar decision if one of them will still
+    // be sitting there next turn. Deliberately mild: it breaks ties toward the
+    // player about to disappear without letting a coin-flip survival estimate
+    // override a real gap in value.
+    const urgency = 1 + 0.28 * (1 - surv);
+    return {
+      i, p, surv,
+      tierLeft: left.get(TKEY(p)) || 0,
+      score: need.f * Math.max(0.3, risk.f) * fit.f * urgency * (V + 0.75 * drop),
+      need, risk, fit, drop, V,
+      hot: press[p.p] >= 1.25,
+    };
+  }).sort((a, b) => b.score - a.score);
+
+  return {rows, at, nextAt, gap: nextAt == null ? 0 : nextAt - at - 1, roster, press,
+          onClock: at === now};
 }
 
 function drawList(){
@@ -877,6 +1196,106 @@ function drawBoard(){
   main.innerHTML = h + "</table></div>";
 }
 
+function drawRec(){
+  const R = recommend();
+  if (!R){
+    main.innerHTML = '<div class="empty">Your draft is done - all 14 picks are in.</div>';
+    return;
+  }
+  const {rows, at, nextAt, gap, roster, onClock} = R;
+  if (!rows.length){
+    main.innerHTML = '<div class="empty">No players left to suggest.</div>';
+    return;
+  }
+  const top = rows[0].score;
+
+  // The header states the actual decision being made, because "who is best" and
+  // "who will not be here in 13 picks" are different questions.
+  const head = `<div class="rechead">
+    <div><b>${onClock ? "You are on the clock" : "Your next pick"}</b> &mdash; ${fullLabel(at)}
+    ${nextAt != null
+      ? `<br>${gap} players come off the board before ${label(nextAt)}, your pick after this.`
+      : "<br>Last pick of your draft."}</div>
+    ${POS.filter(x => R.press[x] >= 1.25).map(x =>
+      `<div class="runwarn">${x} run underway &mdash; the room is taking them ${
+        Math.round((R.press[x] - 1) * 100)}% faster than normal</div>`).join("")}
+  </div>`;
+
+  const card = (r, n) => {
+    const p = r.p;
+    const why = [];
+    why.push(["need", r.need.why]);
+    // Tier scarcity is the whole argument on most picks, so it leads.
+    if (nextAt != null){
+      const pct = Math.round(r.surv * 100);
+      const tl = `${r.tierLeft} left in ${p.p} tier ${p.tr}`;
+      if (r.tierLeft <= 4)
+        why.push(["gone", `only ${tl} &mdash; that tier likely ends before ${label(nextAt)}`]);
+      else if (pct >= 70)
+        why.push(["wait", `${tl} &mdash; the tier itself survives the wait`]);
+      else
+        why.push(["tier", tl]);
+      why.push([pct < 35 ? "gone" : pct > 70 ? "wait" : "odds",
+        `${pct}% likely to still be there at ${label(nextAt)}`]);
+    }
+    // A flag is only worth showing if you can get to the argument behind it,
+    // same as the badges on every other list.
+    r.risk.why.forEach(w => why.push(["risk", /researched/.test(w)
+      ? `<span class="spotlink" data-jump="${r.i}">${w} &mdash; read why</span>` : w]));
+    r.fit.why.forEach(w => why.push(["fit", w]));
+    if (r.hot) why.push(["gone", "and the room is on a " + p.p + " run right now"]);
+
+    const flag = SPOT.has(r.i) ? SPOT.get(r.i).k : null;
+    return `<div class="reccard">
+      <div class="recbar" style="width:${Math.round(100 * r.score / top)}%"></div>
+      <div class="recmain">
+        <div class="recn">${n}</div>
+        <div class="mid">
+          <div class="nm">${esc(p.n)}${flag ? " " + MARKICO[flag] : ""}</div>
+          <div class="sub">${p.t} &middot; Bye ${p.b || "-"} &middot; overall ${p.r}
+            &middot; tier ${p.tr}${p.adp ? " &middot; ADP " + Math.round(p.adp) : ""}</div>
+        </div>
+        <div class="pos ${p.p}">${p.p}${p.pr}</div>
+      </div>
+      <ul class="recwhy">${why.map(([k, w]) => `<li class="w-${k}">${w}</li>`).join("")}</ul>
+      ${onClock
+        ? `<button class="recdraft" data-take="${r.i}">Draft ${esc(p.n)}</button>`
+        : `<div class="recsoon">${esc(teamAt(slotAt(S.picks.length)))} is on the clock
+           &mdash; this is for ${label(at)}</div>`}
+    </div>`;
+  };
+
+  // Who you can safely punt on is as useful as who to take - it is the half of
+  // the decision a plain ranking never tells you.
+  // Drawn from the players just below the recommendations, never from the whole
+  // board: "safe to wait" is only useful about someone you would actually
+  // consider, and filtering the full list surfaces deep bench names that survive
+  // simply because nobody wants them.
+  const wait = rows.slice(4, 20)
+    .filter(r => r.surv >= 0.7 && r.need.f >= 0.6)
+    .slice(0, 6);
+  const waitHtml = wait.length && nextAt != null
+    ? `<h3>Safe to wait on</h3>
+       <div class="note">Still likely to be there at ${label(nextAt)}, so they do not
+       need this pick.</div>
+       ${wait.map(r => `<div class="recwait">
+         <span class="pos ${r.p.p}">${r.p.p}${r.p.pr}</span>
+         <span class="nm">${esc(r.p.n)}</span>
+         <span class="odds">${Math.round(r.surv * 100)}%</span></div>`).join("")}`
+    : "";
+
+  main.innerHTML = head +
+    `<h3>Take one of these</h3>` +
+    rows.slice(0, 4).map((r, k) => card(r, k + 1)).join("") +
+    waitHtml +
+    `<div class="note" style="margin-top:14px">
+      Ranked by tier scarcity and what each pick costs you at your next turn, not
+      by overall rank. There are no projected points behind any of this &mdash; all
+      three ranking sources are rank-only &mdash; so treat it as a well-argued
+      second opinion, not a verdict. ${esc(teamAt(S.slot))}, ${roster.length} picks in.
+    </div>`;
+}
+
 /* Banner shown at the top of the player list while assigning to a chosen team. */
 function addBanner(){
   // Marking mode changes what a tap does, so it gets the same loud sticky
@@ -896,15 +1315,8 @@ function drawTeam(){
     .map((pk, i) => ({pk, i}))
     .filter(x => x.pk.team === slot);
   const mine = rows.map(x => PLAYERS[x.pk.player]);
-  const pool = mine.slice();
-  const take = pos => {
-    const i = pool.findIndex(p => pos.includes(p.p));
-    return i < 0 ? null : pool.splice(i,1)[0];
-  };
-  // Fill required starters first, then the flexes, so the bench is what is left.
-  const filled = LEAGUE.starters.map(s => ({slot: s.label, pos: s.pos, p: null}));
-  filled.forEach(f => { if (f.pos.length === 1) f.p = take(f.pos); });
-  filled.forEach(f => { if (f.pos.length > 1 && !f.p) f.p = take(f.pos); });
+  // Same fill the recommender uses, so both agree on what "startable" means.
+  const {filled, bench: pool} = fillLineup(mine);
 
   const cell = f => `<div class="slot ${f.p ? f.p.p : "void"}">
       <div class="lbl">${f.slot}</div>
@@ -949,11 +1361,15 @@ function drawTeam(){
 }
 
 function render(){
+  // Suggestions can be switched off entirely; do not strand the user on a tab
+  // that no longer exists.
+  if (S.tab === "REC" && !S.rec) S.tab = "ALL";
   drawTabs(); drawClock();
-  const bare = S.tab === "BOARD" || S.tab === "TEAM" || S.tab === "SPOT";
+  const bare = S.tab === "BOARD" || S.tab === "TEAM" || S.tab === "SPOT" || S.tab === "REC";
   document.querySelector(".tools").style.display = bare ? "none" : "flex";
   if (S.tab === "BOARD") drawBoard();
   else if (S.tab === "TEAM") drawTeam();
+  else if (S.tab === "REC") drawRec();
   else if (S.tab === "SPOT"){ drawSpot(); spScroll(); }
   else drawList();
 }
@@ -989,6 +1405,10 @@ main.addEventListener("click", e => {
     return;
   }
   if (e.target.closest("#addDone")){ S.addTo = 0; save(); render(); return; }
+  const take = e.target.closest("[data-take]");
+  if (take){ draft(+take.dataset.take, S.addTo || +$("#team").value); return; }
+  const jump = e.target.closest("[data-jump]");
+  if (jump){ spJump = +jump.dataset.jump; S.tab = "SPOT"; save(); render(); return; }
   const so = e.target.closest("#syncOrder");
   if (so){
     so.textContent = "Checking Sleeper...";
@@ -1058,6 +1478,7 @@ $("#gear").addEventListener("click", () => {
   $("#slotSel").innerHTML = LEAGUE.teams.map((_,i) =>
     `<option value="${i+1}" ${i+1===S.slot?"selected":""}>Slot ${i+1}</option>`).join("");
   $("#syncSel").value = S.sync;
+  $("#recSel").value = S.rec ? "on" : "off";
   $("#build").textContent = BUILD;
   $("#pcount").textContent = PLAYERS.length;
   drawOrderNote();
@@ -1076,6 +1497,7 @@ $("#orderBtn").addEventListener("click", async e => {
 $("#meSel").addEventListener("change", e => { S.slot = +e.target.value; $("#slotSel").value = S.slot; });
 $("#slotSel").addEventListener("change", e => { S.slot = +e.target.value; $("#meSel").value = S.slot; });
 $("#syncSel").addEventListener("change", e => { S.sync = e.target.value; startSync(); });
+$("#recSel").addEventListener("change", e => { S.rec = e.target.value === "on"; save(); render(); });
 $("#close").addEventListener("click", () => { save(); render(); dlg.close(); });
 $("#reset").addEventListener("click", () => {
   if (!confirm("Clear every pick and start over?")) return;
