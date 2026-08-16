@@ -73,6 +73,52 @@ A number turns **green** when it sits 50+ spots later than our rank (the room
 will likely let them fall — safe to wait) and **red** when it sits 50+ spots
 earlier (someone else will likely grab them first — reach now if you want them).
 
+## Projected scoring offense — Mike Clay
+
+Pulled from **Mike Clay's 2026 NFL Projection Guide** (ESPN, public PDF, updated
+8/13/2026), by `fetch_clay.py` → `clay_offense.json`. Two numbers per team:
+
+- **PF** — projected points scored, off the Projected Standings page. This is
+  the actual "scoring offense" number and it sets the 1–32 rank.
+- **offPts** — projected *fantasy* points to that team's QB/RB/WR/TE, summed off
+  the team's own page. Clay's Pts column is full PPR, which is this league's
+  scoring.
+
+`PF` is a whole number and ties three times in the 2026 guide (KC/CHI at 412,
+NE/GB at 410, NO/NYJ at 346). `offPts` breaks them — the same question asked at
+higher resolution. Team pages are matched to teams by their **(PF, PA) pair**,
+not by page order; the order happens to be alphabetical but nothing in the PDF
+promises that, and a silently mis-assigned offense is worse than a crash.
+
+### It does not touch the rankings — on purpose
+
+`offRank` never feeds `blend` or the recommender score. The three ranking
+sources already price offense in as far as they price it in at all, so folding
+it into the rank would count it twice. It is context for a human choosing
+between players the board already rates as equal — which is exactly the case
+where a tiebreaker is worth having.
+
+### How it shows up
+
+- **Player rows** carry a small outlined number, green for a **top-10** offense
+  and red for a **bottom-10**. The middle 12 teams get no badge at all: a
+  rank-16 offense is not information, and badging all 32 would be noise on
+  every row. Long-press/hover gives the full sentence.
+- The number is always the **absolute rank out of 32** — Rams `1`, Dolphins
+  `32` — never "3rd best / 3rd worst". Two scales would put a green `3` and a
+  red `3` in the same column meaning opposite things, which is the misread you
+  cannot afford with 30 seconds on the clock. Colour carries good/bad.
+- **Suggest tab** gets a sentence instead of a badge (`Atlanta Falcons — 25th of
+  32 projected scoring offense (8th worst)`), because that card is an argument
+  and a bare number would be the weakest line on it.
+- **Offense tab** is the whole 1–32 list, so mid-pack teams are answerable too,
+  each with its **best six players still on the board**. Chips are display-only
+  — a stray tap on a reference tab must not draft anyone.
+
+Refresh it with `python fetch_clay.py` (needs `pip install pypdf`) and rebuild.
+The tab hides itself if `clay_offense.json` is missing rather than rendering 32
+empty rows.
+
 ## Suggest tab — live pick recommendations
 
 Optional (Setup → Pick suggestions), and it changes nothing else when off.
@@ -240,6 +286,7 @@ The old shift is in git history if it is ever wanted back.
 ```bash
 python fetch_sleeper.py   # one-time: caches Sleeper's player list -> sleeper_players.json
 python fetch_league.py    # refresh league/draft/users snapshots (incl. draft order)
+python fetch_clay.py      # Clay's projection PDF -> clay_offense.json (needs pypdf)
 python merge.py           # sources -> merged.json (+ prints tiers and match diagnostics)
 python build.py           # merged.json + template.html -> index.html
 ```

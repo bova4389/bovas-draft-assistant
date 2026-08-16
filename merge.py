@@ -293,6 +293,30 @@ for pos in POSITIONS:
                                  key=lambda x: x['blend']), 1):
         p['posRankFinal'] = i
 
+# Mike Clay's projected team scoring (see fetch_clay.py). Purely contextual --
+# it does NOT touch `blend`. The ranking sources already price in offense as
+# far as they price it in at all, so folding this into the rank would double-
+# count it; it is here to break ties between players the board thinks are
+# equal, which is a decision for a human looking at the row.
+try:
+    clay = json.load(open('clay_offense.json'))
+except IOError:
+    clay = None
+    print('\nclay_offense.json missing - run fetch_clay.py; offense ranks skipped')
+if clay:
+    ct = clay['teams']
+    for p in players:
+        t = ct.get(p['team'])          # free agents have no offense
+        if t:
+            p['offRank'] = t['rank']
+            p['offPF'] = t['pf']
+            p['offFpts'] = t['offPts']
+            p['offFptsRank'] = t['fRank']
+    hit = sum(1 for p in players if p.get('offRank'))
+    print('\nClay offense (guide %s): %d of %d players on a ranked team, %d FA'
+          % (clay['updated'], hit, len(players),
+             sum(1 for p in players if not p.get('offRank'))))
+
 print('\ntiers from FantasyPros: %d   banded fallback: %d'
       % (sum(1 for p in players if p.get('tierSrc') == 'fp'), len(untiered)))
 for pos in POSITIONS:

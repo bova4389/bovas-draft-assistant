@@ -1,0 +1,295 @@
+{
+ "source": "Mike Clay's 2026 NFL Projection Guide",
+ "teams": {
+  "ARI": {
+   "fRank": 27,
+   "name": "Arizona Cardinals",
+   "offPts": 1330,
+   "pa": 465,
+   "pf": 306,
+   "rank": 29,
+   "win": 3.6
+  },
+  "ATL": {
+   "fRank": 24,
+   "name": "Atlanta Falcons",
+   "offPts": 1390,
+   "pa": 421,
+   "pf": 341,
+   "rank": 25,
+   "win": 5.7
+  },
+  "BAL": {
+   "fRank": 9,
+   "name": "Baltimore Ravens",
+   "offPts": 1496,
+   "pa": 340,
+   "pf": 430,
+   "rank": 6,
+   "win": 11.5
+  },
+  "BUF": {
+   "fRank": 4,
+   "name": "Buffalo Bills",
+   "offPts": 1570,
+   "pa": 425,
+   "pf": 472,
+   "rank": 2,
+   "win": 10.0
+  },
+  "CAR": {
+   "fRank": 28,
+   "name": "Carolina Panthers",
+   "offPts": 1315,
+   "pa": 397,
+   "pf": 321,
+   "rank": 27,
+   "win": 5.9
+  },
+  "CHI": {
+   "fRank": 12,
+   "name": "Chicago Bears",
+   "offPts": 1460,
+   "pa": 388,
+   "pf": 412,
+   "rank": 11,
+   "win": 9.3
+  },
+  "CIN": {
+   "fRank": 3,
+   "name": "Cincinnati Bengals",
+   "offPts": 1586,
+   "pa": 373,
+   "pf": 438,
+   "rank": 5,
+   "win": 10.7
+  },
+  "CLE": {
+   "fRank": 32,
+   "name": "Cleveland Browns",
+   "offPts": 1233,
+   "pa": 352,
+   "pf": 283,
+   "rank": 31,
+   "win": 6.2
+  },
+  "DAL": {
+   "fRank": 5,
+   "name": "Dallas Cowboys",
+   "offPts": 1564,
+   "pa": 411,
+   "pf": 459,
+   "rank": 3,
+   "win": 10.1
+  },
+  "DEN": {
+   "fRank": 10,
+   "name": "Denver Broncos",
+   "offPts": 1488,
+   "pa": 328,
+   "pf": 404,
+   "rank": 15,
+   "win": 10.9
+  },
+  "DET": {
+   "fRank": 2,
+   "name": "Detroit Lions",
+   "offPts": 1604,
+   "pa": 346,
+   "pf": 453,
+   "rank": 4,
+   "win": 12.0
+  },
+  "GB": {
+   "fRank": 11,
+   "name": "Green Bay Packers",
+   "offPts": 1471,
+   "pa": 379,
+   "pf": 410,
+   "rank": 14,
+   "win": 9.5
+  },
+  "HOU": {
+   "fRank": 22,
+   "name": "Houston Texans",
+   "offPts": 1393,
+   "pa": 333,
+   "pf": 361,
+   "rank": 22,
+   "win": 9.5
+  },
+  "IND": {
+   "fRank": 20,
+   "name": "Indianapolis Colts",
+   "offPts": 1408,
+   "pa": 377,
+   "pf": 379,
+   "rank": 19,
+   "win": 8.5
+  },
+  "JAC": {
+   "fRank": 17,
+   "name": "Jacksonville Jaguars",
+   "offPts": 1447,
+   "pa": 399,
+   "pf": 400,
+   "rank": 16,
+   "win": 8.5
+  },
+  "KC": {
+   "fRank": 8,
+   "name": "Kansas City Chiefs",
+   "offPts": 1505,
+   "pa": 369,
+   "pf": 412,
+   "rank": 10,
+   "win": 9.9
+  },
+  "LAC": {
+   "fRank": 16,
+   "name": "Los Angeles Chargers",
+   "offPts": 1449,
+   "pa": 381,
+   "pf": 411,
+   "rank": 12,
+   "win": 9.5
+  },
+  "LAR": {
+   "fRank": 1,
+   "name": "Los Angeles Rams",
+   "offPts": 1644,
+   "pa": 342,
+   "pf": 493,
+   "rank": 1,
+   "win": 13.3
+  },
+  "LV": {
+   "fRank": 29,
+   "name": "Las Vegas Raiders",
+   "offPts": 1313,
+   "pa": 417,
+   "pf": 313,
+   "rank": 28,
+   "win": 5.1
+  },
+  "MIA": {
+   "fRank": 31,
+   "name": "Miami Dolphins",
+   "offPts": 1260,
+   "pa": 472,
+   "pf": 277,
+   "rank": 32,
+   "win": 2.4
+  },
+  "MIN": {
+   "fRank": 19,
+   "name": "Minnesota Vikings",
+   "offPts": 1429,
+   "pa": 391,
+   "pf": 364,
+   "rank": 21,
+   "win": 7.6
+  },
+  "NE": {
+   "fRank": 6,
+   "name": "New England Patriots",
+   "offPts": 1531,
+   "pa": 364,
+   "pf": 410,
+   "rank": 13,
+   "win": 10.0
+  },
+  "NO": {
+   "fRank": 21,
+   "name": "New Orleans Saints",
+   "offPts": 1394,
+   "pa": 384,
+   "pf": 346,
+   "rank": 23,
+   "win": 7.2
+  },
+  "NYG": {
+   "fRank": 25,
+   "name": "New York Giants",
+   "offPts": 1389,
+   "pa": 410,
+   "pf": 372,
+   "rank": 20,
+   "win": 7.2
+  },
+  "NYJ": {
+   "fRank": 23,
+   "name": "New York Jets",
+   "offPts": 1391,
+   "pa": 382,
+   "pf": 346,
+   "rank": 24,
+   "win": 7.3
+  },
+  "PHI": {
+   "fRank": 14,
+   "name": "Philadelphia Eagles",
+   "offPts": 1457,
+   "pa": 343,
+   "pf": 418,
+   "rank": 9,
+   "win": 11.0
+  },
+  "PIT": {
+   "fRank": 26,
+   "name": "Pittsburgh Steelers",
+   "offPts": 1364,
+   "pa": 330,
+   "pf": 335,
+   "rank": 26,
+   "win": 8.6
+  },
+  "SEA": {
+   "fRank": 15,
+   "name": "Seattle Seahawks",
+   "offPts": 1451,
+   "pa": 341,
+   "pf": 423,
+   "rank": 8,
+   "win": 11.2
+  },
+  "SF": {
+   "fRank": 7,
+   "name": "San Francisco 49ers",
+   "offPts": 1521,
+   "pa": 394,
+   "pf": 427,
+   "rank": 7,
+   "win": 9.5
+  },
+  "TB": {
+   "fRank": 18,
+   "name": "Tampa Bay Buccaneers",
+   "offPts": 1438,
+   "pa": 373,
+   "pf": 388,
+   "rank": 18,
+   "win": 9.0
+  },
+  "TEN": {
+   "fRank": 30,
+   "name": "Tennessee Titans",
+   "offPts": 1313,
+   "pa": 414,
+   "pf": 301,
+   "rank": 30,
+   "win": 4.8
+  },
+  "WAS": {
+   "fRank": 13,
+   "name": "Washington Commanders",
+   "offPts": 1460,
+   "pa": 451,
+   "pf": 389,
+   "rank": 17,
+   "win": 6.4
+  }
+ },
+ "updated": "8/13/2026",
+ "url": "https://g.espncdn.com/s/ffldraftkit/26/NFLDK2026_CS_ClayProjections2026.pdf"
+}

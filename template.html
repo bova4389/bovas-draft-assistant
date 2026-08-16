@@ -70,7 +70,8 @@ nav button[data-p=QB].sel{background:var(--qb);border-color:var(--qb)}
 nav button[data-p=RB].sel{background:var(--rb);border-color:var(--rb);color:#06301a}
 nav button[data-p=WR].sel{background:var(--wr);border-color:var(--wr)}
 nav button[data-p=TE].sel{background:var(--te);border-color:var(--te);color:#3a2400}
-nav button[data-p=ALL].sel,nav button[data-p=BOARD].sel,nav button[data-p=TEAM].sel{
+nav button[data-p=ALL].sel,nav button[data-p=BOARD].sel,nav button[data-p=TEAM].sel,
+nav button[data-p=SPOT].sel,nav button[data-p=OFF].sel{
   background:#4a5568;border-color:#66748a;color:#fff}
 nav button[data-p=REC].sel{background:#8a6d1f;border-color:#b08f2c;color:#fff}
 /* ----------------------------------------------------------------- tools */
@@ -121,6 +122,19 @@ main{padding:8px 8px 90px}
 .cmp span{color:var(--dimmer)}
 .cmp span.value{color:var(--value)}
 .cmp span.reach{color:var(--reach)}
+/* ------------------------------------------- projected team scoring offense */
+/* Mike Clay's team PF rank, 1-32, on rows where it is one of the two extremes.
+   Deliberately quiet: a tinted outline rather than a filled chip, so it reads
+   as context beside the name and never competes with the position badge or an
+   INJ tag. Its own column, like `.spot`, so the right-hand badges stay aligned
+   whether a row carries one or not. */
+.off{
+  flex:0 0 24px;height:22px;border-radius:6px;border:1px solid;
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:800;font-variant-numeric:tabular-nums;
+}
+.off.good{color:#7fe0aa;border-color:#28c76f66;background:#28c76f14}
+.off.bad {color:#ffa8a8;border-color:#ff5d5d66;background:#ff5d5d14}
 .mid{flex:1;min-width:0}
 .nm{font-weight:700;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .sub{font-size:11.5px;color:var(--dim);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -172,6 +186,37 @@ main{padding:8px 8px 90px}
 }
 .row.mine .taken{background:#4a3d16;border-color:#ffd16688;color:#ffd166}
 .empty{text-align:center;color:var(--dim);padding:40px 20px}
+/* ---------------------------------------------------------- offense tab */
+.offrow{
+  display:flex;align-items:center;gap:10px;padding:8px 10px;
+  background:var(--panel);border:1px solid var(--line);border-left-width:4px;
+  border-left-color:var(--dimmer);border-radius:10px 10px 0 0;
+}
+.offrow.good{border-left-color:#28c76f}
+.offrow.bad{border-left-color:#ff5d5d}
+.offrk{
+  flex:0 0 32px;height:30px;border-radius:8px;border:1.5px solid var(--line);
+  display:flex;align-items:center;justify-content:center;color:var(--dim);
+  font-size:14px;font-weight:800;font-variant-numeric:tabular-nums;
+}
+.offrk.good{color:#7fe0aa;border-color:#28c76f66;background:#28c76f14}
+.offrk.bad {color:#ffa8a8;border-color:#ff5d5d66;background:#ff5d5d14}
+/* Best-available chips hang off the bottom of the team row as one block, so a
+   team reads as a single unit while scrolling past 32 of them. */
+.offbest{
+  display:flex;flex-wrap:wrap;gap:4px;padding:6px 10px 8px;margin-bottom:8px;
+  background:var(--panel);border:1px solid var(--line);border-top:0;
+  border-radius:0 0 10px 10px;
+}
+.offchip{
+  font-size:11px;background:var(--panel2);border:1px solid var(--line);
+  border-radius:999px;padding:3px 8px;color:#cbd5e6;white-space:nowrap;
+}
+.offchip b{font-weight:800;margin-left:3px}
+.offchip.QB b{color:var(--qb)} .offchip.RB b{color:var(--rb)}
+.offchip.WR b{color:var(--wr)} .offchip.TE b{color:var(--te)}
+.offnone{font-size:11px;color:var(--dimmer)}
+.offab{font-size:11px;color:var(--dimmer);font-weight:800;margin-left:4px}
 /* ----------------------------------------------------------------- board */
 /* --------------------------------------------------------- suggestions */
 .rechead{
@@ -202,6 +247,8 @@ main{padding:8px 8px 90px}
 .w-odds::before{content:"\25CB";color:var(--dimmer)}
 .w-risk::before{content:"\2726";color:#c99adf}
 .w-fit::before{content:"\2194";color:var(--dimmer)}
+.w-offup::before{content:"\25CF";color:#7fe0aa}
+.w-offdn::before{content:"\25CF";color:#ffa8a8}
 /* Drafting from a card is only offered on your own pick: the tab is about your
    turn, so a Draft button here while someone else is on the clock would quietly
    hand the player to them. */
@@ -417,7 +464,41 @@ dialog select,dialog input{
 "use strict";
 const PLAYERS = /*PLAYERS_JSON*/;
 const LEAGUE  = /*LEAGUE_JSON*/;
+const CLAY    = /*CLAY_JSON*/;   // Mike Clay's projected team scoring, see fetch_clay.py
 PLAYERS.forEach((p, i) => { p._i = i; });   // stable id used by picks + storage
+
+/* ------------------------------------------------------- offense context
+   `p.o` is Clay's projected team scoring rank, 1 (Rams) to 32 (Dolphins).
+   It deliberately does NOT feed the blended rank or the recommender: the
+   ranking sources already price offense in as far as they price it in, so
+   adding it again would double-count. It is a tiebreaker for a human looking
+   at two rows the board thinks are equal.
+
+   The badge shows the absolute rank on one consistent 1-32 scale rather than
+   "3rd best / 3rd worst". Two separate scales would put a green 3 and a red 3
+   in the same column meaning opposite things, which is exactly the misread
+   you cannot afford at 30 seconds on the clock. Colour carries good/bad; the
+   number is always "out of 32". */
+const OFF_TOP = 10;              // ranks 1-10  -> good
+const OFF_BOT = 32 - 10 + 1;     // ranks 23-32 -> bad
+const offClass = o => o == null ? "" : (o <= OFF_TOP ? "good" : (o >= OFF_BOT ? "bad" : ""));
+function ord(n){
+  const s = ["th","st","nd","rd"], v = n % 100;
+  return n + (s[(v - 20) % 10] || s[v] || s[0]);
+}
+function offTitle(p){
+  const t = CLAY.teams[p.t];
+  if (!t) return "";
+  const side = p.o <= OFF_TOP ? "top 10" : (p.o >= OFF_BOT ? ord(33 - p.o) + " worst" : "middle of the pack");
+  return t.name + " - " + ord(p.o) + " of 32 projected scoring offense (" + side +
+         "), " + t.pf + " points. Mike Clay, ESPN, updated " + CLAY.updated + ".";
+}
+// Only the two ends get a badge. A rank-16 offense is not information, and a
+// badge on all 32 teams would be noise on every single row.
+function offHTML(p){
+  const c = offClass(p.o);
+  return c ? `<div class="off ${c}" title="${esc(offTitle(p))}">${p.o}</div>` : "";
+}
 
 /* ------------------------------------------------ sleeper / bust spotlight
    Hand-curated from seven national lists, every one of them published on or
@@ -662,8 +743,12 @@ function toast(msg){
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
 const ALLTABS = [["ALL","Overall"],["REC","Suggest"],["QB","QB"],["RB","RB"],["WR","WR"],["TE","TE"],
-                 ["SPOT","Sleepers &amp; Busts"],["BOARD","Draft Board"],["TEAM","Rosters"]];
-const TABS = () => ALLTABS.filter(t => t[0] !== "REC" || S.rec);
+                 ["SPOT","Sleepers &amp; Busts"],["OFF","Offense"],
+                 ["BOARD","Draft Board"],["TEAM","Rosters"]];
+// The Offense tab is pointless without the projections, so a build that failed
+// to embed them hides it rather than showing 32 empty rows.
+const TABS = () => ALLTABS.filter(t => (t[0] !== "REC" || S.rec) &&
+                                       (t[0] !== "OFF" || CLAY.updated));
 
 /* ------------------------------------------------- spotlight resolution */
 // Article name -> pool index, via the same normaliser the Sleeper sync uses,
@@ -749,6 +834,7 @@ function rowHTML(p, idx, taken, showTier){
     <div class="rk">${rk}</div>
     ${cmp}
     ${spot}
+    ${offHTML(p)}
     <div class="mid">
       <div class="nm">${esc(p.n)}${flags}</div>
       <div class="sub">${p.t} &middot; Bye ${p.b || "-"} &middot; ${src}${spread}</div>
@@ -1106,6 +1192,58 @@ function spCard(p, e, taken){
   </div>`;
 }
 
+/* ============================================== projected scoring offense */
+/* The whole 1-32 list behind the badges on the player rows, so a mid-pack
+   team is answerable too - the badge only marks the extremes, and "is Denver
+   good?" is a real question at pick 90.
+   Each team carries its own best available players, because the useful form of
+   this list during a draft is not "the Rams score a lot" but "the Rams score a
+   lot AND here is who is still on the board". Chips are display-only: this tab
+   is for reading, and a stray tap here drafting someone would be awful. */
+function drawOff(){
+  const taken = takenBy();
+  const rows = Object.keys(CLAY.teams)
+    .map(ab => ({ab, t: CLAY.teams[ab]}))
+    .sort((a, b) => a.t.rank - b.t.rank);
+
+  // Best available per team, by our own blended rank.
+  const avail = new Map();
+  PLAYERS.slice().sort((a, b) => rankOf(a) - rankOf(b)).forEach(p => {
+    if (taken.has(p._i) || !CLAY.teams[p.t]) return;
+    if (!avail.has(p.t)) avail.set(p.t, []);
+    avail.get(p.t).push(p);
+  });
+
+  const html = rows.map(({ab, t}) => {
+    const c = offClass(t.rank);
+    const best = (avail.get(ab) || []).slice(0, 6);
+    return `<div class="offrow ${c}">
+      <div class="offrk ${c}">${t.rank}</div>
+      <div class="mid">
+        <div class="nm">${esc(t.name)} <span class="offab">${ab}</span></div>
+        <div class="sub">${t.pf} projected points &middot; ${t.win} wins &middot;
+          ${t.offPts} PPR points to QB/RB/WR/TE (${ord(t.fRank)})</div>
+      </div>
+    </div>
+    <div class="offbest">${
+      best.length
+        ? best.map(p => `<span class="offchip ${p.p}">${esc(p.n)}
+            <b>${p.p}${p.pr}</b></span>`).join("")
+        : '<span class="offnone">nobody left on the board</span>'}</div>`;
+  }).join("");
+
+  main.innerHTML = `<div class="rechead">
+      <b>Projected scoring offense &mdash; Mike Clay, ESPN</b><br>
+      Ranked by projected points scored, 1 to 32. Guide updated ${esc(CLAY.updated)}.
+      The green and red numbers on the player lists are this rank: green is a
+      top-${OFF_TOP} offense, red is a bottom-${OFF_TOP}. Middle 12 teams get no badge.
+      <div style="margin-top:6px;color:var(--dimmer)">This does not move anyone's
+      rank &mdash; the ranking sources already price offense in, so counting it
+      again would double it. Use it to break a tie between players the board
+      rates the same. Each team shows its best six still on the board.</div>
+    </div>${html}`;
+}
+
 function drawSpot(){
   const taken = takenBy();
   // Researched entries first, ordered by our own board so the tab reads in the
@@ -1243,6 +1381,16 @@ function drawRec(){
     r.risk.why.forEach(w => why.push(["risk", /researched/.test(w)
       ? `<span class="spotlink" data-jump="${r.i}">${w} &mdash; read why</span>` : w]));
     r.fit.why.forEach(w => why.push(["fit", w]));
+    // Offence context. It is not in the score and must not be - the ranking
+    // sources already price offense in. It is here as the tiebreaker the score
+    // cannot make: two players the board rates equally are not equal if one
+    // plays for the Rams and the other for the Browns. On this tab it earns a
+    // sentence rather than the badge the lists use, because the whole card is
+    // an argument and a bare number would be the weakest line on it.
+    const oc = offClass(p.o);
+    if (oc) why.push([oc === "good" ? "offup" : "offdn",
+      `${esc(CLAY.teams[p.t].name)} &mdash; ${ord(p.o)} of 32 projected scoring offense` +
+      (oc === "bad" ? ` (${ord(33 - p.o)} worst)` : "")]);
     if (r.hot) why.push(["gone", "and the room is on a " + p.p + " run right now"]);
 
     const flag = SPOT.has(r.i) ? SPOT.get(r.i).k : null;
@@ -1364,12 +1512,15 @@ function render(){
   // Suggestions can be switched off entirely; do not strand the user on a tab
   // that no longer exists.
   if (S.tab === "REC" && !S.rec) S.tab = "ALL";
+  if (S.tab === "OFF" && !CLAY.updated) S.tab = "ALL";
   drawTabs(); drawClock();
-  const bare = S.tab === "BOARD" || S.tab === "TEAM" || S.tab === "SPOT" || S.tab === "REC";
+  const bare = S.tab === "BOARD" || S.tab === "TEAM" || S.tab === "SPOT" ||
+               S.tab === "REC" || S.tab === "OFF";
   document.querySelector(".tools").style.display = bare ? "none" : "flex";
   if (S.tab === "BOARD") drawBoard();
   else if (S.tab === "TEAM") drawTeam();
   else if (S.tab === "REC") drawRec();
+  else if (S.tab === "OFF") drawOff();
   else if (S.tab === "SPOT"){ drawSpot(); spScroll(); }
   else drawList();
 }

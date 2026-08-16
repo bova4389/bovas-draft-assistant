@@ -18,6 +18,8 @@ for p in sorted(players, key=lambda x: x['rank']):
         'adp': p.get('adp'), 'sr': p.get('sleeperRank'),
         'i': bool(p.get('inj')), 'rk': bool(p.get('rookie')),
         'only': bool(p.get('onlyJyj')),
+        # Clay's projected team scoring rank, 1-32. Null for free agents.
+        'o': p.get('offRank'),
     })
 
 # draft_order maps user_id -> slot once the commissioner sets it; it is null
@@ -71,12 +73,21 @@ league = {
 
 stamp = __import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M')
 
+# Clay's team scoring projections, for the Offense tab. Optional: a build
+# without it simply renders no offence badges rather than failing.
+try:
+    clay = json.load(open('clay_offense.json'))
+except IOError:
+    clay = {'updated': None, 'teams': {}}
+    print('WARNING: clay_offense.json missing - no offence data will be embedded')
+
 html = io.open('template.html', encoding='utf-8').read()
 html = html.replace('/*PLAYERS_JSON*/', json.dumps(out, separators=(',', ':')))
 html = html.replace('/*LEAGUE_JSON*/', json.dumps(league, separators=(',', ':')))
+html = html.replace('/*CLAY_JSON*/', json.dumps(clay, separators=(',', ':')))
 html = html.replace('/*BUILD*/', stamp)
 
-for token in ('/*PLAYERS_JSON*/', '/*LEAGUE_JSON*/', '/*BUILD*/'):
+for token in ('/*PLAYERS_JSON*/', '/*LEAGUE_JSON*/', '/*CLAY_JSON*/', '/*BUILD*/'):
     assert token not in html, 'placeholder left unfilled: ' + token
 # index.html so GitHub Pages serves it at the bare repo URL.
 io.open('index.html', 'w', encoding='utf-8').write(html)
