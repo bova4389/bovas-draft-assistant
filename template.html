@@ -172,6 +172,11 @@ main{padding:8px 8px 90px}
 .row.mine .taken{background:#4a3d16;border-color:#ffd16688;color:#ffd166}
 .empty{text-align:center;color:var(--dim);padding:40px 20px}
 /* ----------------------------------------------------------------- board */
+.orderbar{
+  display:flex;align-items:center;gap:8px;padding:0 2px 8px;
+  font-size:12px;color:var(--dim);
+}
+.orderbar button{padding:8px 12px;font-size:13px;margin-left:auto}
 .boardwrap{overflow-x:auto;padding-bottom:8px}
 table.board{border-collapse:separate;border-spacing:3px;min-width:100%}
 table.board th{
@@ -320,12 +325,19 @@ dialog select,dialog input{
   <select id="meSel"></select>
   <label for="slotSel">Your draft slot</label>
   <select id="slotSel"></select>
+  <label>Draft order</label>
+  <button id="orderBtn" style="width:100%">Sync draft order from Sleeper</button>
+  <div class="note" id="orderNote" style="margin-top:8px"></div>
+
   <label for="syncSel">Sleeper live sync</label>
   <select id="syncSel">
     <option value="off">Off - I will tap picks myself</option>
     <option value="on">On - pull picks from Sleeper every 15s</option>
   </select>
-  <div class="note" id="syncNote" style="margin-top:12px"></div>
+  <div class="note" id="syncNote" style="margin-top:12px">
+    Live sync pulls <b>picks</b> as they happen. It does not move the team
+    columns &mdash; use Sync draft order above for that.
+  </div>
   <div class="note" style="margin-top:8px">
     Each row's <b>A</b> (ADP) and <b>S</b> (Sleeper rank) numbers compare to our
     own rank: <span style="color:var(--value);font-weight:800">green</span> means
@@ -515,7 +527,16 @@ const S = Object.assign({
   // worth more than matching how picks are stored.
   marks: {},        // {"Player Name": "S" | "B"}
   mark: false,      // marking mode - taps set a mark instead of drafting
+  order: null,      // team names by slot, pulled from Sleeper after this build
+  orderAt: 0,       // when that pull happened
 }, load());
+
+// An order pulled from Sleeper on this device beats the one baked in at build
+// time - the commissioner can reshuffle right up to the first pick.
+if (Array.isArray(S.order) && S.order.length === TEAMS){
+  LEAGUE.teams = S.order.slice();
+  LEAGUE.orderKnown = true;
+}
 
 function load(){ try{ return JSON.parse(localStorage.getItem(KEY)) || {}; }catch(e){ return {}; } }
 
@@ -828,7 +849,12 @@ function spScroll(){
 function drawBoard(){
   const taken = takenBy();
   const byPick = new Map(S.picks.map((p,i) => [i, p]));
-  let h = '<div class="boardwrap"><table class="board"><tr><th></th>' +
+  // The board is where a stale order is actually visible, so the fix lives here
+  // too rather than only behind Setup.
+  let h = '<div class="orderbar"><span>' +
+    (LEAGUE.orderKnown ? "Order from Sleeper" : "Order not set on Sleeper yet - league order shown") +
+    '</span><button id="syncOrder">Sync draft order</button></div>' +
+    '<div class="boardwrap"><table class="board"><tr><th></th>' +
     LEAGUE.teams.map((t,i) =>
       `<th class="${i+1===S.slot?"me":""}">${esc(t)}</th>`).join("") + "</tr>";
   for (let r = 0; r < ROUNDS; r++){
@@ -963,6 +989,15 @@ main.addEventListener("click", e => {
     return;
   }
   if (e.target.closest("#addDone")){ S.addTo = 0; save(); render(); return; }
+  const so = e.target.closest("#syncOrder");
+  if (so){
+    so.textContent = "Checking Sleeper...";
+    // An unchanged order does not re-render, so put the label back either way.
+    syncOrder(false).then(() => {
+      const b = $("#syncOrder"); if (b) b.textContent = "Sync draft order";
+    });
+    return;
+  }
 
   const r = e.target.closest(".row"); if (!r) return;
   const i = +r.dataset.i;
@@ -1025,11 +1060,18 @@ $("#gear").addEventListener("click", () => {
   $("#syncSel").value = S.sync;
   $("#build").textContent = BUILD;
   $("#pcount").textContent = PLAYERS.length;
-  $("#syncNote").innerHTML = LEAGUE.orderKnown
-    ? "Draft order came from Sleeper."
-    : "Sleeper has not set the draft order yet, so the team columns are in league order. " +
-      "Open Setup again after the order is posted and it will refresh.";
+  drawOrderNote();
   dlg.showModal();
+});
+$("#orderBtn").addEventListener("click", async e => {
+  const b = e.currentTarget;
+  b.disabled = true; b.textContent = "Checking Sleeper...";
+  await syncOrder(false);
+  // syncOrder can redraw the dialog's own selects out from under us.
+  $("#meSel").innerHTML = LEAGUE.teams.map((t,i) =>
+    `<option value="${i+1}" ${i+1===S.slot?"selected":""}>${esc(t)}</option>`).join("");
+  $("#slotSel").value = S.slot;
+  b.disabled = false; b.textContent = "Sync draft order from Sleeper";
 });
 $("#meSel").addEventListener("change", e => { S.slot = +e.target.value; $("#slotSel").value = S.slot; });
 $("#slotSel").addEventListener("change", e => { S.slot = +e.target.value; $("#meSel").value = S.slot; });
@@ -1039,6 +1081,70 @@ $("#reset").addEventListener("click", () => {
   if (!confirm("Clear every pick and start over?")) return;
   S.picks = []; save(); render(); dlg.close(); toast("Draft cleared");
 });
+
+/* --------------------------------------------------- Sleeper draft order */
+// The commissioner can set or reshuffle the order right up to the first pick,
+// and the order baked in at build time goes stale the moment they do. This
+// re-reads the draft itself (not the picks endpoint, which only knows about
+// picks already made) and moves every team name to the slot Sleeper has it in.
+//
+// Picks stay with their slot, exactly as they do on Sleeper: whoever ends up in
+// slot 3 owns 1.03. Only your own team, the roster view and the add-to target
+// follow their team's name to its new column.
+async function syncOrder(quiet){
+  let d;
+  try{
+    const r = await fetch("https://api.sleeper.app/v1/draft/" + LEAGUE.draftId,
+                          {cache:"no-store"});
+    if (!r.ok) throw new Error(r.status);
+    d = await r.json();
+  }catch(e){
+    if (!quiet) toast("Could not reach Sleeper - draft order unchanged");
+    return;
+  }
+  const ord = d && d.draft_order;
+  if (!ord || !Object.keys(ord).length){
+    if (!quiet) toast("Sleeper has not set the draft order yet");
+    return;
+  }
+  const users = LEAGUE.users || {};
+  const next = new Array(TEAMS).fill(null);
+  for (const uid in ord){
+    const slot = ord[uid];
+    if (slot >= 1 && slot <= TEAMS) next[slot-1] = users[uid] || ("Team " + slot);
+  }
+  // A member who joined after this build has no name here; the slot is still
+  // real, so it gets a placeholder rather than collapsing the order.
+  for (let i = 0; i < TEAMS; i++) if (!next[i]) next[i] = "Team " + (i+1);
+
+  const prev = LEAGUE.teams.slice();
+  const same = next.every((t,i) => t === prev[i]);
+  S.order = next; S.orderAt = Date.now(); LEAGUE.orderKnown = true;
+  if (same){ save(); drawOrderNote(); if (!quiet) toast("Draft order already matches Sleeper"); return; }
+
+  const slotOf = new Map(next.map((t,i) => [t, i+1]));
+  const move = s => slotOf.get(prev[s-1]) || s;
+  S.slot = move(S.slot); S.me = move(S.me);
+  if (S.addTo) S.addTo = move(S.addTo);
+  if (S.viewTeam) S.viewTeam = move(S.viewTeam);
+  LEAGUE.teams = next;
+  save(); render(); drawOrderNote();
+  toast("Draft order updated from Sleeper" +
+        (S.picks.length ? " - picks stayed with their slot" : ""));
+}
+
+function drawOrderNote(){
+  const el = $("#orderNote");
+  if (!el) return;
+  const when = S.orderAt
+    ? "Last synced " + new Date(S.orderAt).toLocaleTimeString([], {hour:"numeric", minute:"2-digit"}) + "."
+    : (LEAGUE.orderKnown ? "Order came from Sleeper at build time." : "");
+  el.innerHTML = LEAGUE.orderKnown
+    ? when + " Slot " + S.slot + " is yours (<b>" + esc(teamAt(S.slot)) + "</b>). " +
+      "Tap the button any time the commissioner reshuffles."
+    : "Sleeper has not posted the draft order yet, so the team columns are in " +
+      "league order. Tap the button once it is set.";
+}
 
 /* ---------------------------------------------------- Sleeper live sync */
 // Sleeper embeds first/last name on each pick, so picks can be matched without
@@ -1109,6 +1215,9 @@ drawFilter();
 drawMarkBtn();
 render();
 startSync();
+// Check the order on every load, quietly - it only speaks up if something moved.
+// A failure here is not worth a toast: the baked-in order still works.
+syncOrder(true);
 </script>
 </body>
 </html>

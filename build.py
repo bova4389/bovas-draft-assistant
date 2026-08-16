@@ -20,8 +20,10 @@ for p in sorted(players, key=lambda x: x['rank']):
         'only': bool(p.get('onlyJyj')),
     })
 
-# Sleeper has not posted the draft order yet, so fall back to league order and
-# let the page refresh it later. draft_order maps user_id -> slot when set.
+# draft_order maps user_id -> slot once the commissioner sets it; it is null
+# before that, in which case we fall back to league order. Either way the page
+# can re-read it at runtime, so a reshuffle after this build does not need a
+# rebuild -- see the Sync draft order button in Setup.
 order = draft_raw.get('draft_order')
 names = {}
 for u in users_raw:
@@ -62,6 +64,9 @@ league = {
     'starters': starters,
     'defaultMe': me,
     'orderKnown': bool(order),
+    # user_id -> team label, so the page can rebuild `teams` from a freshly
+    # fetched draft_order without downloading the users endpoint itself.
+    'users': names,
 }
 
 stamp = __import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M')

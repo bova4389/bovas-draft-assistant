@@ -13,6 +13,33 @@ actually allows `localStorage`, which it refuses for `file://` pages.
 - Starters: QB, RB, RB, WR, WR, TE, FLEX (R/W/T), W/R, W/R — 9 starters, 5 bench.
 - No K, no DST — both stripped from the player pool.
 
+## Draft order
+
+Sleeper's `draft_order` (user_id → slot) is null until the commissioner sets it,
+and it can be reshuffled right up to the first pick. It was null when this was
+first built, so the team columns sat in league order and stayed there — nothing
+re-read it.
+
+The page now pulls it live from `/v1/draft/<id>`:
+
+- **automatically on every page load**, quietly — it only says anything if a
+  team actually moved;
+- **on demand** from `Sync draft order` on the Draft Board tab, or the same
+  button in Setup.
+
+`build.py` embeds a `users` map (user_id → team name) so the page can rebuild the
+order by itself. A synced order is saved to `localStorage` and wins over the one
+baked into the build.
+
+**Picks stay with their slot, exactly as they do on Sleeper** — whoever ends up
+in slot 3 owns 1.03. What follows a team's *name* to its new column is your own
+slot, the Rosters view, and the add-to-team target, so "which team is mine"
+survives a reshuffle.
+
+`python fetch_league.py` refreshes `league.json` / `draft.json` / `users.json`
+so a new build bakes in the current order; it is not needed just to correct a
+running page.
+
 ## Where the rankings come from
 
 | Source | Weight | Notes |
@@ -158,6 +185,7 @@ The old shift is in git history if it is ever wanted back.
 
 ```bash
 python fetch_sleeper.py   # one-time: caches Sleeper's player list -> sleeper_players.json
+python fetch_league.py    # refresh league/draft/users snapshots (incl. draft order)
 python merge.py           # sources -> merged.json (+ prints tiers and match diagnostics)
 python build.py           # merged.json + template.html -> index.html
 ```
