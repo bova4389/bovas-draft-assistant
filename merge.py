@@ -6,7 +6,7 @@ TEAM = {  # normalise every source to Sleeper-style codes
     'TAM': 'TB', 'NOR': 'NO', 'JAX': 'JAC', 'WSH': 'WAS', 'LA': 'LAR',
 }
 SUFFIX = {'jr', 'sr', 'ii', 'iii', 'iv', 'v'}
-# Nickname/legal-name splits between sources, keyed on the normalised form.
+# Nickname/legal-name splits between sources, keyed on the normalized form.
 ALIAS = {'marquise brown': 'hollywood brown'}
 
 
@@ -219,7 +219,7 @@ if os.path.exists('sleeper_players.json'):
 # ------------------------------------------------------------------- blend
 # FantasyPros carries the most expert inputs and is the only PPR-specific
 # source, so it gets half the weight; Yahoo and JYJ split the rest. Weights
-# are renormalised over whichever sources actually rank a given player.
+# are renormalized over whichever sources actually rank a given player.
 WEIGHT = {'fp': 0.50, 'yahoo': 0.25, 'jyj': 0.25}
 DEEP = 400  # stand-in rank so one missing source can't inflate a player
 

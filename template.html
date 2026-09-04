@@ -477,7 +477,7 @@ PLAYERS.forEach((p, i) => { p._i = i; });   // stable id used by picks + storage
    The badge shows the absolute rank on one consistent 1-32 scale rather than
    "3rd best / 3rd worst". Two separate scales would put a green 3 and a red 3
    in the same column meaning opposite things, which is exactly the misread
-   you cannot afford at 30 seconds on the clock. Colour carries good/bad; the
+   you cannot afford at 30 seconds on the clock. Color carries good/bad; the
    number is always "out of 32". */
 const OFF_TOP = 10;              // ranks 1-10  -> good
 const OFF_BOT = 32 - 10 + 1;     // ranks 23-32 -> bad
@@ -1381,7 +1381,7 @@ function drawRec(){
     r.risk.why.forEach(w => why.push(["risk", /researched/.test(w)
       ? `<span class="spotlink" data-jump="${r.i}">${w} &mdash; read why</span>` : w]));
     r.fit.why.forEach(w => why.push(["fit", w]));
-    // Offence context. It is not in the score and must not be - the ranking
+    // Offense context. It is not in the score and must not be - the ranking
     // sources already price offense in. It is here as the tiebreaker the score
     // cannot make: two players the board rates equally are not equal if one
     // plays for the Rams and the other for the Browns. On this tab it earns a

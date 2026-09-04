@@ -107,7 +107,7 @@ where a tiebreaker is worth having.
 - The number is always the **absolute rank out of 32** — Rams `1`, Dolphins
   `32` — never "3rd best / 3rd worst". Two scales would put a green `3` and a
   red `3` in the same column meaning opposite things, which is the misread you
-  cannot afford with 30 seconds on the clock. Colour carries good/bad.
+  cannot afford with 30 seconds on the clock. Color carries good/bad.
 - **Suggest tab** gets a sentence instead of a badge (`Atlanta Falcons — 25th of
   32 projected scoring offense (8th worst)`), because that card is an argument
   and a bare number would be the weakest line on it.
@@ -169,7 +169,7 @@ Some deliberate calls:
 from the whole board — filtering everything surfaces deep bench names that
 survive only because nobody wants them.
 
-Still to build: opponent-need modelling (we know all 11 other rosters from the
+Still to build: opponent-need modeling (we know all 11 other rosters from the
 pick feed, so we can predict what the next 12 picks actually target, which is
 much sharper than league-average ADP).
 

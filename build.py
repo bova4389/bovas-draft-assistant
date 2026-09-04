@@ -74,12 +74,12 @@ league = {
 stamp = __import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M')
 
 # Clay's team scoring projections, for the Offense tab. Optional: a build
-# without it simply renders no offence badges rather than failing.
+# without it simply renders no offense badges rather than failing.
 try:
     clay = json.load(open('clay_offense.json'))
 except IOError:
     clay = {'updated': None, 'teams': {}}
-    print('WARNING: clay_offense.json missing - no offence data will be embedded')
+    print('WARNING: clay_offense.json missing - no offense data will be embedded')
 
 html = io.open('template.html', encoding='utf-8').read()
 html = html.replace('/*PLAYERS_JSON*/', json.dumps(out, separators=(',', ':')))
