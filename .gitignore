@@ -1,3 +1,6 @@
 # Sleeper's full player list (~16MB) - fetched on demand by fetch_sleeper.py,
 # not needed to rebuild index.html since merged.json already carries sr ranks.
 sleeper_players.json
+
+# Python bytecode
+__pycache__/
